@@ -1,0 +1,179 @@
+
+.navbar {
+    position:relative;
+    min-height:100vh;
+    min-width:50px;
+    width: 50px;
+    overflow:hidden;
+    // position:fixed;
+    left:0;
+    z-index:50;
+    background: $primaryColorSecondary;
+    @include transition(all 0.5s);
+
+    // &.expanded {
+    //   // width:150px;
+    //
+    //   .nav-trigger {
+    //     &:before {
+    //       right:0;
+    //       left:auto;
+    //     }
+    //   }
+    //
+    //   span {
+    //     opacity:1;
+    //   }
+    // }
+
+    .inner {
+        position:relative;
+        position: fixed;
+        width: 50px;
+    }
+
+    .active a {
+        background:$primaryColorTertiary;
+    }
+
+    .nav-trigger {
+      display:inline-block;
+      vertical-align: middle;
+      padding-bottom:50px;
+      border-bottom:solid 1px $primaryColor;
+
+      &:before {
+          content:"\E315";
+          line-height:1;
+          font-family: $iconFont;
+          position: absolute;
+          left:0;
+          height: 25px;
+          margin: auto;
+          color:$white;
+          @include font-size(35);
+          line-height:0.5;
+          @include transition(all 0.5s);
+      }
+
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+         /* IE10+ specific styles go here */
+         &:before {
+           @include font-size(5);
+           line-height:0.4;
+        }
+      }
+
+      &:after {
+        content:"";
+        background:none;
+      }
+
+      &.active {
+        border-left:none;
+        background:none;
+        &:before {
+          transform: rotate(-180deg);
+            content:"\E315";
+        }
+
+        &:after {
+          content:"";
+          background:none;
+        }
+      }
+    }
+
+    a {
+        position:relative;
+        display:inline-block;
+        padding:33px 0;
+        width:100%;
+        text-align:center;
+        text-decoration:none;
+        color:$white;
+        @include font-size(10);
+        @include transition(all 0.5s);
+        border-bottom:solid 1px $grey;
+
+        &:before {
+            content:"";
+            line-height:1;
+            font-family: $iconFont;
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            bottom: 0;
+            height: 25px;
+            margin: auto;
+            color:$white;
+            @include font-size(20);
+        }
+
+        &.home {
+             &:before {
+                content:"\E88A";
+            }
+        }
+
+        &.search {
+             &:before {
+                content:"\E8B6";
+                top:12px;
+            }
+        }
+
+        &:hover, &.active {
+            background:$primaryColorTertiary;
+        }
+
+        &.active {
+          &:after {
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:2px;
+            background:$secondaryColor;
+          }
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        span {
+            display: inline-block;
+            height: 100%;
+            padding:0 30px;
+            vertical-align: middle;
+            opacity:0;
+            @include transition(all 0.2s);
+        }
+    }
+}
+
+// expanded state - set on parent
+
+.navbar ul,
+.navbar .nav-trigger {
+  width: 50px;
+  min-width: 50px;
+  @include transition(all 0.5s);
+}
+
+.expanded .navbar,
+.expanded .navbar .inner,
+.expanded .navbar ul,
+.expanded .navbar .nav-trigger {
+  min-width: 150px;
+  width: 150px;
+}
+
+.expanded .navbar a span {
+  opacity: 1;
+}

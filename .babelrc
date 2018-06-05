@@ -1,0 +1,13 @@
+{
+  "presets": ["env", "react", "stage-1"],
+  "env": {
+    "production": {
+      "plugins": [
+
+      ]
+    },
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}

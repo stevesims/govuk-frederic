@@ -1,0 +1,145 @@
+.tag {
+  display:inline-block;
+  padding:5px 15px;
+  text-align: center;
+  margin:10px 10px 10px 0;
+
+  &:last-child {
+    margin-right:0;
+  }
+
+  &.secondary {
+    background:$white;
+    color:$quartenaryColor;
+    border:solid 1px $buttonBlue;
+  }
+}
+
+.buttons {
+    position:relative;
+    display:inline-block;
+    padding:10px 15px;
+    @include font-size(10);
+    border-radius:2px;
+    text-align: center;
+    @include transition(all 0.5s);
+    cursor:pointer;
+
+    &:active {
+        &:after {
+          content:"";
+          position:absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+          margin:auto;
+          border-radius:50%;
+          width:40px;
+          height:40px;
+          background:$white;
+          opacity:0.10;
+        }
+    }
+
+    &.primary {
+        color:$white;
+        background:$secondaryColorSecondary;
+        border:solid 1px $secondaryColorSecondary;
+
+        &:hover {
+            background:$buttonBlue;
+            border-color:$buttonBlue;
+        }
+    }
+
+     &.secondary {
+        background:$white;
+        color:$quartenaryColor;
+        border:solid 1px $buttonBlue;
+
+        &:hover {
+            color:$white;
+            background:$buttonBlue;
+            border:solid 1px $buttonBlue;
+        }
+    }
+
+    &.tertiary {
+        background:$valid;
+        color:$white;
+
+         &:hover {
+            background:$valid;
+            border-color:$valid;
+        }
+    }
+
+    &.quaternary {
+       background:$white;
+       color:$quartenaryColor;
+       border:solid 1px $quinaryColor;
+       padding-top: 11px;
+       height: 21px;
+       padding-bottom: 8px;
+       position: relative;
+       right: -1px;
+       border-radius: 0;
+
+       &:hover {
+           color:$white;
+           background:$buttonBlue;
+           border:solid 1px $buttonBlue;
+       }
+   }
+
+    &.back {
+        position:relative;
+        padding-left:28px;
+        margin-right:15px;
+        color:$quartenaryColor;
+
+        &:before {
+            content:"<";
+            position:absolute;
+            left:8px;
+            top:-1px;
+            bottom:0;
+            height:28px;
+            margin:auto;
+            @include font-size(20);
+            line-height: 1;
+
+        }
+    }
+
+    &.last {
+        padding:0;
+    }
+}
+
+.clear-field {
+  position:relative;
+  border: none;
+  background: none;
+
+  &:after {
+    content:"\E5CD";
+    position:absolute;
+    top:0px;
+    right:7px;
+    display:inline-block;
+    font-family: $iconFont;
+    @include font-size(16);
+    line-height: 1;
+    text-align: center;
+    cursor:pointer;
+  }
+}
+
+.clear-section {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}

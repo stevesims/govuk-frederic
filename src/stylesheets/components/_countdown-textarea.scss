@@ -1,0 +1,31 @@
+.countdown-textarea {
+  display: flex;
+  position: relative;
+
+  &.over {
+    color: $warning;
+    font-weight: 800;
+  }
+
+  &--textarea {
+    position: relative;
+    width: 100%;
+  }
+
+  // Making this a zero width flex container is a workaround to the fact that
+  // one cannot do an ::after on a textarea
+  &--countdown-container {
+    align-items: flex-end;
+    display: flex;
+    flex-grow: 0;
+    line-height: 1;
+    position: relative;
+    width: 0;
+  }
+
+  &--countdown {
+    bottom: 12px;
+    position: absolute;
+    right: 10px;
+  }
+}
