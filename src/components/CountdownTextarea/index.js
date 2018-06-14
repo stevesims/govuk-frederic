@@ -1,6 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 import { TextAreaField } from '@govuk-react/text-area';
+
+const StyledTextArea = styled('div')(
+  {
+    display: 'flex',
+    position: 'relative',
+  },
+  ({ over }) => ({
+    color: over ? '#da0505' : undefined, // Warning colour
+    fontWeight: over ? 800 : undefined,
+  }),
+);
+
+const StyledCountdownContainer = styled('div')({
+  alignItems: 'flex-end',
+  display: 'flex',
+  flexGrow: 0,
+  lineHeight: 1,
+  position: 'relative',
+  width: 0,
+});
+
+const StyledCountdown = styled('div')({
+  bottom: '12px',
+  position: 'absolute',
+  right: '10px',
+});
 
 const CountdownTextarea = props => {
   const {
@@ -12,22 +39,22 @@ const CountdownTextarea = props => {
 
   const showRemaining = !!maxLength;
   const remaining = showRemaining ? maxLength - (input.value || '').length : false;
-  const over = showRemaining && (remaining < 0);
+  const over = showRemaining && (remaining <= 0);
 
   return (
-    <div className={`countdown-textarea ${remaining <= 0 ? 'over' : ''}`}>
+    <StyledTextArea over={over}>
       <TextAreaField
         {...input}
         maxLength={noMaxLengthAttr ? null : maxLength}
       />
       {showRemaining &&
-        <div className="countdown-textarea--countdown-container">
-          <div className="countdown-textarea--countdown">
+        <StyledCountdownContainer>
+          <StyledCountdown>
             {over && positiveOnly ? '0' : remaining}
-          </div>
-        </div>
+          </StyledCountdown>
+        </StyledCountdownContainer>
       }
-    </div>
+    </StyledTextArea>
   );
 };
 
