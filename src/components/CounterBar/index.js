@@ -60,7 +60,6 @@ const Counter = glamorous.button(
 
 const CounterBar = ({
   activeTitle,
-  countContainerClass,
   listTitle,
   counters,
   onSelect,
@@ -71,7 +70,6 @@ const CounterBar = ({
   return (
     <Container {...props}>
       <CountWrapper
-        className={countContainerClass}
         active={activeTitle}
         disabled={!totalScore}
         onClick={() => onSelect()}
@@ -109,8 +107,6 @@ const CounterBar = ({
 
 CounterBar.propTypes = {
   activeTitle: PropTypes.bool,
-  className: PropTypes.string,
-  countContainerClass: PropTypes.string,
   counters: PropTypes.arrayOf(PropTypes.shape({
     active: PropTypes.bool,
     id: PropTypes.any.isRequired,
