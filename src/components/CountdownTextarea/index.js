@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { TextAreaField } from '@govuk-react/text-area';
+import { ERROR_COLOUR } from 'govuk-colours';
 
 const StyledTextArea = styled('div')(
   {
@@ -9,7 +10,7 @@ const StyledTextArea = styled('div')(
     position: 'relative',
   },
   ({ over }) => ({
-    color: over ? '#da0505' : undefined, // Warning colour
+    color: over ? ERROR_COLOUR : undefined, // Warning colour
     fontWeight: over ? 800 : undefined,
   }),
 );
