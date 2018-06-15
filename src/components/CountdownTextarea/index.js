@@ -30,6 +30,7 @@ const StyledCountdownContainer = styled('div')({
 
 const StyledCountdown = styled('div')({
   bottom: '12px',
+  fontFamily: 'Roboto, Arial, sans-serif',
   position: 'absolute',
   right: '10px',
 });
