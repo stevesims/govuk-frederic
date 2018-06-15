@@ -1,0 +1,104 @@
+
+//px to em font sizes and line heights 
+
+@mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.25) {
+    font-size: ($sizeValue * 1) + px;
+    line-height: ($line * 1) + px;
+    font-size: ($sizeValue / 10) + em;
+    line-height: ($line / 10) + em;  
+}
+
+@mixin inline-block($align:bottom) {
+    display:inline-block;
+    vertical-align: $align;
+}
+
+/* ======================================================= 
+=================== Generic Transform ====================
+======================================================= */
+
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+/* ======================================================= 
+================= CSS Transform Rotate ===================
+======================================================= */
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+
+/* ======================================================= 
+================= CSS Transform Prefix ===================
+======================================================= */
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+/* ======================================================= 
+================= CSS Transition Prefix ==================
+======================================================= */
+
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+
+/* ======================================================= 
+================ CSS Transition Duration =================
+======================================================= */
+
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+
+/* ======================================================= 
+================ CSS Transition Timing ===================
+======================================================= */
+
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+
+/* ======================================================= 
+================ CSS Transition Delay ===================
+======================================================= */
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+
+/* ======================================================= 
+===================== CSS Box Shadow =====================
+======================================================= */
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+    
+}
