@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 
-const Count = (props) => {
-  const {
-    value,
-  } = props;
+const StyledCount = styled('div')({
+  fontFamily: 'Roboto, Arial, sans-serif',
+});
+
+const Count = props => {
+  const { value } = props;
 
   return (
-    <div>
+    <StyledCount>
       <span>{value}</span>
-    </div>
+    </StyledCount>
   );
 };
 
