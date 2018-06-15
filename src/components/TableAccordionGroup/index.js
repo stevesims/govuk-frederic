@@ -23,7 +23,7 @@ const Title = glamorous.header(({ clickable }) => (clickable ? { cursor: 'pointe
 const Items = glamorous.div({});
 const FirstItem = glamorous.div({});
 
-const TableAccordianGroup = ({ title, children, expanded, onChange, open, changeOnTitleClick }) => {
+const TableAccordionGroup = ({ title, children, expanded, onChange, open, changeOnTitleClick }) => {
   return (
     <Container>
       <OpenButton open={open} onChange={onChange} />
@@ -38,7 +38,7 @@ const TableAccordianGroup = ({ title, children, expanded, onChange, open, change
   );
 };
 
-TableAccordianGroup.propTypes = {
+TableAccordionGroup.propTypes = {
   changeOnTitleClick: PropTypes.bool,
   children: PropTypes.node.isRequired,
   expanded: PropTypes.node.isRequired,
@@ -47,11 +47,11 @@ TableAccordianGroup.propTypes = {
   title: PropTypes.node,
 };
 
-TableAccordianGroup.defaultProps = {
+TableAccordionGroup.defaultProps = {
   changeOnTitleClick: false,
   open: false,
 };
 
-export default TableAccordianGroup;
+export default TableAccordionGroup;
 
 export { Title };
