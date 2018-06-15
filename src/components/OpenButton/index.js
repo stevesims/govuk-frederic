@@ -14,20 +14,16 @@ const RotatingButton = glamorous.button(
     transition: 'transform 0.3s ease-in-out',
     width: '20px',
   },
-  ({open}) => (
-    {transform:
-        open
-          ? 'rotate(0deg)'
-          : 'rotate(-90deg)',
-    }
-  ),
+  ({ open }) => ({
+    transform: open ? 'rotate(0deg)' : 'rotate(-90deg)',
+  }),
 );
 
-const OpenButton = ({open, onChange}) => (
-  <RotatingButton open={open} onClick={() => onChange && onChange({open: !open})}>
-    <Arrow
-      width={20} />
-  </RotatingButton>);
+const OpenButton = ({ open, onChange }) => (
+  <RotatingButton open={open} onClick={() => onChange && onChange({ open: !open })}>
+    <Arrow width={20} />
+  </RotatingButton>
+);
 
 OpenButton.propTypes = {
   onChange: PropTypes.func,
