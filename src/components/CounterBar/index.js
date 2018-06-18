@@ -53,29 +53,14 @@ const Counter = glamorous.button(
     background: active ? LINK_COLOUR : GREY_1,
     outline: active ? `2px solid ${LINK_COLOUR}` : undefined,
   }),
-  ({ empty }) => (
-    empty ? { opacity: 0 } : undefined
-  )
+  ({ empty }) => (empty ? { opacity: 0 } : undefined),
 );
 
-const CounterBar = ({
-  activeTitle,
-  countContainerClass,
-  listTitle,
-  counters,
-  onSelect,
-  ...props
-}) => {
-  const totalScore = counters
-    .reduce((a, b) => (a + (Number(b.score) || 0)), 0);
+const CounterBar = ({ activeTitle, listTitle, counters, onSelect, ...props }) => {
+  const totalScore = counters.reduce((a, b) => a + (Number(b.score) || 0), 0);
   return (
     <Container {...props}>
-      <CountWrapper
-        className={countContainerClass}
-        active={activeTitle}
-        disabled={!totalScore}
-        onClick={() => onSelect()}
-      >
+      <CountWrapper active={activeTitle} disabled={!totalScore} onClick={() => onSelect()}>
         <ResultCountTitle
           count={totalScore}
           countColor={totalScore > 0 ? WHITE : BLACK}
@@ -101,22 +86,21 @@ const CounterBar = ({
             {counter.name}
           </ResultCountTitle>
         </Counter>
-      ))
-      }
+      ))}
     </Container>
   );
 };
 
 CounterBar.propTypes = {
   activeTitle: PropTypes.bool,
-  className: PropTypes.string,
-  countContainerClass: PropTypes.string,
-  counters: PropTypes.arrayOf(PropTypes.shape({
-    active: PropTypes.bool,
-    id: PropTypes.any.isRequired,
-    name: PropTypes.string.isRequired,
-    score: PropTypes.number,
-  })),
+  counters: PropTypes.arrayOf(
+    PropTypes.shape({
+      active: PropTypes.bool,
+      id: PropTypes.any.isRequired,
+      name: PropTypes.string.isRequired,
+      score: PropTypes.number,
+    }),
+  ),
   listTitle: PropTypes.any,
   name: PropTypes.string.isRequired,
   onSelect: PropTypes.func,

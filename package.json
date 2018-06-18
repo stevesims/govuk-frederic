@@ -71,11 +71,13 @@
     "react": ">=16"
   },
   "dependencies": {
+    "emotion": "^9.2.3",
     "react-collapse": "^4.0.3",
+    "react-emotion": "^9.2.3",
     "react-motion": "^0.5.2"
   },
   "devDependencies": {
-    "@govuk-react/text-area": "^0.1.27",
+    "@govuk-react/text-area": "^0.2.4",
     "@istanbuljs/nyc-config-babel": "^1.2.3",
     "@storybook/react": "^3.2.17",
     "babel-cli": "^6.26.0",

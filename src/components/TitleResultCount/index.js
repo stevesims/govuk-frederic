@@ -10,6 +10,7 @@ const Wrapper = glamorous.div({
 
 const Title = glamorous.div({
   display: 'inline-block',
+  fontFamily: 'Roboto, Arial, sans-serif',
   fontSize: '15px',
   lineHeight: '1.25',
   marginRight: '10px',

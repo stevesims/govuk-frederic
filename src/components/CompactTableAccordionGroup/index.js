@@ -6,6 +6,8 @@ import { Collapse } from 'react-collapse';
 import OpenButton from '../OpenButton';
 
 const Container = glamorous.div({
+  fontFamily: 'Roboto, Arial, sans-serif',
+  fontSize: '14px',
   paddingBottom: '10px',
   paddingTop: '10px',
   position: 'relative',
@@ -16,25 +18,25 @@ const TitleRow = glamorous.div({
   marginBottom: '8px',
 });
 
-const Title = glamorous.header(({ clickable }) => (
-  clickable ? { cursor: 'pointer' } : undefined
-), {
+const Title = glamorous.header(({ clickable }) => (clickable ? { cursor: 'pointer' } : undefined), {
   paddingLeft: '16px',
 });
 
-const CompactTableAccordionGroup = ({title, expanded, onChange, open, changeOnTitleClick }) => {
-  return <Container>
-    <TitleRow>
-      <OpenButton open={open} onChange={onChange} />
-      <Title
-        clickable={changeOnTitleClick}
-        onClick={changeOnTitleClick ? () => onChange({open: !open}) : undefined}
-      >
-        {title}
-      </Title>
-    </TitleRow>
-    <Collapse isOpened={open}>{expanded}</Collapse>
-  </Container>;
+const CompactTableAccordionGroup = ({ title, expanded, onChange, open, changeOnTitleClick }) => {
+  return (
+    <Container>
+      <TitleRow>
+        <OpenButton open={open} onChange={onChange} />
+        <Title
+          clickable={changeOnTitleClick}
+          onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined}
+        >
+          {title}
+        </Title>
+      </TitleRow>
+      <Collapse isOpened={open}>{expanded}</Collapse>
+    </Container>
+  );
 };
 
 CompactTableAccordionGroup.propTypes = {

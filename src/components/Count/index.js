@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 
-const Count = (props) => {
-  const {
-    className = 'result-count',
-    textClass = 'result-count-text',
-    value,
-  } = props;
+const StyledCount = styled('div')({
+  fontFamily: 'Roboto, Arial, sans-serif',
+});
+
+const Count = props => {
+  const { value } = props;
 
   return (
-    <div className={`count ${className}`}>
-      <span className={textClass}>{value}</span>
-    </div>
+    <StyledCount>
+      <span>{value}</span>
+    </StyledCount>
   );
 };
 
 Count.propTypes = {
-  className: PropTypes.string,
   textClass: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };

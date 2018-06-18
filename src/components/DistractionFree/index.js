@@ -27,6 +27,7 @@ const Header = glamorous.header({
 
 const Body = glamorous.article({
   backgroundColor: WHITE,
+  fontFamily: 'Roboto, Arial, sans-serif',
   height: '100%',
   maxWidth: '1158px',
   minHeight: '640px',
@@ -37,12 +38,7 @@ const Button = glamorous.button({
   border: 0,
 });
 
-const DistractionFree = ({
-  children,
-  onClick,
-  arrowLeftTitle,
-  ...props
-}) => {
+const DistractionFree = ({ children, onClick, arrowLeftTitle, ...props }) => {
   return (
     <Background {...props}>
       <Header>
@@ -52,9 +48,7 @@ const DistractionFree = ({
           </ArrowLeft>
         </Button>
       </Header>
-      <Body>
-        {children}
-      </Body>
+      <Body>{children}</Body>
     </Background>
   );
 };
