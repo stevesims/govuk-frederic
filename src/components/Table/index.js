@@ -7,8 +7,8 @@ const TableContainer = glamorous('table', {
   forwardProps: ['name'],
 })(
   {
-    fontFamily: 'nta, Arial, sans-serif',
     display: 'table',
+    fontFamily: 'nta, Arial, sans-serif',
     width: '100%',
   },
   ({ flexibleColumns }) => ({ tableLayout: flexibleColumns ? 'auto' : 'fixed' }),

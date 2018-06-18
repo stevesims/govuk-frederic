@@ -16,7 +16,7 @@ test(
   'Component - Count displays number passed in correctly',
   assert => {
     const component = shallow(<Count value={4}/>);
-    assert.equal(component.text(), '4');
+    assert.equal(component.find('span').text(), '4');
     assert.end();
   }
 );

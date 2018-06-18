@@ -6,6 +6,9 @@ import Arrow from '../Arrow';
 
 const RotatingButton = glamorous.button(
   {
+    ':focus': {
+      outline: 'none',
+    },
     background: 'none',
     border: 'none',
     cursor: 'pointer',

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import { Collapse } from 'react-collapse';
-import { FONT_SIZE, LINE_HEIGHT } from '@govuk-react/constants';
+import { FONT_SIZE } from '@govuk-react/constants';
 
 import OpenButton from '../OpenButton';
 

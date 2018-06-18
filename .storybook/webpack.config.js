@@ -27,15 +27,6 @@ module.exports = {
         use: 'url-loader?limit=8192'
       },
       {
-        // https://github.com/jtangelder/sass-loader
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "eslint-loader"
