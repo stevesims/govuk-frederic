@@ -1,0 +1,43 @@
+{
+  "name": "govuk-frederic",
+  "version": "0.0.1",
+  "dependencies": {
+    "@govuk-frederic/arrow": "^0.0.1",
+    "@govuk-frederic/arrow-left": "^0.0.1",
+    "@govuk-frederic/compact-table-accordion-group": "^0.0.1",
+    "@govuk-frederic/count": "^0.0.1",
+    "@govuk-frederic/countdown-text-area": "^0.0.1",
+    "@govuk-frederic/counter-bar": "^0.0.1",
+    "@govuk-frederic/distraction-free": "^0.0.1",
+    "@govuk-frederic/header-button": "^0.0.1",
+    "@govuk-frederic/keyline": "^0.0.1",
+    "@govuk-frederic/open-button": "^0.0.1",
+    "@govuk-frederic/remove-button": "^0.0.1",
+    "@govuk-frederic/result-count": "^0.0.1",
+    "@govuk-frederic/result-count-title": "^0.0.1",
+    "@govuk-frederic/spinner": "^0.0.1",
+    "@govuk-frederic/table": "^0.0.1",
+    "@govuk-frederic/table-accordion-group": "^0.0.1",
+    "@govuk-frederic/title-result-count": "^0.0.1",
+    "govuk-colours": "^1.0.3"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=16.2.0"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "Steve Sims",
+  "license": "MIT",
+  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
+  "description": "govuk-frederic: Frederic project specific components",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

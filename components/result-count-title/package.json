@@ -1,0 +1,28 @@
+{
+  "name": "@govuk-frederic/result-count-title",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@storybook/addon-knobs": "^3.4.2"
+  },
+  "peerDependencies": {
+    "emotion": ">=9",
+    "react-emotion": ">=9",
+    "prop-types": ">=15",
+    "react": ">=16.2.0"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "Tarandeep Singh Chauhan",
+  "license": "MIT",
+  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
+  "description": "govuk-frederic: Frederic project specific components.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

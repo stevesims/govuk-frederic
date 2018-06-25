@@ -1,0 +1,8 @@
+---
+pipeline:
+  build:
+    commands:
+      - yarn
+      - yarn build:sync
+      - yarn test
+    image: "node:8"

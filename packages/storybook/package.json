@@ -1,0 +1,56 @@
+{
+  "name": "@govuk-frederic/storybook",
+  "version": "0.0.1",
+  "dependencies": {
+    "@govuk-frederic/arrow": "^0.0.1",
+    "@govuk-frederic/arrow-left": "^0.0.1",
+    "@govuk-frederic/compact-table-accordion-group": "^0.0.1",
+    "@govuk-frederic/count": "^0.0.1",
+    "@govuk-frederic/countdown-text-area": "^0.0.1",
+    "@govuk-frederic/counter-bar": "^0.0.1",
+    "@govuk-frederic/distraction-free": "^0.0.1",
+    "@govuk-frederic/header-button": "^0.0.1",
+    "@govuk-frederic/keyline": "^0.0.1",
+    "@govuk-frederic/open-button": "^0.0.1",
+    "@govuk-frederic/remove-button": "^0.0.1",
+    "@govuk-frederic/result-count": "^0.0.1",
+    "@govuk-frederic/result-count-title": "^0.0.1",
+    "@govuk-frederic/spinner": "^0.0.1",
+    "@govuk-frederic/table": "^0.0.1",
+    "@govuk-frederic/table-accordion-group": "^0.0.1",
+    "@govuk-frederic/title-result-count": "^0.0.1",
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/addon-knobs": "^3.4.1",
+    "@storybook/addon-links": "^3.4.1",
+    "@storybook/addons": "^3.4.1",
+    "@storybook/react": "^3.4.1",
+    "@storybook/storybook-deployer": "^2.2.0",
+    "govuk-colours": "^1.0.3",
+    "normalize.css": "^8.0.0",
+    "react-final-form": "^3.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=16.2.0"
+  },
+  "devDependencies": {
+    "react-chromatic": "^0.8.3"
+  },
+  "scripts": {
+    "start": "start-storybook -p 9009",
+    "storybook": "start-storybook -p 9009",
+    "build": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "chromatic-test": "chromatic test --storybook-addon --exit-zero-on-changes"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "Steve Sims",
+  "license": "MIT",
+  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
+  "description": "govuk-frederic: Frederic project specific components",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

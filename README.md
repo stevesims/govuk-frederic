@@ -1,37 +1,27 @@
-# Frederic react-components
+# govuk-frederic
 
-Install dependencies
+- Frederic component library. More detailed description forthcoming.
 
-`npm i`
+## Usage
 
-Link the project so it can be used by other applications (e.g. the analogy app)
+```sh
+npm install govuk-frederic emotion react-emotion --save
+```
 
-`npm link`
+```js
+import { Arrow } from 'govuk-frederic';
 
-Start Storybook
+const Page = () => (
+  <div>
+    <Arrow />
+  </div>
+);
+```
 
-`npm run storybook`
+See the [Storybook](https://{placeholder}.github.io/govuk-frederic) for examples of all available components.
 
+## Contributors
 
-## Releasing
-
-New versions of @frederic/react-components can now be imported using the regular import process.
-
-
-## Testing
-
-To run unit tests and eslint use
-
-`npm run test`
-
-Test coverage can be checked using
-
-`npm run test-cover`
-
-Continuous test watching with
-
-`npm run test-unit-watch`
-
-Run tests connected to the node debugger via
-
-`npm run test-unit:debug`
+- [Steve Sims](https://github.com/stevesims)
+- [Taran Chauhan](https://github.com/taranchauhan)
+- [Gavin Orland](https://github.com/gavinorland)
