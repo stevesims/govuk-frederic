@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultCount matches snapshot 1`] = `
+.emotion-0 {
+  background: yellow;
+  color: blue;
+  display: inline-block;
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 1px 4px;
+  text-align: center;
+}
+
+<span
+  className="emotion-0 emotion-1"
+  color="blue"
+>
+  000
+</span>
+`;

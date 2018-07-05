@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DistractionFree matches snapshot 1`] = `
+<Background>
+  <Header>
+    <Button
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+        }
+      }
+    >
+      <ArrowLeft
+        color="#ffffff"
+        fill="#ffffff"
+        width={28}
+      >
+        Sample title
+      </ArrowLeft>
+    </Button>
+  </Header>
+  <Body>
+    Sample text
+  </Body>
+</Background>
+`;

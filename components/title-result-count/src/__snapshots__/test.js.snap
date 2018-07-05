@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleResultCount matches snapshot 1`] = `
+<Wrapper>
+  <Title>
+    Sample title
+  </Title>
+  <Styled(span)>
+    3
+  </Styled(span)>
+</Wrapper>
+`;

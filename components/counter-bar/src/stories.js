@@ -49,7 +49,7 @@ stories.add('Component default', () =>
       { id: 'pqr', name: 'Counter 6', score: 1 },
       { id: 'stu', name: 'Counter 7', score: 0 },
     ]}
-  />
+  />,
 );
 
 stories.add('Active Counter', () =>
@@ -61,7 +61,7 @@ stories.add('Active Counter', () =>
       { active: true, id: 'def', name: 'Counter 2', score: 2 },
       { id: 'ghi', name: 'Counter 3', score: 2 },
     ]}
-  />
+  />,
 );
 
 stories.add('Active Title', () =>
@@ -74,7 +74,7 @@ stories.add('Active Title', () =>
       { id: 'def', name: 'Counter 2', score: 2 },
       { id: 'ghi', name: 'Counter 3', score: 0 },
     ]}
-  />
+  />,
 );
 
 stories.add('Active Counter and Title on click', () => <ControlledCounterBar />);
@@ -110,7 +110,7 @@ stories.add('CounterBar with padded container', () =>
         { id: 'stu', name: 'Counter 7', score: 2 },
       ]}
     />
-  </div>
+  </div>,
 );
 
 stories.add('Zero/no scores', () =>
@@ -122,5 +122,5 @@ stories.add('Zero/no scores', () =>
       { id: 'def', name: 'Counter 2' },
       { id: 'ghi', name: 'Counter 3', score: 0 },
     ]}
-  />
+  />,
 );

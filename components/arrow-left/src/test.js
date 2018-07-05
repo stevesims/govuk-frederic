@@ -1,13 +1,15 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
+
 import Component from '.';
 
 expect.extend(createMatchers(emotion));
-let wrapper;
 
 describe('ArrowLeft', () => {
+  let wrapper;
+  
   it('renders without crashing', () => {
     wrapper = shallow(<Component />);
   });

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table matches snapshot 1`] = `
+<TableContainer
+  flexibleColumns={true}
+  name="name"
+>
+  <thead>
+    <tr>
+      <TableHeading
+        key="0"
+        name="one"
+      >
+        Heading 4
+      </TableHeading>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="0"
+    >
+      <TableHeading
+        columnCount={1}
+        key="0"
+        rowHeading={true}
+      >
+        Content 1-4
+      </TableHeading>
+    </tr>
+    <tr
+      key="1"
+    >
+      <TableHeading
+        columnCount={1}
+        key="0"
+        rowHeading={true}
+      >
+        Content 2-4
+      </TableHeading>
+    </tr>
+    <tr
+      key="2"
+    >
+      <TableHeading
+        columnCount={1}
+        key="0"
+        rowHeading={true}
+      >
+        Content 3-4
+      </TableHeading>
+    </tr>
+  </tbody>
+</TableContainer>
+`;

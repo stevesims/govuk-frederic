@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableAccordionGroup matches snapshot 1`] = `
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.emotion-0 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  padding: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  width: 20px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  padding-left: 16px;
+}
+
+<TableAccordionGroup
+  changeOnTitleClick={true}
+  expanded="Expanded"
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "open": true,
+          },
+        ],
+      ],
+    }
+  }
+  open={false}
+>
+  <Container>
+    <div
+      className="emotion-7 emotion-8"
+    >
+      <OpenButton
+        onChange={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "open": true,
+                },
+              ],
+            ],
+          }
+        }
+        open={false}
+      >
+        <Styled(button)
+          onClick={[Function]}
+          open={false}
+        >
+          <button
+            className="emotion-0"
+            onClick={[Function]}
+            open={false}
+          >
+            <Arrow
+              fill="#0C60A2"
+              width={20}
+            >
+              <svg
+                height="20px"
+                viewBox="0 0 6 4"
+                width="20px"
+              >
+                <polygon
+                  fill="#0C60A2"
+                  points="3 4 6 1 0 1"
+                />
+              </svg>
+            </Arrow>
+          </button>
+        </Styled(button)>
+      </OpenButton>
+      <Title
+        clickable={true}
+        onClick={[Function]}
+      >
+        <header
+          className="emotion-1 emotion-2"
+          onClick={[Function]}
+        />
+      </Title>
+      <Items>
+        <div
+          className="emotion-5 emotion-6"
+        >
+          <FirstItem>
+            <div
+              className="emotion-3 emotion-4"
+            >
+              Test
+            </div>
+          </FirstItem>
+          <Collapse
+            fixedHeight={-1}
+            forceInitialAnimation={false}
+            hasNestedCollapse={false}
+            isOpened={false}
+            onMeasure={[Function]}
+            onRender={[Function]}
+            onRest={[Function]}
+            style={Object {}}
+            theme={
+              Object {
+                "collapse": "ReactCollapse--collapse",
+                "content": "ReactCollapse--content",
+              }
+            }
+          >
+            <Motion
+              defaultStyle={
+                Object {
+                  "height": 0,
+                }
+              }
+              onRest={[Function]}
+              style={
+                Object {
+                  "height": 0,
+                }
+              }
+            >
+              <div
+                className="ReactCollapse--collapse"
+                style={
+                  Object {
+                    "height": 0,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <div
+                  className="ReactCollapse--content"
+                >
+                  Expanded
+                </div>
+              </div>
+            </Motion>
+          </Collapse>
+        </div>
+      </Items>
+    </div>
+  </Container>
+</TableAccordionGroup>
+`;

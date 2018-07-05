@@ -7,12 +7,12 @@ import Component from '.';
 
 expect.extend(createMatchers(emotion));
 
-describe('CompactTableAccordionGroup', () => {
+describe('TableAccordionGroup', () => {
   let wrapper;
   const changeHandler = jest.fn();
 
   it('renders with only required properties', () => {
-    wrapper = shallow(<Component expanded="Expanded" />);
+    wrapper = shallow(<Component expanded="Expanded">Test</Component>);
   });
 
   it('renders style rules', () => {
@@ -29,7 +29,7 @@ describe('CompactTableAccordionGroup', () => {
     ).toBe('Example title');
   });
 
-  it('triggers onChange when open button is clicked', () => {
+  it('triggers onChange when OpenButton is clicked', () => {
     wrapper = mount(
       <Component expanded="Expanded" onChange={changeHandler}>
         Test
@@ -38,8 +38,8 @@ describe('CompactTableAccordionGroup', () => {
     wrapper.find('OpenButton').simulate('click');
     expect(changeHandler).toHaveBeenCalledTimes(1);
   });
-
-  it('does not trigger onChange when title is clicked and changeOnTitleClick is false', () => {
+  
+  it('does not trigger onChange when title is clicked  and changeOnTitleClick is not true', () => {
     changeHandler.mockReset();
     wrapper.find('Title').simulate('click');
     expect(changeHandler).not.toHaveBeenCalled();

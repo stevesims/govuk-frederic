@@ -35,8 +35,6 @@ const StyledCountdown = styled('div')({
   right: '10px',
 });
 
-StyledCountdown.displayName = 'StyledCountdown';
-
 const CountdownTextarea = props => {
   const { maxLength, noMaxLengthAttr, positiveOnly, ...input } = props;
 

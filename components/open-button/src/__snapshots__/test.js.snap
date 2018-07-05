@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpenButton matches snapshot 1`] = `
+<RotatingButton
+  onClick={[Function]}
+>
+  <Arrow
+    fill="#0C60A2"
+    width={20}
+  />
+</RotatingButton>
+`;

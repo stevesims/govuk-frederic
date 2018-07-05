@@ -98,7 +98,7 @@ CounterBar.propTypes = {
     PropTypes.shape({
       active: PropTypes.bool,
       id: PropTypes.any.isRequired,
-      name: PropTypes.string.isRequired,
+      name: PropTypes.string,
       score: PropTypes.number,
     }),
   ),

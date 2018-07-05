@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterBar matches snapshot 1`] = `
+<Container
+  name="test"
+>
+  <CountWrapper
+    disabled={false}
+    onClick={[Function]}
+  >
+    <ResultCountTitle
+      count={4}
+      countBackgroundColor="#b10e1e"
+      countColor="#ffffff"
+    >
+      Test Title
+    </ResultCountTitle>
+  </CountWrapper>
+  <Counter
+    active={true}
+    disabled={false}
+    empty={false}
+    key="abc"
+    name="abc"
+    onClick={[Function]}
+  >
+    <ResultCountTitle
+      count={1}
+      countBackgroundColor="#b10e1e"
+      countColor="#ffffff"
+    >
+      abc
+    </ResultCountTitle>
+  </Counter>
+  <Counter
+    disabled={false}
+    empty={false}
+    key="def"
+    name="def"
+    onClick={[Function]}
+  >
+    <ResultCountTitle
+      count={3}
+      countBackgroundColor="#b10e1e"
+      countColor="#ffffff"
+    >
+      def
+    </ResultCountTitle>
+  </Counter>
+</Container>
+`;

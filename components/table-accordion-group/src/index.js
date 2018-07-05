@@ -27,7 +27,7 @@ const TableAccordionGroup = ({ title, children, expanded, onChange, open, change
   return (
     <Container>
       <OpenButton open={open} onChange={onChange} />
-      <Title clickable={changeOnTitleClick} onClick={changeOnTitleClick && (() => onChange({ open: !open }))}>
+      <Title clickable={changeOnTitleClick} onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined }>
         {title}
       </Title>
       <Items>

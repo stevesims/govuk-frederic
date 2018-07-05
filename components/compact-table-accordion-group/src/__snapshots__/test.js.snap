@@ -56,7 +56,6 @@ exports[`CompactTableAccordionGroup matches snapshot 1`] = `
     }
   }
   open={false}
-  title="Example title"
 >
   <Container>
     <div
@@ -114,9 +113,7 @@ exports[`CompactTableAccordionGroup matches snapshot 1`] = `
             <header
               className="emotion-1 emotion-2"
               onClick={[Function]}
-            >
-              Example title
-            </header>
+            />
           </Title>
         </div>
       </TitleRow>

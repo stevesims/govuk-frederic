@@ -6,14 +6,14 @@ import Keyline from '@govuk-frederic/keyline';
 const stories = storiesOf('Buttons/HeaderButton', module);
 
 stories.add('Component default', () =>
-  <HeaderButton>One</HeaderButton>
+  <HeaderButton>One</HeaderButton>,
 );
 
 stories.add('Multiple Header Buttons', () =>
   <Fragment>
     <HeaderButton>One</HeaderButton>
     <HeaderButton>Two</HeaderButton>
-  </Fragment>
+  </Fragment>,
 );
 
 stories.add('Multiple Header Buttons with keyline', () =>
@@ -22,13 +22,13 @@ stories.add('Multiple Header Buttons with keyline', () =>
       <HeaderButton>One</HeaderButton>
       <HeaderButton>Two</HeaderButton>
     </Keyline>
-  </Fragment>
+  </Fragment>,
 );
 
 stories.add('Active Header Button', () =>
-  <HeaderButton active>On</HeaderButton>
+  <HeaderButton active>On</HeaderButton>,
 );
 
 stories.add('Disable Header Button', () =>
-  <HeaderButton disabled>Off</HeaderButton>
+  <HeaderButton disabled>Off</HeaderButton>,
 );

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountdownTextarea matches snapshot 1`] = `
+<StyledTextArea
+  over={false}
+>
+  <StyledTextAreaField
+    value="Test"
+  />
+</StyledTextArea>
+`;
