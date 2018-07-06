@@ -2,9 +2,12 @@
 
 exports[`ResultCountTitle matches snapshot 1`] = `
 <Wrapper>
-  <Styled(span)>
+  <ResultCount
+    backgroundColor="#6f777b"
+    color="#ffffff"
+  >
     000
-  </Styled(span)>
+  </ResultCount>
   <Title>
     Sample title
   </Title>

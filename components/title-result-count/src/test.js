@@ -31,7 +31,7 @@ describe('TitleResultCount', () => {
     wrapper.setProps({ count: 3 });
     expect(
       wrapper
-        .find('Styled(span)')
+        .find('ResultCount')
         .childAt(0)
         .text(),
     ).toBe('3');

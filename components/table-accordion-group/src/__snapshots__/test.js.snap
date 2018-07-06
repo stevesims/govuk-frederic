@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TableAccordionGroup matches snapshot 1`] = `
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,7 +33,7 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
   cursor: pointer;
   padding-left: 16px;
 }
@@ -56,7 +56,7 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
 >
   <Container>
     <div
-      className="emotion-7 emotion-8"
+      className="emotion-8 emotion-9"
     >
       <OpenButton
         onChange={
@@ -72,12 +72,12 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
         }
         open={false}
       >
-        <Styled(button)
+        <RotatingButton
           onClick={[Function]}
           open={false}
         >
           <button
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             onClick={[Function]}
             open={false}
           >
@@ -97,24 +97,24 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
               </svg>
             </Arrow>
           </button>
-        </Styled(button)>
+        </RotatingButton>
       </OpenButton>
       <Title
         clickable={true}
         onClick={[Function]}
       >
         <header
-          className="emotion-1 emotion-2"
+          className="emotion-2 emotion-3"
           onClick={[Function]}
         />
       </Title>
       <Items>
         <div
-          className="emotion-5 emotion-6"
+          className="emotion-6 emotion-7"
         >
           <FirstItem>
             <div
-              className="emotion-3 emotion-4"
+              className="emotion-4 emotion-5"
             >
               Test
             </div>

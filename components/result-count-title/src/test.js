@@ -16,7 +16,7 @@ describe('ResultCountTitle', () => {
   });
 
   it('renders with count', () => {
-    expect(wrapper.find('Styled(span)').childAt(0).text()).toBe('000');
+    expect(wrapper.find('ResultCount').childAt(0).text()).toBe('000');
   });
 
   it('renders with title', () => {
