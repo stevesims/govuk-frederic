@@ -7,7 +7,16 @@ const StyledSpinner = styled('div')(props => ({
   opacity: props.visible ? 1 : 0,
 }));
 
-const Spinner = props => {
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Spinner visible />
+ * ```
+ */
+const Spinner = (props) => {
   const { visible } = props;
 
   return (

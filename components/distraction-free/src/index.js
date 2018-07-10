@@ -38,6 +38,24 @@ const Button = styled('button')({
   border: 0,
 });
 
+/**
+ *
+ * ### Usage
+
+ * Simple
+ * ```jsx
+ * <DistractionFree onClick={(e) => {}}>
+ *    content goes here
+ * </DistractionFree>
+ * ```
+ * 
+ * With title
+ * ```jsx
+ * <DistractionFree arrowLeftTitle="Back to example" onClick={(e) => {}}>
+ *    content goes here
+ * </DistractionFree>
+ * ```
+ */
 const DistractionFree = ({ children, onClick, arrowLeftTitle, ...props }) => {
   return (
     <Background {...props}>

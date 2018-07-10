@@ -1,7 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withKnobs } from '@storybook/addon-knobs/react';
 
 import CompactTableAccordionGroup from '.';
+import ReadMe from '../README.md';
 import ResultCountTitle from '@govuk-frederic/result-count-title';
 import Spinner from '@govuk-frederic/spinner';
 
@@ -95,28 +98,32 @@ const ManagedCompactTableAccordionGroup = manageState(CompactTableAccordionGroup
 const arrayExampleItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
 
 const stories = storiesOf('Tables/CompactTableAccordionGroup', module);
+const examples = storiesOf('Tables/CompactTableAccordionGroup/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withKnobs);
 
 stories.add('Component default', () => <CompactTableAccordionGroup title="Title" expanded="expanded">
       Children
 </CompactTableAccordionGroup>);
 
-stories.add('no children', () => <CompactTableAccordionGroup open title="Title" expanded="expanded"/>);
+examples.add('No children', () => <CompactTableAccordionGroup open title="Title" expanded="expanded"/>);
 
-stories.add('open', () => <CompactTableAccordionGroup open title="Title" expanded="expanded">
+examples.add('Open', () => <CompactTableAccordionGroup open title="Title" expanded="expanded">
       Children
 </CompactTableAccordionGroup>);
 
-stories.add('state managed', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded">
+examples.add('State managed', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded">
           Children
 </ManagedCompactTableAccordionGroup>);
 
-stories.add('state managed without children', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded"/>);
+examples.add('State managed without children', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded"/>);
 
-stories.add('changeOnTitleClick', () => <ManagedCompactTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
+examples.add('changeOnTitleClick', () => <ManagedCompactTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
           Children
 </ManagedCompactTableAccordionGroup>);
 
-stories.add('array', () => <ManagedCompactTableAccordionGroup
+examples.add('array', () => <ManagedCompactTableAccordionGroup
   expanded={
     arrayExampleItems.map((item, index) => {
       if (index) {
@@ -128,4 +135,4 @@ stories.add('array', () => <ManagedCompactTableAccordionGroup
   {arrayExampleItems[0]}
 </ManagedCompactTableAccordionGroup>);
 
-stories.add('async', () => <CompactTableAccordionGroupAsyncExample />);
+examples.add('async', () => <CompactTableAccordionGroupAsyncExample />);

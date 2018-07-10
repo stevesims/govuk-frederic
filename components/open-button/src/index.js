@@ -22,6 +22,19 @@ const RotatingButton = styled('button')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * import manageState from 'manage-state';
+ * 
+ * const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
+ * 
+ * <ManagedOpenButton />
+ * ```
+ */
 const OpenButton = ({ open, onChange }) => (
   <RotatingButton open={open} onClick={() => onChange && onChange({ open: !open })}>
     <Arrow width={20} />

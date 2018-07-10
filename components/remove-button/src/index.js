@@ -19,6 +19,20 @@ const RemoveButtonInner = styled('button')({
   width: '20px',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <RemoveButton title="Remove" />
+ * ```
+ * 
+ * Next to some text
+ * ```jsx
+ * <div><span>Text here</span><RemoveButton title="Remove" /></div>
+ * ```
+ */
 const RemoveButton = props => <RemoveButtonInner {...props}>X</RemoveButtonInner>;
 
 export default RemoveButton;

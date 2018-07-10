@@ -32,7 +32,8 @@
     "collectCoverageFrom": [
       "<rootDir>/{components,packages}/*/src/**.js",
       "!<rootDir>/{components,packages}/*/src/**/{stories,example,fixtures}.js",
-      "!<rootDir>/packages/storybook/**"
+      "!<rootDir>/packages/storybook/**",
+      "!<rootDir>/packages/api-docs/**"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
     "testMatch": [

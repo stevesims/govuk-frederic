@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
+import { GREY_1, WHITE } from 'govuk-colours';
 
 import Component from '.';
 
@@ -21,12 +22,15 @@ describe('ResultCount', () => {
   });
 
   it('applies style rules according to props', () => {
+    expect(wrapper).toHaveStyleRule('color', WHITE);
+    expect(wrapper).toHaveStyleRule('background', GREY_1);
     wrapper = shallow(<Component color="blue" backgroundColor="yellow">000</Component>);
     expect(wrapper).toHaveStyleRule('color', 'blue');
     expect(wrapper).toHaveStyleRule('background', 'yellow');
   });
 
   it('matches snapshot', () => {
+    wrapper = mount(<Component>0</Component>);
     expect(wrapper).toMatchSnapshot();
   });
 });

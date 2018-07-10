@@ -115,6 +115,11 @@ exports[`CompactTableAccordionGroup matches snapshot 1`] = `
               onClick={[Function]}
             />
           </Title>
+          <div>
+            <div>
+              Test
+            </div>
+          </div>
         </div>
       </TitleRow>
       <Collapse

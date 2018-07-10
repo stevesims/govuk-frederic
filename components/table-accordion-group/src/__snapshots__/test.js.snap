@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TableAccordionGroup matches snapshot 1`] = `
-.emotion-8 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,7 +56,7 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
 >
   <Container>
     <div
-      className="emotion-8 emotion-9"
+      className="emotion-4 emotion-5"
     >
       <OpenButton
         onChange={
@@ -108,65 +108,57 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
           onClick={[Function]}
         />
       </Title>
-      <Items>
-        <div
-          className="emotion-6 emotion-7"
+      <div>
+        <div>
+          Test
+        </div>
+        <Collapse
+          fixedHeight={-1}
+          forceInitialAnimation={false}
+          hasNestedCollapse={false}
+          isOpened={false}
+          onMeasure={[Function]}
+          onRender={[Function]}
+          onRest={[Function]}
+          style={Object {}}
+          theme={
+            Object {
+              "collapse": "ReactCollapse--collapse",
+              "content": "ReactCollapse--content",
+            }
+          }
         >
-          <FirstItem>
-            <div
-              className="emotion-4 emotion-5"
-            >
-              Test
-            </div>
-          </FirstItem>
-          <Collapse
-            fixedHeight={-1}
-            forceInitialAnimation={false}
-            hasNestedCollapse={false}
-            isOpened={false}
-            onMeasure={[Function]}
-            onRender={[Function]}
-            onRest={[Function]}
-            style={Object {}}
-            theme={
+          <Motion
+            defaultStyle={
               Object {
-                "collapse": "ReactCollapse--collapse",
-                "content": "ReactCollapse--content",
+                "height": 0,
+              }
+            }
+            onRest={[Function]}
+            style={
+              Object {
+                "height": 0,
               }
             }
           >
-            <Motion
-              defaultStyle={
-                Object {
-                  "height": 0,
-                }
-              }
-              onRest={[Function]}
+            <div
+              className="ReactCollapse--collapse"
               style={
                 Object {
                   "height": 0,
+                  "overflow": "hidden",
                 }
               }
             >
               <div
-                className="ReactCollapse--collapse"
-                style={
-                  Object {
-                    "height": 0,
-                    "overflow": "hidden",
-                  }
-                }
+                className="ReactCollapse--content"
               >
-                <div
-                  className="ReactCollapse--content"
-                >
-                  Expanded
-                </div>
+                Expanded
               </div>
-            </Motion>
-          </Collapse>
-        </div>
-      </Items>
+            </div>
+          </Motion>
+        </Collapse>
+      </div>
     </div>
   </Container>
 </TableAccordionGroup>

@@ -1,8 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 import manageState from 'manage-state';
 
 import TableAccordionGroup from '.';
+import ReadMe from '../README.md';
 import ResultCountTitle from '@govuk-frederic/result-count-title';
 import Spinner from '@govuk-frederic/spinner';
 
@@ -94,24 +97,28 @@ const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
 const arrayExampleItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
 
 const stories = storiesOf('Tables/TableAccordionGroup', module);
+const examples = storiesOf('Tables/TableAccordionGroup/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withKnobs);
 
 stories.add('Component default', () => (<TableAccordionGroup title="Title" expanded="expanded">
       Children
 </TableAccordionGroup>));
 
-stories.add('open', () => (<TableAccordionGroup open title="Title" expanded="expanded">
+examples.add('Open', () => (<TableAccordionGroup open title="Title" expanded="expanded">
       Children
 </TableAccordionGroup>));
 
-stories.add('state managed', () => (<ManagedTableAccordionGroup title="Title" expanded="expanded">
+examples.add('State managed', () => (<ManagedTableAccordionGroup title="Title" expanded="expanded">
           Children
 </ManagedTableAccordionGroup>));
 
-stories.add('changeOnTitleClick', () => (<ManagedTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
+examples.add('changeOnTitleClick', () => (<ManagedTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
           Children
 </ManagedTableAccordionGroup>));
 
-stories.add('array', () => (<ManagedTableAccordionGroup
+examples.add('array', () => (<ManagedTableAccordionGroup
   expanded={
     arrayExampleItems.map((item, index) => {
       if (index) {
@@ -123,4 +130,4 @@ stories.add('array', () => (<ManagedTableAccordionGroup
   {arrayExampleItems[0]}
 </ManagedTableAccordionGroup>));
 
-stories.add('async', () => <TableAccordionGroupAsyncExample />);
+examples.add('async', () => <TableAccordionGroupAsyncExample />);

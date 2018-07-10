@@ -2,8 +2,8 @@
 
 exports[`ResultCount matches snapshot 1`] = `
 .emotion-0 {
-  background: yellow;
-  color: blue;
+  background: #6f777b;
+  color: #ffffff;
   display: inline-block;
   font-family: Roboto,Arial,sans-serif;
   font-size: 15px;
@@ -14,10 +14,20 @@ exports[`ResultCount matches snapshot 1`] = `
   text-align: center;
 }
 
-<span
-  className="emotion-0 emotion-1"
-  color="blue"
+<ResultCount
+  backgroundColor="#6f777b"
+  color="#ffffff"
 >
-  000
-</span>
+  <StyledResultCount
+    backgroundColor="#6f777b"
+    color="#ffffff"
+  >
+    <span
+      className="emotion-0 emotion-1"
+      color="#ffffff"
+    >
+      0
+    </span>
+  </StyledResultCount>
+</ResultCount>
 `;

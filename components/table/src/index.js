@@ -48,6 +48,35 @@ const TableData = styled('td', {
   verticalAlign: 'baseline',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={exampleNames} />
+ * ```
+ * 
+ * rowIncludesHeading
+ * ```jsx
+ * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} rowIncludesHeading />
+ * ```
+ * 
+ * rowIncludesHeading, no titles
+ * ```jsx
+ * <Table rows={arrayExampleContent} rowIncludesHeading names={exampleNames} />
+ * ```
+ * 
+ * rowIncludesHeading, no titles, small single row
+ * ```jsx
+ * <Table rows={[['title', 'value']]} rowIncludesHeading />
+ * ```
+ * 
+ * rowIncludesHeading, with flexible columns
+ * ```jsx
+ * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading />
+ * ```
+ */
 const Table = ({ name, names = [], rowIncludesHeading, titles, rows, flexibleColumns }) => (
   <TableContainer name={name} flexibleColumns={flexibleColumns}>
     {titles &&

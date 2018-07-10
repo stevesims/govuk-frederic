@@ -1,7 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import CounterBar from '.';
+import ReadMe from '../README.md';
 
 class ControlledCounterBar extends React.Component {
   state = {
@@ -35,6 +38,10 @@ class ControlledCounterBar extends React.Component {
 }
 
 const stories = storiesOf('Count/CounterBar', module);
+const examples = storiesOf('Count/CounterBar/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withKnobs);
 
 stories.add('Component default', () =>
   <CounterBar
@@ -52,7 +59,7 @@ stories.add('Component default', () =>
   />,
 );
 
-stories.add('Active Counter', () =>
+examples.add('Active Counter', () =>
   <CounterBar
     listTitle="All counters"
     name="name"
@@ -64,7 +71,7 @@ stories.add('Active Counter', () =>
   />,
 );
 
-stories.add('Active Title', () =>
+examples.add('Active Title', () =>
   <CounterBar
     activeTitle
     listTitle="All counters"
@@ -77,9 +84,9 @@ stories.add('Active Title', () =>
   />,
 );
 
-stories.add('Active Counter and Title on click', () => <ControlledCounterBar />);
+examples.add('Active Counter and Title on click', () => <ControlledCounterBar />);
 
-stories.add('Clickable Counters', () => <CounterBar
+examples.add('Clickable Counters', () => <CounterBar
   listTitle="All counters"
   name="name"
   counters={[
@@ -95,7 +102,7 @@ stories.add('Clickable Counters', () => <CounterBar
   onSelect={ (id) => alert(`Counter with id: ${id} selected.`) }
 />);
 
-stories.add('CounterBar with padded container', () =>
+examples.add('CounterBar with padded container', () =>
   <div style={{padding: '4px'}}>
     <CounterBar
       listTitle="All counters"
@@ -113,7 +120,7 @@ stories.add('CounterBar with padded container', () =>
   </div>,
 );
 
-stories.add('Zero/no scores', () =>
+examples.add('Zero/no scores', () =>
   <CounterBar
     listTitle="All counters"
     name="name"

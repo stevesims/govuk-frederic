@@ -20,9 +20,74 @@ const Title = styled('header')(({ clickable }) => (clickable ? { cursor: 'pointe
   paddingLeft: '16px',
 });
 
-const Items = styled('div')({});
-const FirstItem = styled('div')({});
-
+/**
+ * 
+ * ### Usage
+ * 
+ * State managed with children
+ * ```jsx
+ * import manageState from 'manage-state';
+ * 
+ * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
+ *   propsToState: ['open'],
+ * });
+ * 
+ * <ManagedTableAccordionGroup title="Title" expanded="expanded">
+ *   Children
+ * </ManagedTableAccordionGroup>
+ * ```
+ * 
+ * State managed without children
+ * ```jsx
+ * import manageState from 'manage-state';
+ * 
+ * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
+ *   propsToState: ['open'],
+ * });
+ * 
+ * <ManagedTableAccordionGroup title="Title" expanded="expanded"/>
+ * ```
+ * 
+ * Toggle open on title click with 'changeOnTitleClick' prop
+ * ```jsx
+ * import manageState from 'manage-state';
+ * 
+ * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
+ *   propsToState: ['open'],
+ * });
+ * 
+ * <ManagedTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
+ *   Children
+ * </ManagedTableAccordionGroup>
+ * ```
+ * 
+ * Array
+ * ```jsx
+ * import manageState from 'manage-state';
+ * 
+ * const arrayExampleItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+ * 
+ * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
+ *   propsToState: ['open'],
+ * });
+ * 
+ * 
+ * <ManagedTableAccordionGroup
+ *   expanded={
+ *   arrayExampleItems.map((item, index) => {
+ *     if (index) {
+ *       return <div>{item}</div>;
+ *     }
+ *     return null;
+ *   })}
+ * >
+ *   {arrayExampleItems[0]}
+ * </ManagedTableAccordionGroup>
+ * ```
+ *
+ * ### TODO:
+ * - Implement Async story example in CodeSandbox
+ */
 const TableAccordionGroup = ({ title, children, expanded, onChange, open, changeOnTitleClick }) => {
   return (
     <Container>
@@ -30,17 +95,17 @@ const TableAccordionGroup = ({ title, children, expanded, onChange, open, change
       <Title clickable={changeOnTitleClick} onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined }>
         {title}
       </Title>
-      <Items>
-        <FirstItem>{children}</FirstItem>
+      <div>
+        <div>{children}</div>
         <Collapse isOpened={open}>{expanded}</Collapse>
-      </Items>
+      </div>
     </Container>
   );
 };
 
 TableAccordionGroup.propTypes = {
   changeOnTitleClick: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   expanded: PropTypes.node.isRequired,
   onChange: PropTypes.func,
   open: PropTypes.bool,
@@ -49,6 +114,7 @@ TableAccordionGroup.propTypes = {
 
 TableAccordionGroup.defaultProps = {
   changeOnTitleClick: false,
+  children: undefined,
   open: false,
 };
 

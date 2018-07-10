@@ -6,6 +6,15 @@ const StyledCount = styled('div')({
   fontFamily: 'Roboto, Arial, sans-serif',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Count value="5" />
+ * ```
+ */
 const Count = ({ value, ...props }) => <StyledCount {...props}><span>{value}</span></StyledCount>;
 
 Count.propTypes = {
