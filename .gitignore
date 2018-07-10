@@ -20,7 +20,7 @@ yarn-error.log*
 /lib
 /storybook-static
 /es
-govuk-react-*.tgz
+govuk-frederic-*.tgz
 /dist
 /components/*/es
 
