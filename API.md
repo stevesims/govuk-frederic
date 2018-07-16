@@ -252,7 +252,7 @@ const ManagedCompactTableAccordionGroup = manageState(CompactTableAccordionGroup
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `changeOnTitleClick` |  | ```false``` | bool | 
- `children` | true | `````` | node | 
+ `children` |  | ```undefined``` | node | 
  `expanded` | true | `````` | node | 
  `onChange` |  | `````` | func | 
  `open` |  | ```false``` | bool | 
@@ -801,7 +801,7 @@ const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `changeOnTitleClick` |  | ```false``` | bool | 
- `children` | true | `````` | node | 
+ `children` |  | ```undefined``` | node | 
  `expanded` | true | `````` | node | 
  `onChange` |  | `````` | func | 
  `open` |  | ```false``` | bool | 

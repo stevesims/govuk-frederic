@@ -19,6 +19,12 @@ function getComponentFolderName(file) {
   let dir = dirs[dirs.length - 1];
   if (dir === 'src' || dir === 'lib') {
     dir = dirs[dirs.length - 2];
+  // Hmmm dirty hacksauce
+  // This is here to fix generating documentation for the table-of-contents component
+  // As the file that requires documentation lives within a subfolder of src, called 'Container'
+  // TODO: make better
+  } else if (dir === 'Container') {
+    dir = dirs[dirs.length - 3];
   }
   return dir;
 }

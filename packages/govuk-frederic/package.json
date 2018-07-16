@@ -18,6 +18,7 @@
     "@govuk-frederic/spinner": "^0.0.1",
     "@govuk-frederic/table": "^0.0.1",
     "@govuk-frederic/table-accordion-group": "^0.0.1",
+    "@govuk-frederic/table-of-contents": "^0.0.1",
     "@govuk-frederic/title-result-count": "^0.0.1",
     "govuk-colours": "^1.0.3"
   },
