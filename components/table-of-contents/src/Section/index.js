@@ -18,7 +18,6 @@ export class Entry extends Component {
     this.props.toc.addContent(this.props.id, this.props.title);
   }
 
-  // insert unmount that calls removeContent
   componentWillUnmount() {
     this.props.toc.removeContent(this.props.id);
   }
