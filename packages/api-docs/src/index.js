@@ -74,8 +74,6 @@ async function generateApiForFiles(files) {
     const file = files[i];
     if (shouldDocumentComponent(file)) {
       md += await generateApiForFile(file);
-    } else {
-      console.warn('not creating docs for', file);
     }
   }
   return md;
