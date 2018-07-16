@@ -38,7 +38,7 @@ const packageJson = () => {
   // also I'm not sure we need the storybook addons for all components,
   // can be added manually per component perhaps.
   const contents = `{
-  "name": "@rederic-react-components/${componentFolderName}",
+  "name": "@govuk-frederic/${componentFolderName}",
   "version": "${version}",
   "private": false,
   "publishConfig": {
@@ -72,7 +72,7 @@ const testScript = () => {
 import ReactDOM from 'react-dom';
 import ${componentName} from './';
 
-describe(${componentName}, () => {
+describe('${componentName}', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<${componentName}>Example</${componentName}>, div);

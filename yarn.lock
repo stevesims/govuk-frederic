@@ -939,12 +939,33 @@
   dependencies:
     govuk-colours "^1.0.3"
 
+"@govuk-react/constants@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@govuk-react/constants/-/constants-0.2.7.tgz#0be54d90a352dde8a96a82a20b6fe778b05807f1"
+  dependencies:
+    govuk-colours "^1.0.3"
+
 "@govuk-react/error-text@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@govuk-react/error-text/-/error-text-0.2.4.tgz#4a4643f1dce51345ffadce8b3119e7101c91b5ca"
   dependencies:
     "@govuk-react/constants" "^0.2.2"
     "@govuk-react/hoc" "^0.2.4"
+    govuk-colours "^1.0.3"
+
+"@govuk-react/grid-col@^0.2.4":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@govuk-react/grid-col/-/grid-col-0.2.7.tgz#81786a3520ed81971a716e14d56f815213edf2f0"
+  dependencies:
+    "@govuk-react/constants" "^0.2.7"
+    govuk-colours "^1.0.3"
+
+"@govuk-react/grid-row@^0.2.4":
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/@govuk-react/grid-row/-/grid-row-0.2.8.tgz#cb33dc9a65f7ae67387398eff2b9a5da4b701173"
+  dependencies:
+    "@govuk-react/constants" "^0.2.7"
+    "@govuk-react/layout" "^0.2.7"
     govuk-colours "^1.0.3"
 
 "@govuk-react/hint-text@^0.2.4":
@@ -984,6 +1005,13 @@
   dependencies:
     "@govuk-react/constants" "^0.2.2"
     "@govuk-react/hoc" "^0.2.4"
+    govuk-colours "^1.0.3"
+
+"@govuk-react/layout@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@govuk-react/layout/-/layout-0.2.7.tgz#52c6783bc53f108a3e2255e46d23c9d4693e3a73"
+  dependencies:
+    "@govuk-react/constants" "^0.2.7"
     govuk-colours "^1.0.3"
 
 "@govuk-react/storybook-components@^0.2.4":
@@ -4619,13 +4647,13 @@ envinfo@^5.7.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-5.10.0.tgz#503a9774ae15b93ea68bdfae2ccd6306624ea6df"
 
-enzyme-adapter-react-16@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.1.1.tgz#a8f4278b47e082fbca14f5bfb1ee50ee650717b4"
+"enzyme-adapter-react-16@npm:enzyme-react-adapter-future":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/enzyme-react-adapter-future/-/enzyme-react-adapter-future-1.1.3.tgz#f0c102f098086a0ad0270bbdaf9da5113297dc05"
   dependencies:
     enzyme-adapter-utils "^1.3.0"
     lodash "^4.17.4"
-    object.assign "^4.0.4"
+    object.assign "^4.1.0"
     object.values "^1.0.4"
     prop-types "^15.6.0"
     react-reconciler "^0.7.0"

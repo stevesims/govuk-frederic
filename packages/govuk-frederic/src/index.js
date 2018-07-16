@@ -18,4 +18,5 @@ export { default as ResultCountTitle } from '@govuk-frederic/result-count-title'
 export { default as Spinner } from '@govuk-frederic/spinner';
 export { default as Table } from '@govuk-frederic/table';
 export { default as TableAccordionGroup } from '@govuk-frederic/table-accordion-group';
+export { default as TableOfContents } from '@govuk-frederic/table-of-contents';
 export { default as TitleResultCount } from '@govuk-frederic/title-result-count';
