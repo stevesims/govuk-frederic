@@ -4,11 +4,11 @@ import styled from 'react-emotion';
 
 import ResultCount from '@govuk-frederic/result-count';
 
-const Wrapper = styled('div')(
-  {
-    display: 'inline-block',
-  },
-);
+const Wrapper = styled('div')({
+  display: 'inline-block',
+  whiteSpace: 'nowrap',
+  textOverflow: 'ellipsis',
+});
 
 const Title = styled('div')({
   display: 'inline-block',
@@ -26,7 +26,7 @@ const Title = styled('div')({
  * ```jsx
  * <ResultCountTitle count={3}>Title</ResultCountTitle>
  * ```
- * 
+ *
  * In black with count value 0
  * ```jsx
  * <ResultCountTitle count={0} countColor="black" countBackgroundColor="#dee0e2">Title</ResultCountTitle>

@@ -6,6 +6,8 @@ import ResultCount from '@govuk-frederic/result-count';
 
 const Wrapper = styled('div')({
   display: 'inline-block',
+  whiteSpace: 'nowrap',
+  textOverflow: 'ellipsis',
 });
 
 const Title = styled('div')({
@@ -26,7 +28,7 @@ const Title = styled('div')({
  *  Title Title Title
  * </TitleResultCount>
  * ```
- * 
+ *
  * Counter title with value 0 and override text and background colour.
  * ```jsx
  * <TitleResultCount count={0} countColor="black" countBackgroundColor="#dee0e2">

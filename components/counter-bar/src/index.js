@@ -8,7 +8,8 @@ import { BLACK, GREY_1, GREY_3, LINK_COLOUR, RED, WHITE, YELLOW } from 'govuk-co
 
 const OuterWrapper = styled('div')({
   display: 'flex',
-  flexWrap: 'nowrap',
+  flexWrap: 'wrap',
+  alignItems: 'flex-start',
   lineHeight: '1',
 });
 
@@ -18,7 +19,7 @@ const TotalWrapper = styled('a')(
       outline: `solid 4px ${YELLOW}`,
     },
     border: '0',
-    flex: '0 0 auto',
+    flex: '1',
     margin: '0 6px 6px 0',
     maxWidth: '250px',
     outline: 'none',
@@ -31,23 +32,17 @@ const TotalWrapper = styled('a')(
   }),
 );
 
-const CountersWrapper = styled('div')(
-  {
-    alignItems: 'flex-start',
-    display: 'flex',
-    marginRight: '-6px',
-    flex: '1',
-    flexWrap: 'wrap',
-  },
-);
+const CountersWrapper = styled('div')({
+  alignItems: 'flex-start',
+  display: 'flex',
+  marginRight: '-6px',
+  flex: '1',
+  flexWrap: 'wrap',
+});
 
 const CounterWrapper = styled(TotalWrapper)(
   {
-    ':last-child': {
-      marginRight: '0',
-    },
     color: WHITE,
-    flex: '1',
   },
   ({ active }) => ({
     background: active ? LINK_COLOUR : GREY_1,
@@ -181,7 +176,7 @@ const CounterWrapper = styled(TotalWrapper)(
  * Use a Link component for the total
  * ```jsx
  * import { HashRouter, Link } from 'react-router-dom';
- * 
+ *
  * <HashRouter>
  *   <CounterBar>
  *     <CounterBar.Total score={15} component={Link} to="/courses?sort=name'/">All counters</CounterBar.Total>
@@ -211,7 +206,7 @@ const CounterWrapper = styled(TotalWrapper)(
  * Use a Link component for a counter
  * ```jsx
  * import { HashRouter, Link } from 'react-router-dom';
- * 
+ *
  * <HashRouter>
  *   <CounterBar>
  *     <CounterBar.Total score={15}>All counters</CounterBar.Total>

@@ -6,17 +6,21 @@ exports[`CounterBar matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   line-height: 1;
 }
 
 .emotion-6 {
   border: 0px;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   margin: 0 6px 6px 0;
   max-width: 250px;
   outline: none;
@@ -30,6 +34,8 @@ exports[`CounterBar matches snapshot 1`] = `
 
 .emotion-4 {
   display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0 {
@@ -73,27 +79,20 @@ exports[`CounterBar matches snapshot 1`] = `
 
 .emotion-14 {
   border: 0px;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   margin: 0 6px 6px 0;
   max-width: 250px;
   outline: none;
   padding: 0 8px 0 0;
   background: #ffffff;
   color: #ffffff;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   background: #6f777b;
 }
 
 .emotion-14:focus {
   outline: solid 4px #ffbf47;
-}
-
-.emotion-14:last-child {
-  margin-right: 0px;
 }
 
 <HashRouter>

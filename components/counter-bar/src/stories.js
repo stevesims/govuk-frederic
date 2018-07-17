@@ -52,6 +52,17 @@ examples.add('Active total', () =>
   </CounterBar>),
 );
 
+examples.add('Without Counters wrapper', () =>
+  (<CounterBar>
+    <CounterBar.Total score={15}>All counters</CounterBar.Total>
+    <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+    <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+    <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+    <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+    <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+  </CounterBar>),
+);
+
 examples.add('Empty counters', () =>
   (<CounterBar>
     <CounterBar.Total score={7}>All counters</CounterBar.Total>
