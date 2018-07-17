@@ -1,15 +1,15 @@
 {
   "name": "@govuk-frederic/table-of-contents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@govuk-react/storybook-components": "^0.2.4",
     "@govuk-react/grid-col": "^0.2.4",
-    "@govuk-react/grid-row": "^0.2.4"
+    "@govuk-react/grid-row": "^0.2.4",
+    "@govuk-react/storybook-components": "^0.2.4"
   },
   "peerDependencies": {
     "prop-types": ">=15",

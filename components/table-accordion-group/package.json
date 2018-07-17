@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/table-accordion-group",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
@@ -10,10 +10,10 @@
   },
   "peerDependencies": {
     "emotion": ">=9",
-    "react-emotion": ">=9",
     "prop-types": ">=15",
     "react": ">=16.2.0",
-    "react-collapse": ">=4"
+    "react-collapse": ">=4",
+    "react-emotion": ">=9"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",

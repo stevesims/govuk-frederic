@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/count",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
