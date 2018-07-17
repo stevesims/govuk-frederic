@@ -4,9 +4,11 @@ import styled from 'react-emotion';
 
 import ResultCount from '@govuk-frederic/result-count';
 
-const Wrapper = styled('div')({
-  display: 'inline-block',
-});
+const Wrapper = styled('div')(
+  {
+    display: 'inline-block',
+  },
+);
 
 const Title = styled('div')({
   display: 'inline-block',

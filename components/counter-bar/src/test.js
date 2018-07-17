@@ -1,81 +1,158 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { HashRouter, Link } from 'react-router-dom';
+import { mount } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 import { LINK_COLOUR, WHITE } from 'govuk-colours';
 
-import Component from '.';
+import CounterBar from '.';
 
 expect.extend(createMatchers(emotion));
 
-const testCounters = [
-  { id: 'abc', name: 'abc', score: 1 },
-  { id: 'def', name: 'def', score: 3 },
-  { id: 'ghi', me: 'ghi' },
-  { id: 'jlk', name: '', score: 0 },
-];
-
-const testActiveCounters = [
-  { active: true, id: 'abc', name: 'abc', score: 1 },
-  { id: 'def', name: 'def', score: 3 },
-];
-
-const testDisabledCounters = [
-  { id: 'def', name: 'def', score: 0 },
-];
-
 describe('CounterBar', () => {
   let wrapper;
-  const handleChange = jest.fn();
-  
-  it('renders counters without active title', () => {
-    wrapper = shallow(<Component counters={testCounters} name="test" listTitle="Test Title" />);
-    const countWrapper = wrapper.find('CountWrapper');
-    expect(countWrapper).not.toHaveStyleRule('background', LINK_COLOUR);
-    expect(countWrapper).not.toHaveStyleRule('color', WHITE);
-    expect(countWrapper).not.toHaveStyleRule('outline', `2px solid ${LINK_COLOUR}`);
+
+  it('renders counters without an active total', () => {
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={1}>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+        <CounterBar.Counter />
+      </CounterBar.Counters>
+    </CounterBar>);
+    const totalWrapper = wrapper.find('Total');
+    expect(totalWrapper).not.toHaveStyleRule('background', LINK_COLOUR);
+    expect(totalWrapper).not.toHaveStyleRule('color', WHITE);
+    expect(totalWrapper).not.toHaveStyleRule('outline', `2px solid ${LINK_COLOUR}`);
   });
 
   it('renders empty counters', () => {
-    expect(wrapper.find('Counter').at(2)).toHaveStyleRule('opacity', '0');
+    expect(wrapper.find('Counter').at(1).exists()).toBe(true);
   });
     
-  it('renders counters with active title', () => {
-    wrapper = mount(<Component counters={testCounters} name="test" listTitle="Test Title" activeTitle />);
-    const countWrapper = wrapper.find('CountWrapper');
-    expect(countWrapper).toHaveStyleRule('background', LINK_COLOUR);
-    expect(countWrapper).toHaveStyleRule('color', WHITE);
-    expect(countWrapper).toHaveStyleRule('outline', `2px solid ${LINK_COLOUR}`);
-  });
-
-  it('renders default props as expected', () => {
-    expect(typeof wrapper.prop('onSelect') === 'function').toBe(true);
-    wrapper.prop('onSelect')();
+  it('renders counters with an active total', () => {
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={1} active>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
+    const totalWrapper = wrapper.find('Total');
+    expect(totalWrapper).toHaveStyleRule('background', LINK_COLOUR);
+    expect(totalWrapper).toHaveStyleRule('color', WHITE);
+    expect(totalWrapper).toHaveStyleRule('outline', `2px solid ${LINK_COLOUR}`);
   });
 
   it('renders counters with disabled counter values', () => {
-    wrapper = shallow(<Component counters={testDisabledCounters} name="test" listTitle="Test Title" />);
-    const counterWrapper = wrapper.find('Counter').first();
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total active score={0}>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={0}>Counter 1</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
+    const counterWrapper = wrapper.find('CounterWrapper').first();
     expect(counterWrapper.prop('disabled')).toBe(true);
   });
   
   it('renders counters with active values', () => {
-    wrapper = shallow(<Component counters={testActiveCounters} name="test" listTitle="Test Title" />);
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={1}>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1} active>Counter 1</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
     const counterWrapper = wrapper.find('Counter').first();
     expect(counterWrapper).toHaveStyleRule('background', LINK_COLOUR);
     expect(counterWrapper).toHaveStyleRule('color', WHITE);
     expect(counterWrapper).toHaveStyleRule('outline', `2px solid ${LINK_COLOUR}`);
   });
-  
-  it('calls onSelect ID when CountWrapper is clicked', () => {
-    wrapper.setProps({ onSelect: handleChange }).find('CountWrapper').simulate('click');
-    expect(handleChange).toHaveBeenCalledTimes(1);
+
+  it('renders custom colours on totals', () => {
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={1} scoreColor="yellow" scoreBackgroundColor="pink">All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
+    const counterWrapper = wrapper.find('ResultCount').first();
+    expect(counterWrapper).toHaveStyleRule('color', 'yellow');
+    expect(counterWrapper).toHaveStyleRule('background', 'pink');
   });
 
-  it('calls onSelect with expected ID when clicked', () => {
-    handleChange.mockReset();
-    wrapper.find('Counter').first().simulate('click');
-    expect(handleChange).toHaveBeenCalledWith(testActiveCounters[0].id);
+  it('renders custom colours on counters', () => {
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={1}>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1} scoreColor="orange" scoreBackgroundColor="blue">Counter 1</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
+    const counterWrapper = wrapper.find('ResultCount').at(1);
+    expect(counterWrapper).toHaveStyleRule('background', 'blue');
+    expect(counterWrapper).toHaveStyleRule('color', 'orange');
+  });
+
+  it('accepts an HTML element string for the total', () => {
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={15} component="aside">All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+        <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+        <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+        <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+        <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
+    const totalWrapper = wrapper.find('Total');
+    expect(totalWrapper.prop('component')).toBe('aside');
+  });
+
+  it('accepts a component for the total', () => {
+    wrapper = mount(<HashRouter>
+      <CounterBar>
+        <CounterBar.Total score={2} component={Link} to="/courses?sort=name'/">All counters</CounterBar.Total>
+        <CounterBar.Counters>
+          <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+          <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+          <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+          <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+          <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+        </CounterBar.Counters>
+      </CounterBar>
+    </HashRouter>);
+    const totalWrapper = wrapper.find('Total');
+    expect(totalWrapper.prop('component')).toBe(Link);
+  });
+
+  it('accepts an HTML element string for a counter', () => {
+    wrapper = mount(<CounterBar>
+      <CounterBar.Total score={15}>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1} component="aside">Counter 1</CounterBar.Counter>
+        <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+        <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+        <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+        <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
+    const counterWrapper = wrapper.find('Counter').first();
+    expect(counterWrapper.prop('component')).toBe('aside');
+  });
+
+  it('accepts a component for a counter', () => {
+    wrapper = mount(<HashRouter>
+      <CounterBar>
+        <CounterBar.Total score={2}>All counters</CounterBar.Total>
+        <CounterBar.Counters>
+          <CounterBar.Counter score={1} component={Link} to="/courses/1/">Counter 1</CounterBar.Counter>
+          <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+          <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+          <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+          <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+        </CounterBar.Counters>
+      </CounterBar>
+    </HashRouter>);
+    const counterWrapper = wrapper.find('Counter').first();
+    expect(counterWrapper.prop('component')).toBe(Link);
   });
 
   it('matches snapshot', () => {
