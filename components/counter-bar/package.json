@@ -6,6 +6,7 @@
     "@storybook/addon-knobs": "^3.4.2"
   },
   "dependencies": {
+    "@govuk-frederic/result-count-title": "^0.0.2",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

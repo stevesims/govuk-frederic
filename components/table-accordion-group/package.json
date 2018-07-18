@@ -6,6 +6,7 @@
     "@storybook/addon-knobs": "^3.4.2"
   },
   "dependencies": {
+    "@govuk-frederic/open-button": "^0.0.2",
     "@govuk-react/constants": "^0.2.2"
   },
   "peerDependencies": {
