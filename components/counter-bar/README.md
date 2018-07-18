@@ -164,7 +164,7 @@ import { HashRouter, Link } from 'react-router-dom';
 
 <HashRouter>
   <CounterBar>
-    <CounterBar.Total score={2}>All counters</CounterBar.Total>
+    <CounterBar.Total score={15}>All counters</CounterBar.Total>
     <CounterBar.Counters>
       <CounterBar.Counter score={1} component={Link} to="/courses/1/">Counter 1</CounterBar.Counter>
       <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
