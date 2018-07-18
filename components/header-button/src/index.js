@@ -63,6 +63,8 @@ const Button = styled('button')(
  * 
  * Multiple header buttons with keyline
  * ```jsx
+ * import Keyline from '@govuk-frederic/keyline';
+ * 
  * <Fragment>
  *  <Keyline>
  *    <HeaderButton>One</HeaderButton>
