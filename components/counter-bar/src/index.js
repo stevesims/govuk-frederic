@@ -21,7 +21,6 @@ const TotalWrapper = styled('a')(
     border: '0',
     flex: '1',
     margin: '0 6px 6px 0',
-    maxWidth: '250px',
     outline: 'none',
     padding: '0 8px 0 0',
   },
