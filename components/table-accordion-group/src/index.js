@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { Collapse } from 'react-collapse';
-import { FONT_SIZE } from '@govuk-react/constants';
+import { FONT_SIZE, NTA_LIGHT } from '@govuk-react/constants';
 
 import OpenButton from '@govuk-frederic/open-button';
 
 const Container = styled('div')({
   display: 'flex',
-  fontFamily: 'Roboto, Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: '1.75',
   paddingBottom: '10px',

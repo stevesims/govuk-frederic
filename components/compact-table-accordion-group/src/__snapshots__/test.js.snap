@@ -2,7 +2,7 @@
 
 exports[`CompactTableAccordionGroup matches snapshot 1`] = `
 .emotion-6 {
-  font-family: Roboto,Arial,sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-size: 14px;
   padding-bottom: 10px;
   padding-top: 10px;

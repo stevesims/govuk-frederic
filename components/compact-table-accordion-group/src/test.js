@@ -16,7 +16,7 @@ describe('CompactTableAccordionGroup', () => {
   });
 
   it('renders style rules', () => {
-    expect(wrapper).toHaveStyleRule('font-family', 'Roboto,Arial,sans-serif');
+    expect(wrapper).toHaveStyleRule('font-family', '"nta",Arial,sans-serif');
   });
 
   it('renders title when passed', () => {

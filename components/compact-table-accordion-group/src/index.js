@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { Collapse } from 'react-collapse';
+import {
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 import OpenButton from '@govuk-frederic/open-button';
 
 const Container = styled('div')({
-  fontFamily: 'Roboto, Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontSize: '14px',
   paddingBottom: '10px',
   paddingTop: '10px',

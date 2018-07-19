@@ -2,7 +2,8 @@
   "name": "@govuk-frederic/countdown-text-area",
   "version": "0.0.2",
   "dependencies": {
-    "@govuk-react/text-area": "^0.2.4",
+    "@govuk-react/constants": "^0.2.9",
+    "@govuk-react/text-area": "^0.2.9",
     "govuk-colours": "^1.0.3"
   },
   "devDependencies": {

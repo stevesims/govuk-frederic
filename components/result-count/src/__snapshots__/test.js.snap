@@ -5,7 +5,7 @@ exports[`ResultCount matches snapshot 1`] = `
   background: #6f777b;
   color: #ffffff;
   display: inline-block;
-  font-family: Roboto,Arial,sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-size: 15px;
   line-height: 1.25;
   min-height: 20px;

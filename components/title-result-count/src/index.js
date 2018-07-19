@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import ResultCount from '@govuk-frederic/result-count';
+import {
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 const Wrapper = styled('div')({
   display: 'inline-block',
@@ -12,7 +15,7 @@ const Wrapper = styled('div')({
 
 const Title = styled('div')({
   display: 'inline-block',
-  fontFamily: 'Roboto, Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontSize: '15px',
   lineHeight: '1.25',
   marginRight: '10px',

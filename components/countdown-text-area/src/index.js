@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { TextAreaField } from '@govuk-react/text-area';
 import { ERROR_COLOUR } from 'govuk-colours';
+import { TextAreaField } from '@govuk-react/text-area';
+import {
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 const StyledTextAreaField = styled(TextAreaField)({
   minHeight: '250px',
@@ -29,10 +32,10 @@ const StyledCountdownContainer = styled('div')({
 });
 
 const StyledCountdown = styled('div')({
-  bottom: '12px',
-  fontFamily: 'Roboto, Arial, sans-serif',
   position: 'absolute',
+  bottom: '12px',
   right: '10px',
+  fontFamily: NTA_LIGHT,
 });
 
 /**

@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
+import {
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 const RemoveButtonInner = styled('button')({
   '&:first-child': {
@@ -9,7 +12,7 @@ const RemoveButtonInner = styled('button')({
   backgroundColor: '#0C60A2',
   border: 0,
   color: '#fff',
-  fontFamily: '"system-ui", Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontSize: '11px',
   fontWeight: 400,
   height: '20px',
