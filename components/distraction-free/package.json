@@ -2,7 +2,7 @@
   "name": "@govuk-frederic/distraction-free",
   "version": "0.0.2",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.9",
+    "@govuk-react/constants": "^0.2.7",
     "@govuk-frederic/arrow-left": "^0.0.2",
     "govuk-colours": "^1.0.3"
   },

@@ -2,7 +2,7 @@
   "name": "@govuk-frederic/header-button",
   "version": "0.0.2",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.9",
+    "@govuk-react/constants": "^0.2.7",
     "govuk-colours": "^1.0.3"
   },
   "devDependencies": {

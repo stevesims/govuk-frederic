@@ -2,7 +2,7 @@
   "name": "@govuk-frederic/keyline",
   "version": "0.0.2",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.9",
+    "@govuk-react/constants": "^0.2.7",
     "@govuk-frederic/result-count-title": "^0.0.2",
     "govuk-colours": "^1.0.3"
   },

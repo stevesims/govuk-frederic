@@ -2,7 +2,7 @@
   "name": "@govuk-frederic/title-result-count",
   "version": "0.0.2",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.9",
+    "@govuk-react/constants": "^0.2.7",
     "@govuk-frederic/result-count": "^0.0.2"
   },
   "devDependencies": {
