@@ -81,7 +81,6 @@
     "@govuk-frederic/arrow": "*",
     "@govuk-frederic/arrow-left": "*",
     "@govuk-frederic/compact-table-accordion-group": "*",
-    "@govuk-frederic/count": "*",
     "@govuk-frederic/countdown-text-area": "*",
     "@govuk-frederic/counter-bar": "*",
     "@govuk-frederic/distraction-free": "*",

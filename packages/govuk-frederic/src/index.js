@@ -5,7 +5,6 @@
 export { default as Arrow } from '@govuk-frederic/arrow';
 export { default as ArrowLeft } from '@govuk-frederic/arrow-left';
 export { default as CompactTableAccordionGroup } from '@govuk-frederic/compact-table-accordion-group';
-export { default as Count } from '@govuk-frederic/count';
 export { default as CountdownTextArea } from '@govuk-frederic/countdown-text-area';
 export { default as CounterBar } from '@govuk-frederic/counter-bar';
 export { default as DistractionFree } from '@govuk-frederic/distraction-free';

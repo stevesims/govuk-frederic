@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Count matches snapshot 1`] = `
-<StyledCount>
-  <span>
-    4
-  </span>
-</StyledCount>
-`;
