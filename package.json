@@ -62,7 +62,8 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "dependencies": {
-    "govuk-colours": "^1.0.3"
+    "govuk-colours": "^1.0.3",
+    "govuk-react": "^0.2.9"
   },
   "peerDependencies": {
     "prop-types": ">=15",

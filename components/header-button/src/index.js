@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import { FOCUS_COLOUR, LINK_ACTIVE_COLOUR, LINK_COLOUR } from 'govuk-colours';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 const Button = styled('button')(
   {
@@ -12,7 +13,7 @@ const Button = styled('button')(
     borderRight: 'none',
     borderTop: '4px solid transparent',
     display: 'inline-block',
-    fontFamily: 'Roboto, Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     fontSize: '18px',
     fontWeight: 'bold',
     minWidth: '190px',

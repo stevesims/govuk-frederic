@@ -1,13 +1,14 @@
 {
   "name": "@govuk-frederic/distraction-free",
   "version": "0.0.2",
+  "dependencies": {
+    "@govuk-react/constants": "^0.2.7",
+    "@govuk-frederic/arrow-left": "^0.0.2",
+    "govuk-colours": "^1.0.3"
+  },
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
-  },
-  "dependencies": {
-    "@govuk-frederic/arrow-left": "^0.0.2",
-    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "emotion": ">=9",

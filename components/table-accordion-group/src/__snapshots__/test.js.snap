@@ -6,7 +6,7 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Roboto,Arial,sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-size: 14px;
   line-height: 1.75;
   padding-bottom: 10px;

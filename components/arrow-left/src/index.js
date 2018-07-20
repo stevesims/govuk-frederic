@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES } from '@govuk-react/constants';
 
+import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 import { BLUE } from 'govuk-colours';
 
 const Wrapper = styled('span')(
@@ -17,7 +17,7 @@ const Wrapper = styled('span')(
 );
 
 const Title = styled('span')({
-  fontFamily: 'Roboto, Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
   marginLeft: '6px',

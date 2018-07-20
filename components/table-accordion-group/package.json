@@ -1,19 +1,19 @@
 {
   "name": "@govuk-frederic/table-accordion-group",
   "version": "0.0.2",
+  "dependencies": {
+    "@govuk-react/constants": "^0.2.7",
+    "@govuk-frederic/open-button": "^0.0.2",
+    "react-collapse": "^4.0.3"
+  },
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
-  },
-  "dependencies": {
-    "@govuk-frederic/open-button": "^0.0.2",
-    "@govuk-react/constants": "^0.2.2"
   },
   "peerDependencies": {
     "emotion": ">=9",
     "prop-types": ">=15",
     "react": ">=16.2.0",
-    "react-collapse": ">=4",
     "react-emotion": ">=9"
   },
   "scripts": {

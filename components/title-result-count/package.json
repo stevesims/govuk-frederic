@@ -1,12 +1,13 @@
 {
   "name": "@govuk-frederic/title-result-count",
   "version": "0.0.2",
+  "dependencies": {
+    "@govuk-react/constants": "^0.2.7",
+    "@govuk-frederic/result-count": "^0.0.2"
+  },
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
-  },
-  "dependencies": {
-    "@govuk-frederic/result-count": "^0.0.2"
   },
   "peerDependencies": {
     "emotion": ">=9",
