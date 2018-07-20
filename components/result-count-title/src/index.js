@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import ResultCount from '@govuk-frederic/result-count';
-import {
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 const Wrapper = styled('div')({
   display: 'inline-block',

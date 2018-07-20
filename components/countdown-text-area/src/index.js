@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { TextAreaField } from '@govuk-react/text-area';
-import {
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 const StyledTextAreaField = styled(TextAreaField)({
   minHeight: '250px',

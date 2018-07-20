@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import { FOCUS_COLOUR, LINK_ACTIVE_COLOUR, LINK_COLOUR } from 'govuk-colours';
-import {
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 const Button = styled('button')(
   {

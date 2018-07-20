@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import { GREY_1 } from 'govuk-colours';
-import {
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 const KeylineWrapper = styled('span')(({ inlineBlock, borderColor }) => ({
   border: 0,

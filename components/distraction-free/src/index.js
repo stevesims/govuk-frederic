@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { GREY_1, WHITE } from 'govuk-colours';
-import {
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 import ArrowLeft from '@govuk-frederic/arrow-left';
 
