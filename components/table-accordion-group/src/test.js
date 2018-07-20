@@ -2,6 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 import Component from '.';
 
@@ -16,7 +17,7 @@ describe('TableAccordionGroup', () => {
   });
 
   it('renders style rules', () => {
-    expect(wrapper).toHaveStyleRule('font-family', '"nta",Arial,sans-serif');
+    expect(wrapper).toHaveStyleRule('font-family', NTA_LIGHT.replace(/\s/g, ''));
   });
 
   it('renders title when passed', () => {
