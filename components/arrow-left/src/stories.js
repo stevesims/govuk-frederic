@@ -23,7 +23,7 @@ const lightBackground = {
 };
 
 const stories = storiesOf('Icons/ArrowLeft', module);
-const examples = storiesOf('Icons/ArrowLeft/Examples');
+const examples = storiesOf('Icons/ArrowLeft/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
