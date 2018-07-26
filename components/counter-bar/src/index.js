@@ -17,20 +17,34 @@ const TotalWrapper = styled('a', {
   shouldForwardProp: prop => ['active', 'empty'].indexOf(prop) === -1,
 })(
   {
-    ':focus': {
-      outline: `solid 4px ${YELLOW}`,
-    },
+    color: LINK_COLOUR,
     border: '0',
     flex: '1',
     margin: '0 6px 6px 0',
     outline: 'none',
     padding: '0 8px 0 0',
+    textDecoration: 'none',
+    ':visited': {
+      color: LINK_COLOUR,
+    },
   },
   ({ active }) => ({
     background: active ? LINK_COLOUR : WHITE,
     color: active ? WHITE : undefined,
     outline: active ? `2px solid ${LINK_COLOUR}` : undefined,
   }),
+  ({ to, href }) => {
+    const isLink = to || href;
+    return ({
+    ':focus': {
+      color: isLink ? BLACK : LINK_COLOUR,
+      outline: `solid 4px ${YELLOW}`,
+    },
+    ':hover, :active': {
+      color: isLink ? BLACK : LINK_COLOUR,
+    },
+  });
+},
 );
 
 const CountersWrapper = styled('div')({
@@ -50,6 +64,17 @@ const CounterWrapper = styled(TotalWrapper, {
   ({ active }) => ({
     background: active ? LINK_COLOUR : GREY_1,
   }),
+  ({ to, href }) => {
+    const isLink = to || href;
+    return ({
+      ':visited': {
+        color: WHITE,
+      },
+      ':focus, :hover, :active': {
+        color: isLink ? BLACK : WHITE,
+      },
+    });
+  },
   ({ empty }) => (empty ? { opacity: 0 } : undefined),
 );
 
