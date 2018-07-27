@@ -28,11 +28,16 @@ const TotalWrapper = styled('a', {
       color: LINK_COLOUR,
     },
   },
-  ({ active }) => ({
-    background: active ? LINK_COLOUR : WHITE,
-    color: active ? WHITE : undefined,
-    outline: active ? `2px solid ${LINK_COLOUR}` : undefined,
-  }),
+  ({ active }) => {
+    if (!active) {
+      return false;
+    }
+    return ({
+      background: LINK_COLOUR,
+      color: WHITE,
+      outline: `2px solid ${LINK_COLOUR}`,
+    });
+  },
   ({ to, href }) => {
     const isLink = to || href;
     if (!isLink) {

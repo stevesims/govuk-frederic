@@ -27,7 +27,6 @@ exports[`CounterBar matches snapshot 1`] = `
   padding: 0 8px 0 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background: #ffffff;
 }
 
 .emotion-6:visited {
@@ -90,7 +89,6 @@ exports[`CounterBar matches snapshot 1`] = `
   padding: 0 8px 0 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background: #ffffff;
   color: #ffffff;
   background: #6f777b;
 }
@@ -110,7 +108,6 @@ exports[`CounterBar matches snapshot 1`] = `
   padding: 0 8px 0 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background: #ffffff;
   color: #ffffff;
   background: #6f777b;
 }
