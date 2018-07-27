@@ -25,10 +25,11 @@
     "@storybook/addon-links": "^3.4.1",
     "@storybook/addons": "^3.4.1",
     "@storybook/react": "^3.4.1",
+    "storybook-readme": "^3.3.0",
     "@storybook/storybook-deployer": "^2.2.0",
-    "govuk-colours": "^1.0.3",
     "normalize.css": "^8.0.0",
-    "react-final-form": "^3.1.0"
+    "react-collapse": "^4.0.3",
+    "react-motion": "^0.5.2"
   },
   "peerDependencies": {
     "prop-types": ">=15",
