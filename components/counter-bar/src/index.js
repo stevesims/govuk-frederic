@@ -35,16 +35,19 @@ const TotalWrapper = styled('a', {
   }),
   ({ to, href }) => {
     const isLink = to || href;
+    if (!isLink) {
+      return false;
+    }
     return ({
-    ':focus': {
-      color: isLink ? BLACK : LINK_COLOUR,
-      outline: `solid 4px ${YELLOW}`,
-    },
-    ':hover, :active': {
-      color: isLink ? BLACK : LINK_COLOUR,
-    },
-  });
-},
+      ':focus': {
+        color: BLACK,
+        outline: `solid 4px ${YELLOW}`,
+      },
+      ':hover, :active': {
+        color: BLACK,
+      },
+    });
+  },
 );
 
 const CountersWrapper = styled('div')({
@@ -66,12 +69,15 @@ const CounterWrapper = styled(TotalWrapper, {
   }),
   ({ to, href }) => {
     const isLink = to || href;
+    if (!isLink) {
+      return false;
+    }
     return ({
       ':visited': {
         color: WHITE,
       },
       ':focus, :hover, :active': {
-        color: isLink ? BLACK : WHITE,
+        color: BLACK,
       },
     });
   },
