@@ -13,7 +13,9 @@ const OuterWrapper = styled('div')({
   lineHeight: '1',
 });
 
-const TotalWrapper = styled('a')(
+const TotalWrapper = styled('a', {
+  shouldForwardProp: prop => ['active', 'empty'].indexOf(prop) === -1,
+})(
   {
     ':focus': {
       outline: `solid 4px ${YELLOW}`,
@@ -39,7 +41,9 @@ const CountersWrapper = styled('div')({
   flexWrap: 'wrap',
 });
 
-const CounterWrapper = styled(TotalWrapper)(
+const CounterWrapper = styled(TotalWrapper, {
+  shouldForwardProp: prop => ['active', 'empty'].indexOf(prop) === -1,
+})(
   {
     color: WHITE,
   },
@@ -227,7 +231,6 @@ CounterBar.propTypes = {
 };
 
 CounterBar.Item = ({
-  active,
   children,
   component,
   score,
@@ -240,7 +243,7 @@ CounterBar.Item = ({
 }) => {
   const Wrapper = wrapper.withComponent(component);
   return (
-    <Wrapper active={active} disabled={!score} empty={ !children || children.length === 0 ? 1 : 0 } {...props}>
+    <Wrapper disabled={!score} empty={!children || children.length === 0} {...props}>
       <ResultCountTitle
         count={score}
         countColor={score > 0 ? scoreColor : scoreDisabledColor}

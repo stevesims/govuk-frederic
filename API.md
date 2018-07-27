@@ -514,6 +514,22 @@ import { HashRouter, Link } from 'react-router-dom';
   </CounterBar>
 </HashRouter>
 ```
+Use an active Link component for a counter
+```jsx
+import { HashRouter, Link } from 'react-router-dom';
+
+<HashRouter>
+  <CounterBar>
+    <CounterBar.Total score={15}>All counters</CounterBar.Total>
+    <CounterBar.Counters>
+      <CounterBar.Counter score={1} component={Link} to="/courses/1/" active>Counter *1</CounterBar.Counter>
+      <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+      <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+      <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+      <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+    </CounterBar.Counters>
+  </CounterBar>
+</HashRouter>
 
 ### Properties
 Prop | Required | Default | Type | Description

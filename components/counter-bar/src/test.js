@@ -43,7 +43,7 @@ describe('CounterBar', () => {
     expect(totalWrapper).toHaveStyleRule('outline', `2px solid ${LINK_COLOUR}`);
   });
 
-  it('renders counters with disabled counter values', () => {
+  it('renders counters with disabled values', () => {
     wrapper = mount(<CounterBar>
       <CounterBar.Total active score={0}>All counters</CounterBar.Total>
       <CounterBar.Counters>
@@ -93,13 +93,9 @@ describe('CounterBar', () => {
 
   it('accepts an HTML element string for the total', () => {
     wrapper = mount(<CounterBar>
-      <CounterBar.Total score={15} component="aside">All counters</CounterBar.Total>
+      <CounterBar.Total score={1} component="aside">All counters</CounterBar.Total>
       <CounterBar.Counters>
         <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
-        <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
-        <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
-        <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
-        <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
       </CounterBar.Counters>
     </CounterBar>);
     const totalWrapper = wrapper.find('Total');
@@ -109,13 +105,9 @@ describe('CounterBar', () => {
   it('accepts a component for the total', () => {
     wrapper = mount(<HashRouter>
       <CounterBar>
-        <CounterBar.Total score={2} component={Link} to="/courses?sort=name'/">All counters</CounterBar.Total>
+        <CounterBar.Total score={1} component={Link} to="/courses?sort=name'/">All counters</CounterBar.Total>
         <CounterBar.Counters>
           <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
-          <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
-          <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
-          <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
-          <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
         </CounterBar.Counters>
       </CounterBar>
     </HashRouter>);
@@ -125,13 +117,9 @@ describe('CounterBar', () => {
 
   it('accepts an HTML element string for a counter', () => {
     wrapper = mount(<CounterBar>
-      <CounterBar.Total score={15}>All counters</CounterBar.Total>
+      <CounterBar.Total score={3}>All counters</CounterBar.Total>
       <CounterBar.Counters>
         <CounterBar.Counter score={1} component="aside">Counter 1</CounterBar.Counter>
-        <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
-        <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
-        <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
-        <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
       </CounterBar.Counters>
     </CounterBar>);
     const counterWrapper = wrapper.find('Counter').first();
@@ -141,18 +129,20 @@ describe('CounterBar', () => {
   it('accepts a component for a counter', () => {
     wrapper = mount(<HashRouter>
       <CounterBar>
-        <CounterBar.Total score={2}>All counters</CounterBar.Total>
+        <CounterBar.Total score={1}>All counters</CounterBar.Total>
         <CounterBar.Counters>
-          <CounterBar.Counter score={1} component={Link} to="/courses/1/">Counter 1</CounterBar.Counter>
-          <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
-          <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
-          <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
-          <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+          <CounterBar.Counter score={1} component={Link} to="/courses/1/" active>Counter 1</CounterBar.Counter>
         </CounterBar.Counters>
       </CounterBar>
     </HashRouter>);
     const counterWrapper = wrapper.find('Counter').first();
     expect(counterWrapper.prop('component')).toBe(Link);
+  });
+  
+  it('does not forward props when it shouldn\'t', () => {
+    const linkWrapper = wrapper.find('Counter').first().find('Link');
+    expect(linkWrapper.prop('active')).toBe(undefined);
+    expect(linkWrapper.prop('empty')).toBe(undefined);
   });
 
   it('matches snapshot', () => {
