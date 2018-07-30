@@ -17,20 +17,42 @@ const TotalWrapper = styled('a', {
   shouldForwardProp: prop => ['active', 'empty'].indexOf(prop) === -1,
 })(
   {
-    ':focus': {
-      outline: `solid 4px ${YELLOW}`,
-    },
+    color: LINK_COLOUR,
     border: '0',
     flex: '1',
     margin: '0 6px 6px 0',
     outline: 'none',
     padding: '0 8px 0 0',
+    textDecoration: 'none',
+    ':visited': {
+      color: LINK_COLOUR,
+    },
   },
-  ({ active }) => ({
-    background: active ? LINK_COLOUR : WHITE,
-    color: active ? WHITE : undefined,
-    outline: active ? `2px solid ${LINK_COLOUR}` : undefined,
-  }),
+  ({ active }) => {
+    if (!active) {
+      return false;
+    }
+    return ({
+      background: LINK_COLOUR,
+      color: WHITE,
+      outline: `2px solid ${LINK_COLOUR}`,
+    });
+  },
+  ({ to, href }) => {
+    const isLink = to || href;
+    if (!isLink) {
+      return false;
+    }
+    return ({
+      ':focus': {
+        color: BLACK,
+        outline: `solid 4px ${YELLOW}`,
+      },
+      ':hover, :active': {
+        color: BLACK,
+      },
+    });
+  },
 );
 
 const CountersWrapper = styled('div')({
@@ -50,6 +72,20 @@ const CounterWrapper = styled(TotalWrapper, {
   ({ active }) => ({
     background: active ? LINK_COLOUR : GREY_1,
   }),
+  ({ to, href }) => {
+    const isLink = to || href;
+    if (!isLink) {
+      return false;
+    }
+    return ({
+      ':visited': {
+        color: WHITE,
+      },
+      ':focus, :hover, :active': {
+        color: BLACK,
+      },
+    });
+  },
   ({ empty }) => (empty ? { opacity: 0 } : undefined),
 );
 
