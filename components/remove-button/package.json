@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/remove-button",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7"
   },

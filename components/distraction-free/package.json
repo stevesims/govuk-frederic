@@ -1,9 +1,9 @@
 {
   "name": "@govuk-frederic/distraction-free",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
+    "@govuk-frederic/arrow-left": "^0.0.3",
     "@govuk-react/constants": "^0.2.7",
-    "@govuk-frederic/arrow-left": "^0.0.2",
     "govuk-colours": "^1.0.3"
   },
   "devDependencies": {
