@@ -9,7 +9,7 @@ exports[`Table matches snapshot 1`] = `
     <tr>
       <TableHeading
         key="0"
-        name="one"
+        name="heading"
       >
         Heading 4
       </TableHeading>
@@ -22,6 +22,7 @@ exports[`Table matches snapshot 1`] = `
       <TableHeading
         columnCount={1}
         key="0"
+        name="one"
         rowHeading={true}
       >
         Content 1-4
@@ -33,6 +34,7 @@ exports[`Table matches snapshot 1`] = `
       <TableHeading
         columnCount={1}
         key="0"
+        name="i"
         rowHeading={true}
       >
         Content 2-4
@@ -44,6 +46,7 @@ exports[`Table matches snapshot 1`] = `
       <TableHeading
         columnCount={1}
         key="0"
+        name="three"
         rowHeading={true}
       >
         Content 3-4

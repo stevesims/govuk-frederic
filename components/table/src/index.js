@@ -15,39 +15,50 @@ const TableContainer = styled('table', {
   ({ flexibleColumns }) => ({ tableLayout: flexibleColumns ? 'auto' : 'fixed' }),
 );
 
-const TableHeading = styled('th', {
-  forwardProps: ['name'],
-})(({ rowHeading, columnCount }) => ({
+const cellStyles = {
   ':first-child': {
-    padding: '15px 8px 15px 0',
-    width: rowHeading && columnCount < 4 ? '25%' : undefined,
+    padding: '15px 4px 15px 0',
   },
   ':last-child': {
-    padding: '15px 0 15px 8px',
+    padding: '15px 0 15px 4px',
   },
   borderBottom: '1px solid #bfc1c3',
   display: 'table-cell',
   fontSize: '14px',
-  fontWeight: 'bold',
-  textAlign: 'left',
-  verticalAlign: 'baseline',
-}));
+  padding: '15px 4px',
+  verticalAlign: 'top',
+};
 
 const TableData = styled('td', {
   // use `forwardProps` here as by default emotion doesn't allow setting `name` prop on a `td`
   forwardProps: ['name'],
-})({
-  ':first-child': {
-    padding: '15px 8px 15px 0',
-  },
-  ':last-child': {
-    padding: '15px 0 15px 8px',
-  },
-  borderBottom: '1px solid #bfc1c3',
-  display: 'table-cell',
-  fontSize: '14px',
-  verticalAlign: 'baseline',
-});
+})(cellStyles);
+
+const TableHeading = styled('th')(
+  cellStyles,
+  ({rowHeading, columnCount}) => (
+    {
+      fontWeight: 'bold',
+      textAlign: 'left',
+      width: rowHeading && columnCount < 4 ? '25%' : undefined,
+    }
+  ),
+);
+
+const getName = (names, row, column, nameByRow) => {
+  if (nameByRow) {
+    return Array.isArray(names[row]) ? names[row][column] : names[row];
+  } 
+  return Array.isArray(names[column]) ? names[column][row] : names[column];
+};
+
+const calculateIndex = (titles, nameByRow, index) => {
+  if (nameByRow) {
+    // Only if there are headings at the top, we need to increment the row
+    return (titles && titles.length) ? (index + 1) : index;
+  }
+  return (index + 1);
+};
 
 /**
  *
@@ -55,30 +66,70 @@ const TableData = styled('td', {
  *
  * Simple
  * ```jsx
- * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={exampleNames} />
+ * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
+ * const arrayExampleContent = [
+ *  ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
+ *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
+ *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
+ * ];
+ * const columnTableNames = ['one', 'two', 'three', ['i', 'am', 'named', 'individually']];
+ * 
+ * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} />
  * ```
  * 
  * rowIncludesHeading
  * ```jsx
- * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} rowIncludesHeading />
+ * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
+ * const arrayExampleContent = [
+ *  ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
+ *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
+ *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
+ * ];
+ * const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individually'], 'three'];
+ * 
+ * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} rowIncludesHeading nameByRow names={rowTableNamesWithTitles} />
  * ```
  * 
  * rowIncludesHeading, no titles
  * ```jsx
- * <Table rows={arrayExampleContent} rowIncludesHeading names={exampleNames} />
+ * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
+ * const arrayExampleContent = [
+ *  ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
+ *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
+ *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
+ * ];
+ * const rowTableNames = ['one', ['i', 'am', 'named', 'individually'], 'three'];
+ * 
+ * <Table rows={arrayExampleContent} rowIncludesHeading nameByRow names={rowTableNames} />
  * ```
  * 
  * rowIncludesHeading, no titles, small single row
  * ```jsx
- * <Table rows={[['title', 'value']]} rowIncludesHeading />
+ * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
+ * const arrayExampleContent = [
+ *  ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
+ *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
+ *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
+ * ];
+ * const rowTableNames = ['one', ['i', 'am', 'named', 'individually'], 'three'];
+ * 
+ * <Table rows={[['title', 'value']]} rowIncludesHeading nameByRow names={rowTableNames} />
  * ```
  * 
- * rowIncludesHeading, with flexible columns
+ * rowIncludesHeading, with titles, with flexible columns
  * ```jsx
- * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading />
+ * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
+ * const arrayExampleContent = [
+ *  ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
+ *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
+ *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
+ * ];
+ * const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individually'], 'three'];
+ * 
+ * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading nameByRow names={rowTableNamesWithTitles} />
  * ```
  */
-const Table = ({ name, names = [], rowIncludesHeading, titles, rows, flexibleColumns }) => (
+const Table = ({ name, names, rowIncludesHeading, nameByRow, titles, rows, flexibleColumns }) => (
   <TableContainer name={name} flexibleColumns={flexibleColumns}>
     {titles &&
       titles.length && (
@@ -87,7 +138,9 @@ const Table = ({ name, names = [], rowIncludesHeading, titles, rows, flexibleCol
           {titles.map((title, index) => (
             // disable false-positive rule - this is an access into an array of strings, not object access
             // eslint-disable-next-line security/detect-object-injection
-            <TableHeading key={title.key || index} name={names[index]}>
+            <TableHeading 
+              key={title.key || index} 
+              name={getName(names, 0, index, nameByRow)}>
               {title}
             </TableHeading>
           ))}
@@ -100,13 +153,19 @@ const Table = ({ name, names = [], rowIncludesHeading, titles, rows, flexibleCol
           {row.map(
             (item, itemIndex) =>
               rowIncludesHeading && itemIndex === 0 ? (
-                <TableHeading rowHeading columnCount={row.length} key={item.key || itemIndex}>
+                <TableHeading 
+                  rowHeading 
+                  columnCount={row.length} 
+                  key={item.key || itemIndex} 
+                  name={getName(names, calculateIndex(titles, nameByRow, index), itemIndex, nameByRow)}>
                   {item}
                 </TableHeading>
               ) : (
                 // disable false-positive rule - this is an access into an array of strings, not object access
                 // eslint-disable-next-line security/detect-object-injection
-                <TableData key={item.key || itemIndex} name={names[itemIndex]}>
+                <TableData 
+                  key={item.key || itemIndex} 
+                  name={getName(names, calculateIndex(titles, nameByRow, index), itemIndex, nameByRow)}>
                   {item}
                 </TableData>
               ),
@@ -120,10 +179,23 @@ const Table = ({ name, names = [], rowIncludesHeading, titles, rows, flexibleCol
 Table.propTypes = {
   flexibleColumns: PropTypes.bool,
   name: PropTypes.string,
-  names: PropTypes.arrayOf(PropTypes.string),
+  names: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
+  ),
+  nameByRow: PropTypes.bool,
   rowIncludesHeading: PropTypes.bool,
   rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.node]))).isRequired,
   titles: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.node])),
+};
+
+Table.defaultProps = {
+  flexibleColumns: false,
+  nameByRow: false,
+  names: [],
+  rowIncludesHeading: false,
 };
 
 export default Table;
