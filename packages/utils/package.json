@@ -1,10 +1,6 @@
 {
   "name": "@govuk-frederic/utils",
-  "version": "0.0.1",
-  "dependencies": {
-  },
-  "peerDependencies": {
-  },
+  "version": "0.0.4",
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
     "build:lib": "rimraf lib && babel src -d lib --source-maps",

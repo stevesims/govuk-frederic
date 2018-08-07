@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/compact-table-accordion-group",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
-    "@govuk-frederic/open-button": "^0.0.3",
+    "@govuk-frederic/open-button": "^0.0.4",
     "@govuk-react/constants": "^0.2.7"
   },
   "devDependencies": {
