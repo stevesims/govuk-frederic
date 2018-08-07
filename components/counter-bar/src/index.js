@@ -279,7 +279,7 @@ CounterBar.Item = ({
 }) => {
   const Wrapper = wrapper.withComponent(component);
   return (
-    <Wrapper disabled={!score} empty={!children || children.length === 0} {...props}>
+    <Wrapper disabled={!score} empty={!children || !children.length} {...props}>
       <ResultCountTitle
         count={score}
         countColor={score > 0 ? scoreColor : scoreDisabledColor}
