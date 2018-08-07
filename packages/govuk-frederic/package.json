@@ -2,6 +2,7 @@
   "name": "govuk-frederic",
   "version": "0.0.3",
   "dependencies": {
+    "@govuk-frederic/array-object-table": "^0.0.1",
     "@govuk-frederic/arrow": "^0.0.2",
     "@govuk-frederic/arrow-left": "^0.0.3",
     "@govuk-frederic/compact-table-accordion-group": "^0.0.3",
@@ -11,6 +12,7 @@
     "@govuk-frederic/distraction-free": "^0.0.3",
     "@govuk-frederic/header-button": "^0.0.3",
     "@govuk-frederic/keyline": "^0.0.3",
+    "@govuk-frederic/object-table": "^0.0.1",
     "@govuk-frederic/open-button": "^0.0.3",
     "@govuk-frederic/remove-button": "^0.0.3",
     "@govuk-frederic/result-count": "^0.0.3",
@@ -20,6 +22,7 @@
     "@govuk-frederic/table-accordion-group": "^0.0.3",
     "@govuk-frederic/table-of-contents": "^0.0.2",
     "@govuk-frederic/title-result-count": "^0.0.3",
+    "@govuk-frederic/utils": "^0.0.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
