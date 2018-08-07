@@ -1,12 +1,12 @@
 {
   "name": "@govuk-frederic/open-button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
   },
   "dependencies": {
-    "@govuk-frederic/arrow": "^0.0.2"
+    "@govuk-frederic/arrow": "^0.0.4"
   },
   "peerDependencies": {
     "emotion": ">=9",
