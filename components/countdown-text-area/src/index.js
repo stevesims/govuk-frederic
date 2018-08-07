@@ -76,7 +76,7 @@ const StyledCountdown = styled('div')({
  * <ManagedCountdownTextarea maxLength={100} positiveOnly />
  * ```
  */
-const CountdownTextArea = (props) => {
+const CountdownTextArea = props => {
   const {
     maxLength, noMaxLengthAttr, positiveOnly, ...input
   } = props;
@@ -86,7 +86,7 @@ const CountdownTextArea = (props) => {
   const over = showRemaining && remaining <= 0;
 
   return (
-    <StyledTextArea over={over}>
+    <StyledTextArea over={over} {...props}>
       <StyledTextAreaField {...input} maxLength={noMaxLengthAttr ? null : maxLength} />
       {showRemaining && (
         <StyledCountdownContainer>

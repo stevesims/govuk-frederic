@@ -101,8 +101,9 @@ const CompactTableAccordionGroup = ({
   onChange,
   open,
   changeOnTitleClick,
+  ...props
 }) => (
-  <Container>
+  <Container {...props}>
     <TitleRow>
       <OpenButton open={open} onChange={onChange} />
       <Title

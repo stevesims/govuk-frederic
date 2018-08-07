@@ -19,8 +19,8 @@ import PropTypes from 'prop-types';
  * <Arrow />
  * ```
  */
-const Arrow = ({ fill, width, ...rest }) => (
-  <svg width={`${width}px`} height={`${width}px`} viewBox="0 0 6 4" {...rest}>
+const Arrow = ({ fill, width, ...props }) => (
+  <svg width={`${width}px`} height={`${width}px`} viewBox="0 0 6 4" {...props}>
     <polygon fill={fill} points="3 4 6 1 0 1" />
   </svg>
 );

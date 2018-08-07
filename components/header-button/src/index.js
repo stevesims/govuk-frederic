@@ -84,11 +84,7 @@ const Button = styled('button')(
  * <HeaderButton disabled>Off</HeaderButton>
  * ```
  */
-const HeaderButton = ({ active, children, disabled, ...props }) => (
-  <Button {...props} active={active} disabled={disabled}>
-    {children}
-  </Button>
-);
+const HeaderButton = props => <Button {...props} />;
 
 HeaderButton.propTypes = {
   active: PropTypes.bool,

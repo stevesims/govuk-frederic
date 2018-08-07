@@ -163,15 +163,14 @@ const Title = styled('span')({
  * ```
  */
 const ArrowLeft = ({
-  fill, color, width, children, onClick, ...props
+  fill, width, children, onClick, ...props
 }) => (
-  <Wrapper onClick={onClick} color={color}>
+  <Wrapper onClick={onClick} {...props}>
     <svg
       width={`${width}px`}
       height={`${width}px`}
       viewBox="0 0 512 512"
       fill={fill}
-      {...props}
     >
       <title>{children}</title>
       { /** TODO check licence for Font Awesome or decide on an icon */ }

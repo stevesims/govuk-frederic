@@ -16,11 +16,9 @@ const StyledSpinner = styled('div')(props => ({
  * <Spinner visible />
  * ```
  */
-const Spinner = (props) => {
-  const { visible } = props;
-
+const Spinner = props => {
   return (
-    <StyledSpinner visible={visible}>
+    <StyledSpinner {...props}>
       {/*
         TODO: loader image has been inlined for now but we should either:
           1. make this an svg

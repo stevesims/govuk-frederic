@@ -88,9 +88,9 @@ const Title = styled('header')(({ clickable }) => (clickable ? { cursor: 'pointe
  * ### TODO:
  * - Implement Async story example in CodeSandbox
  */
-const TableAccordionGroup = ({ title, children, expanded, onChange, open, changeOnTitleClick }) => {
+const TableAccordionGroup = ({ title, children, expanded, onChange, open, changeOnTitleClick, ...props }) => {
   return (
-    <Container>
+    <Container {...props}>
       <OpenButton open={open} onChange={onChange} />
       <Title clickable={changeOnTitleClick} onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined }>
         {title}

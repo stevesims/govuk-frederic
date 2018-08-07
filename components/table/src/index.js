@@ -129,8 +129,8 @@ const calculateIndex = (titles, nameByRow, index) => {
  * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading nameByRow names={rowTableNamesWithTitles} />
  * ```
  */
-const Table = ({ name, names, rowIncludesHeading, nameByRow, titles, rows, flexibleColumns }) => (
-  <TableContainer name={name} flexibleColumns={flexibleColumns}>
+const Table = ({ name, names, rowIncludesHeading, nameByRow, titles, rows, flexibleColumns, ...props }) => (
+  <TableContainer name={name} flexibleColumns={flexibleColumns} {...props}>
     {titles &&
       titles.length && (
       <thead>
