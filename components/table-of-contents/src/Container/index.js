@@ -15,7 +15,7 @@ import Context from '../Context';
  *         <ul>
  *           {
  *             contents.map(
- *               ({ id, title }) => <li key={id}><a href={`#${id}`}>{title}</a>
+ *               ({ id, title }) => <li key={id}><a href={`#${id}`}>{title}</a></li>
  *             )
  *           }
  *         </ul>
