@@ -4,7 +4,6 @@ import { Table } from 'govuk-frederic';
 
 import { objectHasValueForKeys, keysFromFields, rowsFromObject } from '@govuk-frederic/utils';
 
-
 /**
  *
  * ### Usage
@@ -51,10 +50,10 @@ import { objectHasValueForKeys, keysFromFields, rowsFromObject } from '@govuk-fr
  */
 const ObjectTable = ({
   title,
-  fields = [],
-  object = {},
-  hideWithNoValues = false,
-  skipEmptyValues = true,
+  fields,
+  object,
+  hideWithNoValues,
+  skipEmptyValues,
   defaultTransform, 
   ...props
 }) => {
@@ -62,7 +61,7 @@ const ObjectTable = ({
     const rows = rowsFromObject(object, fields, skipEmptyValues, defaultTransform);
     if (rows.rows.length) {
       return <Fragment>
-        {title ? title : null}
+        {title}
         <Table rows={rows.rows} names={rows.names} rowIncludesHeading nameByRow {...props} />
       </Fragment>;
     }
@@ -82,6 +81,14 @@ ObjectTable.propTypes = {
   skipEmptyValues: PropTypes.bool,
   defaultTransform: PropTypes.func,
   title: PropTypes.node,
+};
+
+ObjectTable.defaultProps = {
+  fields: [],
+  object: {},
+  hideWithNoValues: false,
+  skipEmptyValues: true,
+  title: null,
 };
 
 export default ObjectTable;

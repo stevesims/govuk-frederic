@@ -54,14 +54,14 @@ import { rowsFromArray, titlesFromFields } from '@govuk-frederic/utils';
  * <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues/>;
  * ```
  * */
-const ArrayObjectTable = ({ fields = [], array = [], hideWithNoValues = false, skipEmptyRows = false, title, ...props }) => {
+const ArrayObjectTable = ({ fields, array, hideWithNoValues, skipEmptyRows, title, ...props }) => {
   let rows = rowsFromArray(array, fields, skipEmptyRows);
   if (!rows.length && !hideWithNoValues) {
     rows = rowsFromArray([{}], fields, false);
   }
   return rows.length ?
     <Fragment>
-      {title ? title : null}
+      {title}
       <Table rows={rows} titles={titlesFromFields(fields)} {...props}/>
     </Fragment>
     :
@@ -78,6 +78,14 @@ ArrayObjectTable.propTypes = {
   hideWithNoValues: PropTypes.bool,
   skipEmptyRows: PropTypes.bool,
   title: PropTypes.node,
+};
+
+ArrayObjectTable.defaultProps = {
+  fields: [],
+  array: [],
+  hideWithNoValues: false,
+  skipEmptyRows: false,
+  title: null,
 };
 
 export default ArrayObjectTable;
