@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/keyline",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "dependencies": {
     "@govuk-frederic/result-count-title": "^0.0.3",
     "@govuk-react/constants": "^0.2.7",
