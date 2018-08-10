@@ -87,7 +87,7 @@ ObjectTable.defaultProps = {
   fields: [],
   object: {},
   hideWithNoValues: false,
-  skipEmptyValues: true,
+  skipEmptyValues: false,
   title: null,
 };
 

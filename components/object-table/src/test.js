@@ -42,7 +42,7 @@ describe('ObjectTable', () => {
       { key: 'three', heading: 'three'},
     ];
     object = { one: 'test', two: 'test', three: null };
-    wrapper = mount(<Component fields={fields} object={object} />);
+    wrapper = mount(<Component fields={fields} object={object} skipEmptyValues />);
     const rows = wrapper.find('tr');
     
     expect(rows.length).toBe(1);
