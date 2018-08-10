@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 import ResultCountTitle from '@govuk-frederic/result-count-title';
 
@@ -260,7 +261,7 @@ const CounterWrapper = styled(TotalWrapper, {
  * </HashRouter>
  * ```
  */
-const CounterBar = props => <OuterWrapper {...props}/>;
+const CounterBar = withWhiteSpace({ marginBottom: 3 })(props => <OuterWrapper {...props}/>);
 
 CounterBar.propTypes = {
   children: PropTypes.node.isRequired,

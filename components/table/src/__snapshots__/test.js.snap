@@ -1,57 +1,219 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table matches snapshot 1`] = `
-<TableContainer
+.emotion-10 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 4px;
+  vertical-align: top;
+  font-weight: bold;
+  text-align: left;
+}
+
+.emotion-0:first-child {
+  padding: 15px 4px 15px 0;
+}
+
+.emotion-0:last-child {
+  padding: 15px 0 15px 4px;
+}
+
+.emotion-2 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 4px;
+  vertical-align: top;
+  font-weight: bold;
+  text-align: left;
+  width: 25%;
+}
+
+.emotion-2:first-child {
+  padding: 15px 4px 15px 0;
+}
+
+.emotion-2:last-child {
+  padding: 15px 0 15px 4px;
+}
+
+.emotion-8 {
+  display: table;
+  font-family: "nta",Arial,sans-serif;
+  width: 100%;
+  table-layout: auto;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 15px;
+  }
+}
+
+<Styled(Table)
   flexibleColumns={true}
   name="name"
+  nameByRow={true}
+  names={
+    Array [
+      "heading",
+      "one",
+      Array [
+        "i",
+        "am",
+        "named",
+        "individually",
+      ],
+      "three",
+    ]
+  }
+  rowIncludesHeading={true}
+  rows={
+    Array [
+      Array [
+        "Content 1-4",
+      ],
+      Array [
+        "Content 2-4",
+      ],
+      Array [
+        "Content 3-4",
+      ],
+    ]
+  }
+  titles={
+    Array [
+      "Heading 4",
+    ]
+  }
 >
-  <thead>
-    <tr>
-      <TableHeading
-        key="0"
-        name="heading"
-      >
-        Heading 4
-      </TableHeading>
-    </tr>
-  </thead>
-  <tbody>
-    <tr
-      key="0"
+  <Table
+    className="emotion-10"
+    flexibleColumns={true}
+    name="name"
+    nameByRow={true}
+    names={
+      Array [
+        "heading",
+        "one",
+        Array [
+          "i",
+          "am",
+          "named",
+          "individually",
+        ],
+        "three",
+      ]
+    }
+    rowIncludesHeading={true}
+    rows={
+      Array [
+        Array [
+          "Content 1-4",
+        ],
+        Array [
+          "Content 2-4",
+        ],
+        Array [
+          "Content 3-4",
+        ],
+      ]
+    }
+    titles={
+      Array [
+        "Heading 4",
+      ]
+    }
+  >
+    <TableContainer
+      className="emotion-10"
+      flexibleColumns={true}
     >
-      <TableHeading
-        columnCount={1}
-        key="0"
-        name="one"
-        rowHeading={true}
+      <table
+        className="emotion-8 emotion-9"
       >
-        Content 1-4
-      </TableHeading>
-    </tr>
-    <tr
-      key="1"
-    >
-      <TableHeading
-        columnCount={1}
-        key="0"
-        name="i"
-        rowHeading={true}
-      >
-        Content 2-4
-      </TableHeading>
-    </tr>
-    <tr
-      key="2"
-    >
-      <TableHeading
-        columnCount={1}
-        key="0"
-        name="three"
-        rowHeading={true}
-      >
-        Content 3-4
-      </TableHeading>
-    </tr>
-  </tbody>
-</TableContainer>
+        <thead>
+          <tr>
+            <TableHeading
+              key="0"
+              name="heading"
+            >
+              <th
+                className="emotion-0 emotion-1"
+                name="heading"
+              >
+                Heading 4
+              </th>
+            </TableHeading>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            key="0"
+          >
+            <TableHeading
+              columnCount={1}
+              key="0"
+              name="one"
+              rowHeading={true}
+            >
+              <th
+                className="emotion-2 emotion-1"
+                name="one"
+              >
+                Content 1-4
+              </th>
+            </TableHeading>
+          </tr>
+          <tr
+            key="1"
+          >
+            <TableHeading
+              columnCount={1}
+              key="0"
+              name="i"
+              rowHeading={true}
+            >
+              <th
+                className="emotion-2 emotion-1"
+                name="i"
+              >
+                Content 2-4
+              </th>
+            </TableHeading>
+          </tr>
+          <tr
+            key="2"
+          >
+            <TableHeading
+              columnCount={1}
+              key="0"
+              name="three"
+              rowHeading={true}
+            >
+              <th
+                className="emotion-2 emotion-1"
+                name="three"
+              >
+                Content 3-4
+              </th>
+            </TableHeading>
+          </tr>
+        </tbody>
+      </table>
+    </TableContainer>
+  </Table>
+</Styled(Table)>
 `;

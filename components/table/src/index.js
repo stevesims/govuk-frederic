@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const TableContainer = styled('table', {
   // use `forwardProps` here as by default emotion doesn't allow setting `name` prop on a `table`
@@ -129,8 +130,8 @@ const calculateIndex = (titles, nameByRow, index) => {
  * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading nameByRow names={rowTableNamesWithTitles} />
  * ```
  */
-const Table = ({ name, names, rowIncludesHeading, nameByRow, titles, rows, flexibleColumns, ...props }) => (
-  <TableContainer name={name} flexibleColumns={flexibleColumns} {...props}>
+const Table = ({ name, names, nameByRow, rowIncludesHeading, titles, rows, ...props }) => (
+  <TableContainer {...props}>
     {titles &&
       titles.length && (
       <thead>
@@ -198,4 +199,4 @@ Table.defaultProps = {
   rowIncludesHeading: false,
 };
 
-export default Table;
+export default withWhiteSpace({ marginBottom: 3 })(Table);

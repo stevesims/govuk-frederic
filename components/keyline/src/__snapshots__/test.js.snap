@@ -1,7 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Keyline matches snapshot 1`] = `
-<KeylineWrapper
+.emotion-2 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-0 {
+  border: 0;
+  border-bottom: 1px solid red;
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 15px;
+  }
+}
+
+<Styled(Keyline)
   borderColor="red"
-/>
+>
+  <Keyline
+    borderColor="red"
+    className="emotion-2"
+  >
+    <KeylineWrapper
+      borderColor="red"
+      className="emotion-2"
+    >
+      <span
+        className="emotion-0 emotion-1"
+      />
+    </KeylineWrapper>
+  </Keyline>
+</Styled(Keyline)>
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 
@@ -12,7 +12,7 @@ describe('CompactTableAccordionGroup', () => {
   const changeHandler = jest.fn();
 
   it('renders with only required properties', () => {
-    wrapper = shallow(<Component expanded="Expanded" />);
+    wrapper = mount(<Component expanded="Expanded" />);
   });
 
   it('renders style rules', () => {

@@ -3,7 +3,9 @@
   "version": "0.0.4",
   "dependencies": {
     "@govuk-frederic/result-count-title": "^0.0.3",
-    "govuk-colours": "^1.0.3"
+    "govuk-colours": "^1.0.3",
+    "@govuk-react/constants": "^0.2.7",
+    "@govuk-react/hoc": "^0.2.7"
   },
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",

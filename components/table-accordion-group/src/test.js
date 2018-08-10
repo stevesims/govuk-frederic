@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 import { NTA_LIGHT } from '@govuk-react/constants';
@@ -13,7 +13,7 @@ describe('TableAccordionGroup', () => {
   const changeHandler = jest.fn();
 
   it('renders with only required properties', () => {
-    wrapper = shallow(<Component expanded="Expanded">Test</Component>);
+    wrapper = mount(<Component expanded="Expanded">Test</Component>);
   });
 
   it('renders style rules', () => {

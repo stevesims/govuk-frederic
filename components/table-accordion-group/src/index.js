@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { Collapse } from 'react-collapse';
 import { FONT_SIZE, NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 import OpenButton from '@govuk-frederic/open-button';
 
@@ -118,6 +119,6 @@ TableAccordionGroup.defaultProps = {
   open: false,
 };
 
-export default TableAccordionGroup;
+export default withWhiteSpace({ marginBottom: 3 })(TableAccordionGroup);
 
 export { Title };

@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TableAccordionGroup matches snapshot 1`] = `
+.emotion-6 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 15px;
+  }
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12,6 +22,13 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
   padding-bottom: 10px;
   padding-top: 10px;
   position: relative;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 15px;
+  }
 }
 
 .emotion-0 {
@@ -38,7 +55,7 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
   padding-left: 16px;
 }
 
-<TableAccordionGroup
+<Styled(TableAccordionGroup)
   changeOnTitleClick={true}
   expanded="Expanded"
   onChange={
@@ -54,112 +71,132 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
   }
   open={false}
 >
-  <Container>
-    <div
-      className="emotion-4 emotion-5"
+  <TableAccordionGroup
+    changeOnTitleClick={true}
+    className="emotion-6"
+    expanded="Expanded"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "open": true,
+            },
+          ],
+        ],
+      }
+    }
+    open={false}
+  >
+    <Container
+      className="emotion-6"
     >
-      <OpenButton
-        onChange={
-          [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "open": true,
-                },
-              ],
-            ],
-          }
-        }
-        open={false}
+      <div
+        className="emotion-4 emotion-5"
       >
-        <RotatingButton
-          onClick={[Function]}
+        <OpenButton
+          onChange={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "open": true,
+                  },
+                ],
+              ],
+            }
+          }
           open={false}
         >
-          <button
-            className="emotion-0 emotion-1"
+          <RotatingButton
             onClick={[Function]}
             open={false}
           >
-            <Arrow
-              fill="#0C60A2"
-              width={20}
+            <button
+              className="emotion-0 emotion-1"
+              onClick={[Function]}
+              open={false}
             >
-              <svg
-                height="20px"
-                viewBox="0 0 6 4"
-                width="20px"
+              <Arrow
+                fill="#0C60A2"
+                width={20}
               >
-                <polygon
-                  fill="#0C60A2"
-                  points="3 4 6 1 0 1"
-                />
-              </svg>
-            </Arrow>
-          </button>
-        </RotatingButton>
-      </OpenButton>
-      <Title
-        clickable={true}
-        onClick={[Function]}
-      >
-        <header
-          className="emotion-2 emotion-3"
+                <svg
+                  height="20px"
+                  viewBox="0 0 6 4"
+                  width="20px"
+                >
+                  <polygon
+                    fill="#0C60A2"
+                    points="3 4 6 1 0 1"
+                  />
+                </svg>
+              </Arrow>
+            </button>
+          </RotatingButton>
+        </OpenButton>
+        <Title
+          clickable={true}
           onClick={[Function]}
-        />
-      </Title>
-      <div>
-        <div>
-          Test
-        </div>
-        <Collapse
-          fixedHeight={-1}
-          forceInitialAnimation={false}
-          hasNestedCollapse={false}
-          isOpened={false}
-          onMeasure={[Function]}
-          onRender={[Function]}
-          onRest={[Function]}
-          style={Object {}}
-          theme={
-            Object {
-              "collapse": "ReactCollapse--collapse",
-              "content": "ReactCollapse--content",
-            }
-          }
         >
-          <Motion
-            defaultStyle={
-              Object {
-                "height": 0,
-              }
-            }
+          <header
+            className="emotion-2 emotion-3"
+            onClick={[Function]}
+          />
+        </Title>
+        <div>
+          <div>
+            Test
+          </div>
+          <Collapse
+            fixedHeight={-1}
+            forceInitialAnimation={false}
+            hasNestedCollapse={false}
+            isOpened={false}
+            onMeasure={[Function]}
+            onRender={[Function]}
             onRest={[Function]}
-            style={
+            style={Object {}}
+            theme={
               Object {
-                "height": 0,
+                "collapse": "ReactCollapse--collapse",
+                "content": "ReactCollapse--content",
               }
             }
           >
-            <div
-              className="ReactCollapse--collapse"
+            <Motion
+              defaultStyle={
+                Object {
+                  "height": 0,
+                }
+              }
+              onRest={[Function]}
               style={
                 Object {
                   "height": 0,
-                  "overflow": "hidden",
                 }
               }
             >
               <div
-                className="ReactCollapse--content"
+                className="ReactCollapse--collapse"
+                style={
+                  Object {
+                    "height": 0,
+                    "overflow": "hidden",
+                  }
+                }
               >
-                Expanded
+                <div
+                  className="ReactCollapse--content"
+                >
+                  Expanded
+                </div>
               </div>
-            </div>
-          </Motion>
-        </Collapse>
+            </Motion>
+          </Collapse>
+        </div>
       </div>
-    </div>
-  </Container>
-</TableAccordionGroup>
+    </Container>
+  </TableAccordionGroup>
+</Styled(TableAccordionGroup)>
 `;

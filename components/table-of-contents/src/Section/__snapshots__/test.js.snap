@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TableOfContents Section Entry matches snapshot 1`] = `
-<div
-  id="id"
->
-  Section text here
-</div>
-`;
+exports[`TableOfContents Section Entry matches snapshot 1`] = `""`;

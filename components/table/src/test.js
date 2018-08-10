@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 
@@ -22,7 +22,7 @@ describe('Table', () => {
   let wrapper;
 
   it('renders as a table', () => {
-    wrapper = shallow(<Component titles={titles} rows={rows} />);
+    wrapper = mount(<Component titles={titles} rows={rows} />);
     expect(wrapper).toHaveStyleRule('display', 'table');
   });
 
