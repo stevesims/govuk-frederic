@@ -1,7 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HeaderButton matches snapshot 1`] = `
-<Button
-  disabled={true}
-/>
+.emotion-0 {
+  background: none;
+  border-bottom: 4px solid transparent;
+  border-left: none;
+  border-right: none;
+  border-top: 4px solid transparent;
+  display: inline-block;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 190px;
+  padding: 8px;
+  text-align: center;
+  border-bottom-color: #005ea5;
+  border-top-color: #005ea5;
+  color: #005ea5;
+}
+
+.emotion-0:focus {
+  background: #ffbf47;
+  outline: 1px solid #ffbf47;
+}
+
+.emotion-0:hover {
+  border-bottom-color: #2b8cc4;
+  border-top-color: #2b8cc4;
+}
+
+<HeaderButton
+  active={true}
+>
+  <Button
+    active={true}
+  >
+    <button
+      className="emotion-0 emotion-1"
+    />
+  </Button>
+</HeaderButton>
 `;

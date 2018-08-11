@@ -1,9 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Count matches snapshot 1`] = `
-<StyledCount>
-  <span>
-    4
-  </span>
-</StyledCount>
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+}
+
+<Count
+  value={6}
+>
+  <StyledCount>
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <span>
+        6
+      </span>
+    </div>
+  </StyledCount>
+</Count>
 `;

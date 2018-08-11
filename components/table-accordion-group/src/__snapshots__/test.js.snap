@@ -58,34 +58,14 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
 <Styled(TableAccordionGroup)
   changeOnTitleClick={true}
   expanded="Expanded"
-  onChange={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
-            "open": true,
-          },
-        ],
-      ],
-    }
-  }
+  onChange={[MockFunction]}
   open={false}
 >
   <TableAccordionGroup
     changeOnTitleClick={true}
     className="emotion-6"
     expanded="Expanded"
-    onChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            Object {
-              "open": true,
-            },
-          ],
-        ],
-      }
-    }
+    onChange={[MockFunction]}
     open={false}
   >
     <Container
@@ -95,17 +75,7 @@ exports[`TableAccordionGroup matches snapshot 1`] = `
         className="emotion-4 emotion-5"
       >
         <OpenButton
-          onChange={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "open": true,
-                  },
-                ],
-              ],
-            }
-          }
+          onChange={[MockFunction]}
           open={false}
         >
           <RotatingButton

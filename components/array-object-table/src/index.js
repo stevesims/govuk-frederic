@@ -73,16 +73,14 @@ ArrayObjectTable.propTypes = {
     key: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
     transform: PropTypes.func,
-  })),
-  array: PropTypes.arrayOf(PropTypes.object),
+  })).isRequired,
+  array: PropTypes.arrayOf(PropTypes.object).isRequired,
   hideWithNoValues: PropTypes.bool,
   skipEmptyRows: PropTypes.bool,
   title: PropTypes.node,
 };
 
 ArrayObjectTable.defaultProps = {
-  fields: [],
-  array: [],
   hideWithNoValues: false,
   skipEmptyRows: false,
   title: null,

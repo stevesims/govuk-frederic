@@ -1,75 +1,66 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
-import Component from '.';
+import ArrayObjectTable from '.';
+
+const fields = [
+  { key: 'one', heading: 'One' },
+  { key: 'two', heading: 'Two', transform: () => 'two' },
+  { key: 'three', heading: 'Three' },
+];
+
+const array = [
+  {},
+  { one: 'test', two: 'test' },
+];
+
+const getRows = wrapper => wrapper.find('Table').prop('rows');
 
 describe('ArrayObjectTable', () => {
-  let fields = [
-    { key: 'one', heading: 'One' },
-    { key: 'two', heading: 'Two', transform: () => 'two' },
-    { key: 'three', heading: 'Three' },
-  ];
-  let array = [
-    {}, // empty record to be automatically omitted
-    { one: 'test', two: 'test' },
-  ];
-  const title = 'Heading';
-  let wrapper;
-
-  it('renders with defaults', () => {
-    wrapper = mount(<Component />);
+  it('renders with required props', () => {
+    const wrapper = shallow(<ArrayObjectTable fields={fields} array={array} />);
     expect(wrapper.exists()).toBe(true);
   });
 
-  it('renders with basic props', () => {
-    wrapper = mount(<Component fields={fields} array={array} />);
+  describe('renders table data', () => {
+    it('renders expected table heading cells ', () => {
+      const wrapper = mount(<ArrayObjectTable fields={fields} array={array} />);
+      const titles = wrapper.find('Table').prop('titles');
+      expect(titles).toEqual(['One', 'Two', 'Three']);
+    });
+
+    it('renders expected table data cells', () => {
+      const wrapper = mount(<ArrayObjectTable fields={fields} array={array} />);
+      expect(getRows(wrapper)).toEqual([['-', 'two', '-'], ['test', 'two', '-']]);
+    });
+  });
+
+  describe('responds as expected to additional props', () => {
+    it('renders a table heading if provided', () => {
+      const wrapper = shallow(<ArrayObjectTable fields={fields} array={array} title="Heading"/>);
+      expect(wrapper.contains('Heading')).toBe(true);
+    });
+
+    it('skips empty rows if skipEmptyRows is true', () => {
+      const wrapper = mount(<ArrayObjectTable fields={fields} array={array} skipEmptyRows/>);
+      expect(getRows(wrapper)).toEqual([['test', 'two', '-']]);
+    });
     
-    expect(wrapper.exists()).toBe(true);
+    it('renders nothing if no rows are returned and hideWithNoValues is true', () => {
+      const emptyArray = [{}, {}, {}];
+      const wrapper = shallow(<ArrayObjectTable fields={fields} array={emptyArray} skipEmptyRows hideWithNoValues />);
+      expect(wrapper.html()).toBe(null);
+    });
+
+    it('renders one tbody row if no rows are returned and hideWithNoValues is not true', () => {
+      const emptyArray = [{}, {}, {}];
+      const wrapper = mount(<ArrayObjectTable fields={fields} array={emptyArray} skipEmptyRows />);
+      expect(wrapper.find('tbody tr').length).toBe(1);
+    });
   });
 
-  it('renders a table of data based on props passed', () => {
-    const table = wrapper.find('Table');
-    const rows = table.prop('rows');
-    const titles = table.prop('titles');
-  
-    expect(rows).toEqual([['-', 'two', '-'], ['test', 'two', '-']]);
-    expect(titles).toEqual(['One', 'Two', 'Three']);
-  });
-
-  it('skips empty rows when skipEmptyRows prop is passed', () => {
-    wrapper.setProps({ skipEmptyRows: true });
-    const table = wrapper.find('Table');
-    const rows = table.prop('rows');
-
-    expect(rows).toEqual([['test', 'two', '-']]);
-  });
-
-  it('optionally renders a heading for a table', () => {
-    wrapper.setProps({ title });
-
-    expect(wrapper.contains('Heading')).toBe(true);
-  });
-
-  it('renders one tbody row when no rows are returned if hideWithNoValues is not true', () => {
-    fields = [
-      { key: 'one', heading: 'One' },
-      { key: 'two', heading: 'Two' },
-    ];
-    array = [
-      {},
-      {},
-    ];
-    wrapper = mount(<Component fields={fields} array={array} skipEmptyRows/>);
-    const table = wrapper.find('Table');
-    const rows = table.prop('rows');
-    expect(rows).toEqual([['-', '-']]);
-    expect(wrapper.find('tbody tr').length).toBe(1);
-  });
-
-  it('renders nothing when no rows are returned and hideWithNoValues is true', () => {
-    wrapper = mount(<Component fields={fields} array={array} skipEmptyRows hideWithNoValues/>);
-
-    expect(wrapper.html()).toBe(null);
+  it('matches snapshot', () => {
+    const wrapper = mount(<ArrayObjectTable fields={fields} array={array} skipEmptyRows />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
-

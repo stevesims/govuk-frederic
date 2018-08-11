@@ -1,39 +1,40 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 
-import Component from '.';
+import ArrowLeft from '.';
 
 expect.extend(createMatchers(emotion));
 
-describe('ArrowLeft', () => {
-  let wrapper;
-  
+describe('ArrowLeft', () => { 
   it('renders without crashing', () => {
-    wrapper = shallow(<Component />);
+    const wrapper = shallow(<ArrowLeft />);
+    expect(wrapper.exists()).toBe(true);
   });
 
   it('renders with a title', () => {
-    wrapper = shallow(<Component>Example title</Component>);
-    expect(wrapper.find('title').text()).toBe('Example title');
+    const wrapper = shallow(<ArrowLeft>Title</ArrowLeft>);
+    expect(wrapper.find('title').text()).toBe('Title');
   });
 
   it('renders with a colour fill', () => {
-    wrapper = shallow(<Component fill="red" />);
+    const wrapper = shallow(<ArrowLeft fill="red" />);
     expect(wrapper.find('svg[fill="red"]').length).toBe(1);
   });
 
-  it('supports setting of no color', () => {
-    expect(wrapper).not.toHaveStyleRule('color', 'purple');
-  });
-
   it('supports setting of color', () => {
-    wrapper = shallow(<Component color="purple" />);
+    const wrapper = shallow(<ArrowLeft color="purple" />);
     expect(wrapper).toHaveStyleRule('color', 'purple');
   });
 
+  it('supports no setting of color', () => {
+    const wrapper = shallow(<ArrowLeft/>);
+    expect(wrapper).not.toHaveStyleRule('color', 'purple');
+  });
+  
   it('matches snapshot', () => {
+    const wrapper = mount(<ArrowLeft fill="red" color="purple">Title</ArrowLeft>);
     expect(wrapper).toMatchSnapshot();
   });
 });

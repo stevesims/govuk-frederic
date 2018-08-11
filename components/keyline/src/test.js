@@ -1,37 +1,35 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
-import { GREY_1 } from 'govuk-colours';
 
-import Component from '.';
+import Keyline from '.';
 
 expect.extend(createMatchers(emotion));
 
 describe('Keyline', () => {
-  let wrapper;
-
-  it('renders with no props', () => {
-    wrapper = mount(<Component />);
-    expect(wrapper).toHaveStyleRule('border-bottom', `1px solid ${GREY_1}`);
+  it('renders without crashing', () => {
+    const wrapper = shallow(<Keyline />);
+    expect(wrapper.exists()).toBe(true);
   });
 
   it('renders children', () => {
-    wrapper = mount(<Component>Sample text</Component>);
+    const wrapper = mount(<Keyline>Sample text</Keyline>);
     expect(wrapper.find('KeylineWrapper').childAt(0).text()).toBe('Sample text');
   });
- 
-  it('renders as inlineBlock', () => {
-    wrapper = mount(<Component inlineBlock />);
+
+  it('renders as inlineBlock in response to prop', () => {
+    const wrapper = mount(<Keyline inlineBlock />);
     expect(wrapper).toHaveStyleRule('display', 'inline-block'); 
   });
   
-  it('renders with borderColor', () => {
-    wrapper = mount(<Component borderColor="red" />);
+  it('renders with borderColor in response to prop', () => {
+    const wrapper = mount(<Keyline borderColor="red" />);
     expect(wrapper).toHaveStyleRule('border-bottom', '1px solid red'); 
   });
 
   it('matches snapshot', () => {
+    const wrapper = mount(<Keyline inlineBlock borderColor="blue" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

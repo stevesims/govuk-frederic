@@ -1,14 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Arrow matches snapshot 1`] = `
-<svg
-  height="20px"
-  viewBox="0 0 6 4"
-  width="20px"
+<Arrow
+  fill="red"
+  width={20}
 >
-  <polygon
-    fill="red"
-    points="3 4 6 1 0 1"
-  />
-</svg>
+  <svg
+    height="20px"
+    viewBox="0 0 6 4"
+    width="20px"
+  >
+    <polygon
+      fill="red"
+      points="3 4 6 1 0 1"
+    />
+  </svg>
+</Arrow>
 `;

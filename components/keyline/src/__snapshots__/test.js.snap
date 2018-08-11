@@ -13,8 +13,8 @@ exports[`Keyline matches snapshot 1`] = `
 
 .emotion-0 {
   border: 0;
-  border-bottom: 1px solid red;
-  display: block;
+  border-bottom: 1px solid blue;
+  display: inline-block;
   font-family: "nta",Arial,sans-serif;
   margin-bottom: 15px;
 }
@@ -26,15 +26,18 @@ exports[`Keyline matches snapshot 1`] = `
 }
 
 <Styled(Keyline)
-  borderColor="red"
+  borderColor="blue"
+  inlineBlock={true}
 >
   <Keyline
-    borderColor="red"
+    borderColor="blue"
     className="emotion-2"
+    inlineBlock={true}
   >
     <KeylineWrapper
-      borderColor="red"
+      borderColor="blue"
       className="emotion-2"
+      inlineBlock={true}
     >
       <span
         className="emotion-0 emotion-1"

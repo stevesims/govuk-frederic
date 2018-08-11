@@ -1,34 +1,30 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 
-import Component from '.';
+import TitleResultCount from '.';
 
 expect.extend(createMatchers(emotion));
 
 describe('TitleResultCount', () => {
-  let wrapper;
-
-  it('renders with no properties', () => {
-    wrapper = shallow(<Component>Sample title</Component>);
+  it('renders without crashing', () => {
+    const wrapper = shallow(<TitleResultCount />);
+    expect(wrapper.exists()).toBe(true);
   });
 
-  it('renders style rules', () => {
-    expect(wrapper).toHaveStyleRule('display', 'inline-block');
-  });
-
-  it('renders title', () => {
+  it('renders a title', () => {
+    const wrapper = shallow(<TitleResultCount>Title</TitleResultCount>);
     expect(
       wrapper
         .find('Title')
         .childAt(0)
         .text(),
-    ).toBe('Sample title');
+    ).toBe('Title');
   });
 
   it('renders with a count', () => {
-    wrapper.setProps({ count: 3 });
+    const wrapper = shallow(<TitleResultCount count="3" />);
     expect(
       wrapper
         .find('ResultCount')
@@ -36,8 +32,9 @@ describe('TitleResultCount', () => {
         .text(),
     ).toBe('3');
   });
-
+  
   it('matches snapshot', () => {
+    const wrapper = mount(<TitleResultCount count="3">Title</TitleResultCount>);
     expect(wrapper).toMatchSnapshot();
   });
 });

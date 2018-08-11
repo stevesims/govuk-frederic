@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObjectTable matches snapshot 1`] = `
+.emotion-10 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-8 {
+  display: table;
+  font-family: "nta",Arial,sans-serif;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 4px;
+  vertical-align: top;
+  font-weight: bold;
+  text-align: left;
+  width: 25%;
+}
+
+.emotion-0:first-child {
+  padding: 15px 4px 15px 0;
+}
+
+.emotion-0:last-child {
+  padding: 15px 0 15px 4px;
+}
+
+.emotion-2 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 4px;
+  vertical-align: top;
+}
+
+.emotion-2:first-child {
+  padding: 15px 4px 15px 0;
+}
+
+.emotion-2:last-child {
+  padding: 15px 0 15px 4px;
+}
+
+<ObjectTable
+  fields={
+    Array [
+      Object {
+        "heading": "One",
+        "key": "one",
+      },
+      Object {
+        "heading": "Two",
+        "key": "two",
+        "transform": [Function],
+      },
+    ]
+  }
+  hideWithNoValues={false}
+  object={
+    Object {
+      "one": "test",
+      "two": "test",
+    }
+  }
+  skipEmptyValues={false}
+  title={null}
+>
+  <Styled(Table)
+    flexibleColumns={false}
+    nameByRow={true}
+    names={
+      Array [
+        "one",
+        "two",
+      ]
+    }
+    rowIncludesHeading={true}
+    rows={
+      Array [
+        Array [
+          "One",
+          "test",
+        ],
+        Array [
+          "Two",
+          "two",
+        ],
+      ]
+    }
+    titles={null}
+  >
+    <Table
+      className="emotion-10"
+      flexibleColumns={false}
+      nameByRow={true}
+      names={
+        Array [
+          "one",
+          "two",
+        ]
+      }
+      rowIncludesHeading={true}
+      rows={
+        Array [
+          Array [
+            "One",
+            "test",
+          ],
+          Array [
+            "Two",
+            "two",
+          ],
+        ]
+      }
+      titles={null}
+    >
+      <TableContainer
+        className="emotion-10"
+        flexibleColumns={false}
+      >
+        <table
+          className="emotion-8 emotion-9"
+        >
+          <tbody>
+            <tr
+              key="0"
+            >
+              <TableHeading
+                columnCount={2}
+                key="0"
+                name="one"
+                rowHeading={true}
+              >
+                <th
+                  className="emotion-0 emotion-1"
+                  name="one"
+                >
+                  One
+                </th>
+              </TableHeading>
+              <TableData
+                key="1"
+                name="one"
+              >
+                <td
+                  className="emotion-2 emotion-3"
+                  name="one"
+                >
+                  test
+                </td>
+              </TableData>
+            </tr>
+            <tr
+              key="1"
+            >
+              <TableHeading
+                columnCount={2}
+                key="0"
+                name="two"
+                rowHeading={true}
+              >
+                <th
+                  className="emotion-0 emotion-1"
+                  name="two"
+                >
+                  Two
+                </th>
+              </TableHeading>
+              <TableData
+                key="1"
+                name="two"
+              >
+                <td
+                  className="emotion-2 emotion-3"
+                  name="two"
+                >
+                  two
+                </td>
+              </TableData>
+            </tr>
+          </tbody>
+        </table>
+      </TableContainer>
+    </Table>
+  </Styled(Table)>
+</ObjectTable>
+`;

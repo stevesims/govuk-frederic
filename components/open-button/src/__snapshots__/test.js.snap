@@ -1,12 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OpenButton matches snapshot 1`] = `
-<RotatingButton
-  onClick={[Function]}
+.emotion-0 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  padding: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  width: 20px;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+<OpenButton
+  onChange={[MockFunction]}
+  open={true}
 >
-  <Arrow
-    fill="#0C60A2"
-    width={20}
-  />
-</RotatingButton>
+  <RotatingButton
+    onClick={[Function]}
+    open={true}
+  >
+    <button
+      className="emotion-0 emotion-1"
+      onClick={[Function]}
+      open={true}
+    >
+      <Arrow
+        fill="#0C60A2"
+        width={20}
+      >
+        <svg
+          height="20px"
+          viewBox="0 0 6 4"
+          width="20px"
+        >
+          <polygon
+            fill="#0C60A2"
+            points="3 4 6 1 0 1"
+          />
+        </svg>
+      </Arrow>
+    </button>
+  </RotatingButton>
+</OpenButton>
 `;

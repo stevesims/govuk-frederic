@@ -1,21 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
-import Component from '.';
+import Arrow from '.';
 
 describe('Arrow', () => {
-  let wrapper;
-
   it('renders without crashing', () => {
-    wrapper = shallow(<Component />);
+    const wrapper = shallow(<Arrow />);
+    expect(wrapper.exists()).toBe(true);
   });
 
   it('sets fill color on polygon', () => {
-    wrapper = shallow(<Component fill="red" />);
+    const wrapper = shallow(<Arrow fill="red" />);
     expect(wrapper.find('polygon[fill="red"]').length).toBe(1);
   });
 
   it('matches snapshot', () => {
+    const wrapper = mount(<Arrow fill="red" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

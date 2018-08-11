@@ -1,21 +1,20 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 
-import Component from '.';
+import RemoveButton from '.';
 
 expect.extend(createMatchers(emotion));
 
 describe('RemoveButton', () => {
-  let wrapper;
-  
-  it('renders with expected style rule', () => {
-    wrapper = shallow(<Component />);
-    expect(wrapper).toHaveStyleRule('font-size', '11px');
+  it('renders without crashing', () => {
+    const wrapper = shallow(<RemoveButton />);
+    expect(wrapper.exists()).toBe(true);
   });
 
   it('matches snapshot', () => {
+    const wrapper = mount(<RemoveButton />);
     expect(wrapper).toMatchSnapshot();
   });
 });

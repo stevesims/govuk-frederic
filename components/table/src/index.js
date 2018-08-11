@@ -197,6 +197,7 @@ Table.defaultProps = {
   nameByRow: false,
   names: [],
   rowIncludesHeading: false,
+  titles: null,
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(Table);

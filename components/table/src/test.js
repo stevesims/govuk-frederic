@@ -1,41 +1,40 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
 
-import Component from '.';
+import Table from '.';
 
 expect.extend(createMatchers(emotion));
 
+const titles = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
+const rows = [
+  ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
+  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
+  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
+];
+const columnTableNames = ['one', 'two', 'three', ['i', 'am', 'named', 'individually']];
+const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individually'], 'three'];
+const rowTableNames = ['one', ['i', 'am', 'named', 'individually'], 'three'];
+
 describe('Table', () => {
-  const titles = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
-  const rows = [
-    ['Content 1-1', 'Content 1-2', 'Content 1-3', 'Content 1-4'],
-    ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
-    ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
-  ];
+  it('renders with only required props', () => {
+    const wrapper = shallow(<Table rows={rows} />);
+    expect(wrapper.exists()).toBe(true);
+  });
   
-  const columnTableNames = ['one', 'two', 'three', ['i', 'am', 'named', 'individually']];
-  const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individually'], 'three'];
-  const rowTableNames = ['one', ['i', 'am', 'named', 'individually'], 'three'];
-
-  let wrapper;
-
-  it('renders as a table', () => {
-    wrapper = mount(<Component titles={titles} rows={rows} />);
-    expect(wrapper).toHaveStyleRule('display', 'table');
+  it('renders rows from prop', () => {
+    const wrapper = mount(<Table rows={rows} />);
+    expect(wrapper.find('tr')).toHaveLength(3);
   });
 
   it('renders titles from prop', () => {
+    const wrapper = mount(<Table rows={rows} titles={titles} />);
     expect(wrapper.find('TableHeading')).toHaveLength(4);
   });
 
-  it('renders rows from prop', () => {
-    expect(wrapper.find('tr')).toHaveLength(4);
-  });
-
   it('names each cell according to its column', () => {
-    wrapper.setProps({name: 'name', names: columnTableNames});
+    const wrapper = mount(<Table rows={rows} titles={titles} name="name" names={columnTableNames} />);
     const th = wrapper.find('TableHeading').at(2);
     expect(th.prop('name')).toBe('three');
     const td = wrapper.find('TableData').at(2);
@@ -43,13 +42,26 @@ describe('Table', () => {
   });
 
   it('renders rows with header column', () => {
-    wrapper.setProps({rowIncludesHeading: true, nameByRow: true});
+    const wrapper = mount(<Table 
+      rows={rows}
+      name="name"
+      titles={titles}
+      names={columnTableNames}
+      rowIncludesHeading 
+      nameByRow
+    />);
     expect(wrapper.find('TableHeading')).toHaveLength(7);
   });
 
   it('names each cell according to its row, no titles', () => {
-    wrapper.setProps({ titles: undefined, names: rowTableNames });
-    
+    const wrapper = mount(<Table 
+      rows={rows}
+      name="name"
+      names={rowTableNames}
+      rowIncludesHeading 
+      nameByRow
+    />);
+
     let th = wrapper.find('TableHeading').at(0);
     expect(th.prop('name')).toBe('one');
 
@@ -76,8 +88,15 @@ describe('Table', () => {
   });
 
   it('names each cell according to its row, with titles', () => {
-    wrapper.setProps({ titles, names: rowTableNamesWithTitles });
-
+    const wrapper = mount(<Table 
+      rows={rows}
+      name="name"
+      names={rowTableNamesWithTitles}
+      rowIncludesHeading 
+      nameByRow
+      titles={titles}
+    />);
+    
     let th = wrapper.find('TableHeading').at(3);
     expect(th.prop('name')).toBe('heading');
 
@@ -107,6 +126,14 @@ describe('Table', () => {
   });
 
   it('sets th width according to rowHeading prop', () => {
+    const wrapper = mount(<Table 
+      rows={rows}
+      name="name"
+      names={rowTableNamesWithTitles}
+      rowIncludesHeading 
+      nameByRow
+      titles={titles}
+    />);
     expect(wrapper.find('TableHeading').at(3)).not.toHaveStyleRule('width');
     const t = titles.slice(-1);
     const r = rows.map(row => row.slice(-1));
@@ -115,12 +142,29 @@ describe('Table', () => {
   });
 
   it('sets table-layout according to flexibleColumns prop', () => {
+    const wrapper = mount(<Table 
+      rows={rows}
+      name="name"
+      names={rowTableNamesWithTitles}
+      rowIncludesHeading 
+      nameByRow
+      titles={titles}
+    />);
     expect(wrapper).toHaveStyleRule('table-layout', 'fixed');
     wrapper.setProps({flexibleColumns: true});
     expect(wrapper).toHaveStyleRule('table-layout', 'auto');
   });
-
+  
   it('matches snapshot', () => {
+    const wrapper = mount(<Table 
+      rows={rows}
+      name="name"
+      names={rowTableNamesWithTitles}
+      rowIncludesHeading 
+      flexibleColumns
+      nameByRow
+      titles={titles}
+    />);
     expect(wrapper).toMatchSnapshot();
   });
 });

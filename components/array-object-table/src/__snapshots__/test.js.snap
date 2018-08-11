@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArrayObjectTable matches snapshot 1`] = `
+.emotion-14 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-12 {
+  display: table;
+  font-family: "nta",Arial,sans-serif;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 4px;
+  vertical-align: top;
+  font-weight: bold;
+  text-align: left;
+}
+
+.emotion-0:first-child {
+  padding: 15px 4px 15px 0;
+}
+
+.emotion-0:last-child {
+  padding: 15px 0 15px 4px;
+}
+
+.emotion-6 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 4px;
+  vertical-align: top;
+}
+
+.emotion-6:first-child {
+  padding: 15px 4px 15px 0;
+}
+
+.emotion-6:last-child {
+  padding: 15px 0 15px 4px;
+}
+
+<ArrayObjectTable
+  array={
+    Array [
+      Object {},
+      Object {
+        "one": "test",
+        "two": "test",
+      },
+    ]
+  }
+  fields={
+    Array [
+      Object {
+        "heading": "One",
+        "key": "one",
+      },
+      Object {
+        "heading": "Two",
+        "key": "two",
+        "transform": [Function],
+      },
+      Object {
+        "heading": "Three",
+        "key": "three",
+      },
+    ]
+  }
+  hideWithNoValues={false}
+  skipEmptyRows={true}
+  title={null}
+>
+  <Styled(Table)
+    flexibleColumns={false}
+    nameByRow={false}
+    names={Array []}
+    rowIncludesHeading={false}
+    rows={
+      Array [
+        Array [
+          "test",
+          "two",
+          "-",
+        ],
+      ]
+    }
+    titles={
+      Array [
+        "One",
+        "Two",
+        "Three",
+      ]
+    }
+  >
+    <Table
+      className="emotion-14"
+      flexibleColumns={false}
+      nameByRow={false}
+      names={Array []}
+      rowIncludesHeading={false}
+      rows={
+        Array [
+          Array [
+            "test",
+            "two",
+            "-",
+          ],
+        ]
+      }
+      titles={
+        Array [
+          "One",
+          "Two",
+          "Three",
+        ]
+      }
+    >
+      <TableContainer
+        className="emotion-14"
+        flexibleColumns={false}
+      >
+        <table
+          className="emotion-12 emotion-13"
+        >
+          <thead>
+            <tr>
+              <TableHeading
+                key="0"
+              >
+                <th
+                  className="emotion-0 emotion-1"
+                >
+                  One
+                </th>
+              </TableHeading>
+              <TableHeading
+                key="1"
+              >
+                <th
+                  className="emotion-0 emotion-1"
+                >
+                  Two
+                </th>
+              </TableHeading>
+              <TableHeading
+                key="2"
+              >
+                <th
+                  className="emotion-0 emotion-1"
+                >
+                  Three
+                </th>
+              </TableHeading>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              key="0"
+            >
+              <TableData
+                key="0"
+              >
+                <td
+                  className="emotion-6 emotion-7"
+                >
+                  test
+                </td>
+              </TableData>
+              <TableData
+                key="1"
+              >
+                <td
+                  className="emotion-6 emotion-7"
+                >
+                  two
+                </td>
+              </TableData>
+              <TableData
+                key="2"
+              >
+                <td
+                  className="emotion-6 emotion-7"
+                >
+                  -
+                </td>
+              </TableData>
+            </tr>
+          </tbody>
+        </table>
+      </TableContainer>
+    </Table>
+  </Styled(Table)>
+</ArrayObjectTable>
+`;

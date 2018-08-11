@@ -1,14 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CountdownTextarea matches snapshot 1`] = `
-<StyledTextArea
+exports[`CountdownTextArea matches snapshot 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #b10e1e;
+  font-weight: 800;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  min-height: 250px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
+}
+
+.emotion-0:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.emotion-4 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  line-height: 1;
+  position: relative;
+  width: 0;
+}
+
+.emotion-2 {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  font-family: "nta",Arial,sans-serif;
+}
+
+<CountdownTextArea
+  maxLength={2}
   noMaxLengthAttr={false}
-  over={false}
   positiveOnly={false}
   value="Test"
 >
-  <StyledTextAreaField
+  <StyledTextArea
+    maxLength={2}
+    noMaxLengthAttr={false}
+    over={true}
+    positiveOnly={false}
     value="Test"
-  />
-</StyledTextArea>
+  >
+    <div
+      className="emotion-6 emotion-7"
+      maxLength={2}
+      value="Test"
+    >
+      <StyledTextAreaField
+        maxLength={2}
+        value="Test"
+      >
+        <textarea
+          className="emotion-0 emotion-1"
+          maxLength={2}
+          value="Test"
+        />
+      </StyledTextAreaField>
+      <StyledCountdownContainer>
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <StyledCountdown>
+            <div
+              className="emotion-2 emotion-3"
+            >
+              -2
+            </div>
+          </StyledCountdown>
+        </div>
+      </StyledCountdownContainer>
+    </div>
+  </StyledTextArea>
+</CountdownTextArea>
 `;

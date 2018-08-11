@@ -1,15 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TitleResultCount matches snapshot 1`] = `
-<Wrapper>
-  <Title>
-    Sample title
-  </Title>
-  <ResultCount
-    backgroundColor="#6f777b"
-    color="#ffffff"
-  >
-    3
-  </ResultCount>
-</Wrapper>
+.emotion-4 {
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.emotion-0 {
+  display: inline-block;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+  margin-right: 10px;
+}
+
+.emotion-2 {
+  background: #6f777b;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 1px 4px;
+  text-align: center;
+}
+
+<TitleResultCount
+  count="3"
+>
+  <Wrapper>
+    <div
+      className="emotion-4 emotion-5"
+    >
+      <Title>
+        <div
+          className="emotion-0 emotion-1"
+        >
+          Title
+        </div>
+      </Title>
+      <ResultCount
+        backgroundColor="#6f777b"
+        color="#ffffff"
+      >
+        <StyledResultCount
+          backgroundColor="#6f777b"
+          color="#ffffff"
+        >
+          <span
+            className="emotion-2 emotion-3"
+            color="#ffffff"
+          >
+            3
+          </span>
+        </StyledResultCount>
+      </ResultCount>
+    </div>
+  </Wrapper>
+</TitleResultCount>
 `;

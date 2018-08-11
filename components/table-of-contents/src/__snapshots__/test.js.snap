@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableOfContents matches snapshot 1`] = `
+<Container>
+  <Section
+    id="id"
+    title="Title"
+  >
+    <Entry
+      id="id"
+      title="Title"
+      toc={
+        Object {
+          "addContent": [Function],
+          "contents": Array [
+            Object {
+              "id": "id",
+              "title": "Title",
+            },
+          ],
+          "removeContent": [Function],
+        }
+      }
+    >
+      <div
+        id="id"
+      >
+        Section text here
+      </div>
+    </Entry>
+  </Section>
+  <div
+    id="index-id"
+    key="id"
+  >
+    id
+    : 
+    Title
+  </div>
+</Container>
+`;
