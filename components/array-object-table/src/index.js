@@ -20,10 +20,10 @@ import { rowsFromArray, titlesFromFields } from '@govuk-frederic/utils';
  *   {},
  * ];
  * const title = ['Heading'];
- * 
+ *
  * <ArrayObjectTable fields={fields} array={array} title={title}/>;
  * ```
- * 
+ *
  * With skipEmptyRows
  * ```jsx
  * const fields = [
@@ -35,10 +35,10 @@ import { rowsFromArray, titlesFromFields } from '@govuk-frederic/utils';
  *   {},
  * ];
  * const title = ['Heading'];
- * 
+ *
  * <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows/>
  * ```
- * 
+ *
  * With skipEmptyRows and hideWithNoValues
  * ```jsx
  * const fields = [
@@ -50,14 +50,39 @@ import { rowsFromArray, titlesFromFields } from '@govuk-frederic/utils';
  *   {},
  * ];
  * const title = ['Heading'];
- * 
+ *
  * <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues/>;
  * ```
+ *
+ * With object transform and default transform
+ * ```jsx
+ * const fields = [
+ *   { key: 'one', heading: 'One' },
+ *   { key: 'two', heading: 'Two', transform: value => value ? value.toLowerCase() : '' },
+ *   { key: 'three', heading: 'Three' },
+ *   { key: 'three', heading: 'Four', transform: value => value ? value.toLowerCase() : '*' },
+ * ];
+ * const array = [
+ *   {one: 'One', two: 'Two'},
+ * ];
+ * const title = ['Heading'];
+ * const defaultTransform = value => (value || '-');
+ *
+ * <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues defaultTransform={defaultTransform}/>
+ * ```
  * */
-const ArrayObjectTable = ({ fields, array, hideWithNoValues, skipEmptyRows, title, ...props }) => {
-  let rows = rowsFromArray(array, fields, skipEmptyRows);
+const ArrayObjectTable = ({
+  fields,
+  array,
+  hideWithNoValues,
+  skipEmptyRows,
+  title,
+  defaultTransform,
+  ...props
+}) => {
+  let rows = rowsFromArray(array, fields, skipEmptyRows, defaultTransform);
   if (!rows.length && !hideWithNoValues) {
-    rows = rowsFromArray([{}], fields, false);
+    rows = rowsFromArray([{}], fields, false, defaultTransform);
   }
   return rows.length ?
     <Fragment>
@@ -77,12 +102,14 @@ ArrayObjectTable.propTypes = {
   array: PropTypes.arrayOf(PropTypes.object).isRequired,
   hideWithNoValues: PropTypes.bool,
   skipEmptyRows: PropTypes.bool,
+  defaultTransform: PropTypes.func,
   title: PropTypes.node,
 };
 
 ArrayObjectTable.defaultProps = {
   hideWithNoValues: false,
   skipEmptyRows: false,
+  defaultTransform: value => (value ? value : '-'), /* "||" breaks api-docs formatting! */
   title: null,
 };
 

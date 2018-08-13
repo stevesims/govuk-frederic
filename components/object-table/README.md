@@ -56,8 +56,7 @@ Prop | Required | Default | Type | Description
  `fields` |  | ```[]``` | arrayOf[object Object] | 
  `hideWithNoValues` |  | ```false``` | bool | 
  `object` |  | ```{}``` | object | 
- `skipEmptyValues` |  | ```true``` | bool | 
- `skipMissingKeys` |  | `````` | bool | 
- `title` |  | `````` | node | 
+ `skipEmptyValues` |  | ```false``` | bool | 
+ `title` |  | ```null``` | node | 
 
 

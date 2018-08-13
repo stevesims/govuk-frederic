@@ -5,7 +5,7 @@ describe('rowsFromArray', () => {
     const { rowsFromArray } = exports;
     const fields = [
       { key: 'one', heading: 'One' },
-      { key: 'two', heading: 'Two', transform: () => 'two' },
+      { key: 'two', heading: 'Two', transform: value => (value || 'two') },
       { key: 'three', heading: 'Three' },
     ];
     const array = [
@@ -14,10 +14,10 @@ describe('rowsFromArray', () => {
     ];
     
     let rows = rowsFromArray(array, fields, false);
-    expect(rows).toEqual([['-', 'two', '-'], ['test', 'two', '-']]);
+    expect(rows).toEqual([['-', 'two', '-'], ['test', 'test', '-']]);
 
     rows = rowsFromArray(array, fields, true);
-    expect(rows).toEqual([['test', 'two', '-']]);
+    expect(rows).toEqual([['test', 'test', '-']]);
   });
 });
 

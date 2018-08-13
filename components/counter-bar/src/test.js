@@ -11,7 +11,12 @@ expect.extend(createMatchers(emotion));
 
 describe('CounterBar', () => {
   it('renders without crashing', () => {
-    const wrapper = shallow(<CounterBar />);
+    const wrapper = shallow(<CounterBar>
+      <CounterBar.Total score={1}>All counters</CounterBar.Total>
+      <CounterBar.Counters>
+        <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+      </CounterBar.Counters>
+    </CounterBar>);
     expect(wrapper.exists()).toBe(true);
   });
 
@@ -40,7 +45,7 @@ describe('CounterBar', () => {
       </CounterBar>);
       expect(wrapper.find('Counter').at(1).exists()).toBe(true);
     });
-      
+
     it('renders counters with an active total', () => {
       const wrapper = mount(<CounterBar>
         <CounterBar.Total score={1} active>All counters</CounterBar.Total>
@@ -114,7 +119,7 @@ describe('CounterBar', () => {
       expect(counterWrapper.prop('component')).toBe(Link);
     });
   });
-  
+
   describe('handles totals as expected', () => {
     it('renders custom colours on totals', () => {
       const wrapper = mount(<CounterBar>

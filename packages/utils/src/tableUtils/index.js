@@ -12,13 +12,13 @@ export function keysFromFields(fields) {
 
 export const titlesFromFields = fields => fields.map(field => field.heading || field.title);
 
-export const rowsFromArray = (array, fields, skipEmptyRows) => {
+export const rowsFromArray = (array, fields, skipEmptyRows, defaultTransform = value => (value || '-')) => {
   const keys = keysFromFields(fields);
 
   return array.reduce((rows, item) => {
     if (!skipEmptyRows || objectHasValueForKeys(item, keys)) {
       rows.push(
-        fields.map(({ key, transform = result => (result || '-')}) => transform(item[key], item)),
+        fields.map(({ key, transform = defaultTransform}) => transform(item[key])),
       );
     }
 
@@ -43,7 +43,7 @@ export const rowsFromObject = (object, fields, skipEmptyValues, defaultTransform
         table.rows.push([heading, result]);
         table.names.push(nameAttribute);
       }
-  
+
       return table;
     },
     {

@@ -55,14 +55,32 @@ const title = ['Heading'];
 <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues/>;
 ```
 
+With object transform and default transform
+```jsx
+const fields = [
+  { key: 'one', heading: 'One' },
+  { key: 'two', heading: 'Two', transform: value => value ? value.toLowerCase() : '' },
+  { key: 'three', heading: 'Three' },
+  { key: 'three', heading: 'Four', transform: value => value ? value.toLowerCase() : '*' },
+];
+const array = [
+  {one: 'One', two: 'Two'},
+];
+const title = ['Heading'];
+const defaultTransform = value => (value || '-');
+
+<ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues defaultTransform={defaultTransform}/>
+```
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `array` |  | ```[]``` | arrayOf[object Object] | 
- `fields` |  | ```[]``` | arrayOf[object Object] | 
+ `array` | true | `````` | arrayOf[object Object] | 
+ `defaultTransform` |  | ```value => (value ? value : '-')``` | func | 
+ `fields` | true | `````` | arrayOf[object Object] | 
  `hideWithNoValues` |  | ```false``` | bool | 
  `skipEmptyRows` |  | ```false``` | bool | 
- `title` |  | `````` | node | 
+ `title` |  | ```null``` | node | 
 
 
 ArrowLeft
@@ -324,6 +342,56 @@ Prop | Required | Default | Type | Description
  `onChange` |  | `````` | func | 
  `open` |  | ```false``` | bool | 
  `title` |  | `````` | node | 
+
+
+Arrow
+=====
+
+### Import
+```js
+  import Arrow from '@govuk-frederic/arrow';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+<Arrow />
+```
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `fill` |  | ```'#0C60A2'``` | string | 
+ `width` |  | ```20``` | number | 
+
+
+OpenButton
+==========
+
+### Import
+```js
+  import OpenButton from '@govuk-frederic/open-button';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+import manageState from 'manage-state';
+
+const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
+
+<ManagedOpenButton />
+```
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `onChange` |  | `````` | func | 
+ `open` |  | `````` | bool | 
 
 
 Count
@@ -773,9 +841,8 @@ Prop | Required | Default | Type | Description
  `fields` |  | ```[]``` | arrayOf[object Object] | 
  `hideWithNoValues` |  | ```false``` | bool | 
  `object` |  | ```{}``` | object | 
- `skipEmptyValues` |  | ```true``` | bool | 
- `skipMissingKeys` |  | `````` | bool | 
- `title` |  | `````` | node | 
+ `skipEmptyValues` |  | ```false``` | bool | 
+ `title` |  | ```null``` | node | 
 
 
 OpenButton
@@ -994,6 +1061,56 @@ Prop | Required | Default | Type | Description
  `title` |  | `````` | node | 
 
 
+Arrow
+=====
+
+### Import
+```js
+  import Arrow from '@govuk-frederic/arrow';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+<Arrow />
+```
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `fill` |  | ```'#0C60A2'``` | string | 
+ `width` |  | ```20``` | number | 
+
+
+OpenButton
+==========
+
+### Import
+```js
+  import OpenButton from '@govuk-frederic/open-button';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+import manageState from 'manage-state';
+
+const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
+
+<ManagedOpenButton />
+```
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `onChange` |  | `````` | func | 
+ `open` |  | `````` | bool | 
+
+
 Table
 =====
 
@@ -1079,7 +1196,7 @@ Prop | Required | Default | Type | Description
  `names` |  | ```[]``` | arrayOf[object Object] | 
  `rowIncludesHeading` |  | ```false``` | bool | 
  `rows` | true | `````` | arrayOf[object Object] | 
- `titles` |  | `````` | arrayOf[object Object] | 
+ `titles` |  | ```null``` | arrayOf[object Object] | 
 
 
 TitleResultCount

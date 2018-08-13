@@ -83,6 +83,6 @@ Prop | Required | Default | Type | Description
  `names` |  | ```[]``` | arrayOf[object Object] | 
  `rowIncludesHeading` |  | ```false``` | bool | 
  `rows` | true | `````` | arrayOf[object Object] | 
- `titles` |  | `````` | arrayOf[object Object] | 
+ `titles` |  | ```null``` | arrayOf[object Object] | 
 
 
