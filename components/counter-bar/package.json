@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/counter-bar",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "dependencies": {
     "@govuk-frederic/result-count-title": "^0.0.3",
     "@govuk-react/constants": "^0.2.7",
