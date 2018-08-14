@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CountdownTextArea matches snapshot 1`] = `
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  color: #b10e1e;
-  font-weight: 800;
-}
-
 .emotion-0 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
@@ -35,6 +25,16 @@ exports[`CountdownTextArea matches snapshot 1`] = `
 .emotion-0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #b10e1e;
+  font-weight: 800;
 }
 
 .emotion-4 {
@@ -63,13 +63,16 @@ exports[`CountdownTextArea matches snapshot 1`] = `
 }
 
 <CountdownTextArea
+  input={Object {}}
   maxLength={2}
   noMaxLengthAttr={false}
   positiveOnly={false}
   value="Test"
 >
   <StyledTextArea
+    input={Object {}}
     maxLength={2}
+    name="CountdownTextArea--container"
     noMaxLengthAttr={false}
     over={true}
     positiveOnly={false}
@@ -78,9 +81,11 @@ exports[`CountdownTextArea matches snapshot 1`] = `
     <div
       className="emotion-6 emotion-7"
       maxLength={2}
+      name="CountdownTextArea--container"
       value="Test"
     >
       <StyledTextAreaField
+        input={Object {}}
         maxLength={2}
         value="Test"
       >
@@ -90,13 +95,19 @@ exports[`CountdownTextArea matches snapshot 1`] = `
           value="Test"
         />
       </StyledTextAreaField>
-      <StyledCountdownContainer>
+      <StyledCountdownContainer
+        name="CountdownTextArea--count_wrapper"
+      >
         <div
           className="emotion-4 emotion-5"
+          name="CountdownTextArea--count_wrapper"
         >
-          <StyledCountdown>
+          <StyledCountdown
+            name="CountdownTextArea--count"
+          >
             <div
               className="emotion-2 emotion-3"
+              name="CountdownTextArea--count"
             >
               -2
             </div>

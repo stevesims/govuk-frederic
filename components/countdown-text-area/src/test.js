@@ -18,11 +18,24 @@ describe('CountdownTextArea', () => {
     it('contains countdown', () => {
       const wrapper = shallow(<CountdownTextArea maxLength={250} />);
       expect(wrapper.find('StyledCountdown').childAt(0).text()).toBe('250');
-    });    
+    });
 
     it('reduces countdown', () => {
       const wrapper = shallow(<CountdownTextArea value="Test" maxLength={250} />);
       expect(wrapper.find('StyledCountdown').childAt(0).text()).toBe('246');
+    });
+  });
+
+  describe('displays a countdown name prop', () => {
+    it('correctly shows container name attribute', () => {
+      const wrapper = shallow(<CountdownTextArea name="countdown" />);
+      expect(wrapper.prop('name')).toEqual('countdown--container');
+    });
+
+    it('correctly shows textarea name attribute', () => {
+      const wrapper = mount(<CountdownTextArea name="countdown" />);
+      const counterWrapper = wrapper.find('StyledCountdown').first();
+      expect(counterWrapper.prop('name')).toBe('countdown--count');
     });
   });
 
@@ -51,7 +64,7 @@ describe('CountdownTextArea', () => {
       expect(wrapper).not.toHaveStyleRule('font-weight', '800');
     });
   });
-  
+
   describe('manages maxLength prop as expected', () => {
     it('sets maxLength prop if sent', () => {
       const wrapper = shallow(<CountdownTextArea value="Test" maxLength={10} />);
