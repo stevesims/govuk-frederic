@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CountdownTextArea matches snapshot 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #b10e1e;
+  font-weight: 800;
+}
+
 .emotion-0 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
@@ -25,16 +35,6 @@ exports[`CountdownTextArea matches snapshot 1`] = `
 .emotion-0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  color: #b10e1e;
-  font-weight: 800;
 }
 
 .emotion-4 {
