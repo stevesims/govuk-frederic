@@ -63,14 +63,12 @@ exports[`CountdownTextArea matches snapshot 1`] = `
 }
 
 <CountdownTextArea
-  input={Object {}}
   maxLength={2}
   noMaxLengthAttr={false}
   positiveOnly={false}
   value="Test"
 >
   <StyledTextArea
-    input={Object {}}
     maxLength={2}
     name="CountdownTextArea--container"
     noMaxLengthAttr={false}
@@ -85,7 +83,6 @@ exports[`CountdownTextArea matches snapshot 1`] = `
       value="Test"
     >
       <StyledTextAreaField
-        input={Object {}}
         maxLength={2}
         value="Test"
       >

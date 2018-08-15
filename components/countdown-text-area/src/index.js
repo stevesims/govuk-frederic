@@ -102,19 +102,12 @@ CountdownTextArea.defaultProps = {
   maxLength: undefined,
   noMaxLengthAttr: false,
   positiveOnly: false,
-  input: {},
 };
 
 CountdownTextArea.propTypes = {
   maxLength: PropTypes.number,
   noMaxLengthAttr: PropTypes.bool,
   positiveOnly: PropTypes.bool,
-  input: PropTypes.shape({
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-  }),
 };
 
 export default CountdownTextArea;

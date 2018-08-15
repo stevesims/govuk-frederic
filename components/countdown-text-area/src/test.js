@@ -31,6 +31,16 @@ describe('CountdownTextArea', () => {
       const wrapper = shallow(<CountdownTextArea name="countdown" />);
       expect(wrapper.prop('name')).toEqual('countdown--container');
     });
+
+    it('correctly shows countdown wrapper attribute', () => {
+      const wrapper = shallow(<CountdownTextArea value="Test" name="countdown" maxLength={202} />);
+      expect(wrapper.find('StyledCountdownContainer').prop('name')).toEqual('countdown--count_wrapper');
+    });
+
+    it('correctly shows countdown name attribute', () => {
+      const wrapper = shallow(<CountdownTextArea value="Test" name="countdown" maxLength={202} />);
+      expect(wrapper.find('StyledCountdown').prop('name')).toEqual('countdown--count');
+    });
   });
 
   describe('displays count as expected', () => {
