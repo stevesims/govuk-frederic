@@ -26,7 +26,7 @@ describe('CountdownTextArea', () => {
     });
   });
 
-  describe('displays a countdown name prop', () => {
+  describe('displays a countdown container prop', () => {
     it('correctly shows container name attribute', () => {
       const wrapper = shallow(<CountdownTextArea name="countdown" />);
       expect(wrapper.prop('name')).toEqual('countdown--container');
