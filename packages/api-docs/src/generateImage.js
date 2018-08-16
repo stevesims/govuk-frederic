@@ -3,7 +3,7 @@ import { renderStylesToString } from 'emotion-server';
 
 import { generateImage as gi } from 'component-image';
 
-const renderEmotion = (component) => {
+const renderEmotion = component => {
   const { html, css } = renderStylesToString(() => renderToString(component));
   return `
     <style>${css}</style>

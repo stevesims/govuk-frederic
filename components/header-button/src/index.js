@@ -21,15 +21,15 @@ const Button = styled('button')(
     textAlign: 'center',
   },
   ({ active }) =>
-    active
+    (active
       ? {
         borderBottomColor: LINK_COLOUR,
         borderTopColor: LINK_COLOUR,
         color: LINK_COLOUR,
       }
-      : {},
+      : {}),
   ({ disabled }) =>
-    disabled
+    (disabled
       ? {
         opacity: '0.35',
       }
@@ -42,7 +42,7 @@ const Button = styled('button')(
           borderBottomColor: `${LINK_ACTIVE_COLOUR}`,
           borderTopColor: `${LINK_ACTIVE_COLOUR}`,
         },
-      },
+      }),
 );
 
 /**

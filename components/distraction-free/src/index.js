@@ -60,20 +60,18 @@ const Button = styled('button')({
  */
 const DistractionFree = ({
   children, onClick, arrowLeftTitle, ...props
-}) => {
-  return (
-    <Background {...props}>
-      <Header>
-        <Button onClick={onClick}>
-          <ArrowLeft fill={WHITE} color={WHITE} width={28}>
-            {arrowLeftTitle}
-          </ArrowLeft>
-        </Button>
-      </Header>
-      <Body>{children}</Body>
-    </Background>
-  );
-};
+}) => (
+  <Background {...props}>
+    <Header>
+      <Button onClick={onClick}>
+        <ArrowLeft fill={WHITE} color={WHITE} width={28}>
+          {arrowLeftTitle}
+        </ArrowLeft>
+      </Button>
+    </Header>
+    <Body>{children}</Body>
+  </Background>
+);
 
 DistractionFree.propTypes = {
   arrowLeftTitle: PropTypes.string,

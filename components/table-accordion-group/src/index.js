@@ -92,22 +92,20 @@ const Title = styled('header')(({ clickable }) => (clickable ? { cursor: 'pointe
  */
 const TableAccordionGroup = ({
   title, children, expanded, onChange, open, changeOnTitleClick, ...props
-}) => {
-  return (
-    <Container {...props}>
-      <OpenButton open={open} onChange={onChange} />
-      <Title
-        clickable={changeOnTitleClick}
-        onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined }>
-        {title}
-      </Title>
-      <div>
-        <div>{children}</div>
-        <Collapse isOpened={open}>{expanded}</Collapse>
-      </div>
-    </Container>
-  );
-};
+}) => (
+  <Container {...props}>
+    <OpenButton open={open} onChange={onChange} />
+    <Title
+      clickable={changeOnTitleClick}
+      onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined }>
+      {title}
+    </Title>
+    <div>
+      <div>{children}</div>
+      <Collapse isOpened={open}>{expanded}</Collapse>
+    </div>
+  </Container>
+);
 
 TableAccordionGroup.propTypes = {
   changeOnTitleClick: PropTypes.bool,

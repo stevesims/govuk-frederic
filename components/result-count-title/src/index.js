@@ -39,16 +39,14 @@ const Title = styled('div')({
  */
 const ResultCountTitle = ({
   countBackgroundColor, children, count, countColor, ...props
-}) => {
-  return (
-    <Wrapper {...props}>
-      <ResultCount backgroundColor={countBackgroundColor} color={countColor}>
-        {count}
-      </ResultCount>
-      <Title>{children}</Title>
-    </Wrapper>
-  );
-};
+}) => (
+  <Wrapper {...props}>
+    <ResultCount backgroundColor={countBackgroundColor} color={countColor}>
+      {count}
+    </ResultCount>
+    <Title>{children}</Title>
+  </Wrapper>
+);
 
 ResultCountTitle.propTypes = {
   children: PropTypes.node,

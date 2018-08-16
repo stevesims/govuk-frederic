@@ -178,7 +178,7 @@ const Table = ({
       {rows.map((row, index) => (
         <tr key={index}>
           {row.map((item, itemIndex) =>
-              rowIncludesHeading && itemIndex === 0 ? (
+              (rowIncludesHeading && itemIndex === 0 ? (
                 <TableHeading
                   rowHeading
                   columnCount={row.length}
@@ -201,7 +201,7 @@ const Table = ({
                   )}>
                   {item}
                 </TableData>
-              ))}
+              )))}
         </tr>
       ))}
     </tbody>

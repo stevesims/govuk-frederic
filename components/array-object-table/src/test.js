@@ -67,9 +67,9 @@ describe('ArrayObjectTable', () => {
   describe('uses transforms as expected', () => {
     const fieldsWithTransforms = [
       { key: 'one', heading: 'One' },
-      { key: 'two', heading: 'Two', transform: value => value ? value.toLowerCase() : '-' },
+      { key: 'two', heading: 'Two', transform: value => (value ? value.toLowerCase() : '-') },
       { key: 'three', heading: 'Three' },
-      { key: 'four', heading: 'Four', transform: value => value ? value.toLowerCase() : '*' },
+      { key: 'four', heading: 'Four', transform: value => (value ? value.toLowerCase() : '*') },
     ];
     const arrayOfOnlyTwo = [
       { one: 'One', two: 'Two' },

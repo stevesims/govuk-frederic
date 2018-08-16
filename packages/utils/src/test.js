@@ -49,12 +49,12 @@ describe('rowsFromObject', () => {
     const { rowsFromObject } = exports;
     const fields = [
       { key: 'one', heading: 'One', names: ['firstCol', 'secondCol'] },
-      { key: 'two', heading: 'Two', transform: (val) => val },
+      { key: 'two', heading: 'Two', transform: val => val },
     ];
     const object = { one: 'test', two: 'some val' };
     const skipEmptyValues = true;
-    const deafultTransform = (david) => `${david} david`;
-    const rows = rowsFromObject(object, fields, skipEmptyValues, deafultTransform);
+    const defaultTransform = david => `${david} david`;
+    const rows = rowsFromObject(object, fields, skipEmptyValues, defaultTransform);
 
     expect(rows).toEqual({
       rows: [
