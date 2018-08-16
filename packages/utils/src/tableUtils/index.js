@@ -30,28 +30,26 @@ export const rowsFromArray = (array, fields, skipEmptyRows, defaultTransform = v
 // TODO: SOME TESTS
 // Empty values and keys are treated the same
 export const rowsFromObject =
-  (object, fields, skipEmptyValues, defaultTransform = value => value) => {
-    return fields.reduce(
-      (table, {
-        key, heading, names, transform = defaultTransform,
-      }) => {
+  (object, fields, skipEmptyValues, defaultTransform = value => value) => fields.reduce(
+    (table, {
+      key, heading, names, transform = defaultTransform,
+    }) => {
       // If there is a name attribute in the fields object use it, otherwise fallback to the key
-        const nameAttribute = names || key;
-        // Run any passed transforms and normalise undefined values to an empty string
-        const result = transform(object[key], object) || '';
+      const nameAttribute = names || key;
+      // Run any passed transforms and normalise undefined values to an empty string
+      const result = transform(object[key], object) || '';
 
-        // Empty values are empty strings (normalised above)
-        // We never render null
-        if (result !== null && !(skipEmptyValues && result === '')) {
-          table.rows.push([heading, result]);
-          table.names.push(nameAttribute);
-        }
+      // Empty values are empty strings (normalised above)
+      // We never render null
+      if (result !== null && !(skipEmptyValues && result === '')) {
+        table.rows.push([heading, result]);
+        table.names.push(nameAttribute);
+      }
 
-        return table;
-      },
-      {
-        rows: [],
-        names: [],
-      },
-    );
-  };
+      return table;
+    },
+    {
+      rows: [],
+      names: [],
+    },
+  );

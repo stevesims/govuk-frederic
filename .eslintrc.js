@@ -18,11 +18,7 @@ module.exports = {
     "react/no-array-index-key": 0,
     'react/require-default-props': 0,
     "react/sort-comp": 0,
-
-    /* Up for discussion */
-    "arrow-body-style": 0,
-    "arrow-parens": 0, /* Could relax "requireForBlockBody": true */
-    "no-confusing-arrow": 0,
+    "arrow-parens": [2, "as-needed"],
 
     /* Copied from govuk/react */
     'react/jsx-filename-extension': 0,
