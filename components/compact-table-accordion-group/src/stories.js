@@ -29,24 +29,6 @@ class CompactTableAccordionGroupAsyncExample extends React.Component {
     };
   }
 
-  loadItem(index) {
-    // mock ajax call
-    setTimeout(() => {
-      this.setState(() => {
-        const newItems = this.state.items.map((item, i) => {
-          if (index === i) {
-            return {
-              ...item,
-              loaded: true,
-              text: `Loaded item ${index}`,
-            };
-          } return item;
-        });
-        return { items: newItems };
-      });
-    }, 1000);
-  }
-
   onChange(open, index) {
     this.setState(() => {
       const newItems = this.state.items.map((item, i) => {
@@ -72,10 +54,28 @@ class CompactTableAccordionGroupAsyncExample extends React.Component {
     }
   }
 
+  loadItem(index) {
+    // mock ajax call
+    setTimeout(() => {
+      this.setState(() => {
+        const newItems = this.state.items.map((item, i) => {
+          if (index === i) {
+            return {
+              ...item,
+              loaded: true,
+              text: `Loaded item ${index}`,
+            };
+          } return item;
+        });
+        return { items: newItems };
+      });
+    }, 1000);
+  }
+
   render() {
     const { items } = this.state;
 
-    return <div>
+    return (<div>
       {items.map((item, index) => (
         <CompactTableAccordionGroup
           changeOnTitleClick
@@ -85,11 +85,12 @@ class CompactTableAccordionGroupAsyncExample extends React.Component {
           }
           open={item.open}
           expanded={item.loaded ? item.text : <Spinner visible />}
-          onChange={({ open }) => this.onChange(open, index)}>
+          onChange={({ open }) => this.onChange(open, index)}
+        >
           {item.firstItem}
         </CompactTableAccordionGroup>
       ))}
-    </div>;
+    </div>);
   }
 }
 
@@ -105,27 +106,27 @@ const examples = storiesOf('Tables/CompactTableAccordionGroup/Examples', module)
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => <CompactTableAccordionGroup title="Title" expanded="expanded">
+stories.add('Component default', () => (<CompactTableAccordionGroup title="Title" expanded="expanded">
       Children
-</CompactTableAccordionGroup>);
+</CompactTableAccordionGroup>));
 
-examples.add('No children', () => <CompactTableAccordionGroup open title="Title" expanded="expanded"/>);
+examples.add('No children', () => <CompactTableAccordionGroup open title="Title" expanded="expanded" />);
 
-examples.add('Open', () => <CompactTableAccordionGroup open title="Title" expanded="expanded">
+examples.add('Open', () => (<CompactTableAccordionGroup open title="Title" expanded="expanded">
       Children
-</CompactTableAccordionGroup>);
+</CompactTableAccordionGroup>));
 
-examples.add('State managed', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded">
+examples.add('State managed', () => (<ManagedCompactTableAccordionGroup title="Title" expanded="expanded">
           Children
-</ManagedCompactTableAccordionGroup>);
+</ManagedCompactTableAccordionGroup>));
 
-examples.add('State managed without children', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded"/>);
+examples.add('State managed without children', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded" />);
 
-examples.add('changeOnTitleClick', () => <ManagedCompactTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
+examples.add('changeOnTitleClick', () => (<ManagedCompactTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
           Children
-</ManagedCompactTableAccordionGroup>);
+</ManagedCompactTableAccordionGroup>));
 
-examples.add('array', () => <ManagedCompactTableAccordionGroup
+examples.add('array', () => (<ManagedCompactTableAccordionGroup
   expanded={
     arrayExampleItems.map((item, index) => {
       if (index) {
@@ -135,6 +136,6 @@ examples.add('array', () => <ManagedCompactTableAccordionGroup
     })}
 >
   {arrayExampleItems[0]}
-</ManagedCompactTableAccordionGroup>);
+</ManagedCompactTableAccordionGroup>));
 
 examples.add('async', () => <CompactTableAccordionGroupAsyncExample />);

@@ -17,7 +17,7 @@ describe('TableOfContents', () => {
   });
 
   it('can remove a section', () => {
-    const TestContainer = ({ showSection }) => <TableOfContents.Container>
+    const TestContainer = ({ showSection }) => (<TableOfContents.Container>
       <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
       { showSection &&
         <TableOfContents.Section id="optional" title="Optional">Optional section here</TableOfContents.Section>
@@ -26,7 +26,7 @@ describe('TableOfContents', () => {
         <TableOfContents.Section id="optional" title="Optional">Duplicate section here</TableOfContents.Section>
       }
       <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
-    </TableOfContents.Container>;
+    </TableOfContents.Container>);
     TestContainer.propTypes = {
       showSection: PropTypes.bool,
     };

@@ -60,10 +60,10 @@ const ObjectTable = ({
   if (!hideWithNoValues || objectHasValueForKeys(object, keysFromFields(fields))) {
     const rows = rowsFromObject(object, fields, skipEmptyValues, defaultTransform);
     if (rows.rows.length) {
-      return <Fragment>
+      return (<Fragment>
         {title}
         <Table rows={rows.rows} names={rows.names} rowIncludesHeading nameByRow {...props} />
-      </Fragment>;
+      </Fragment>);
     }
   }
 
@@ -76,7 +76,9 @@ ObjectTable.propTypes = {
     heading: PropTypes.string.isRequired,
     transform: PropTypes.func,
   })),
-  object: PropTypes.object,
+  object: PropTypes.shape({
+    key: PropTypes.string.isRequired,
+  }),
   hideWithNoValues: PropTypes.bool,
   skipEmptyValues: PropTypes.bool,
   defaultTransform: PropTypes.func,

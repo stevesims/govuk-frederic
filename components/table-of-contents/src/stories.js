@@ -20,13 +20,13 @@ storiesOf('TableOfContents', module).add('Component default', () => (
       <GridCol>
         <TOC.Index>
           {
-            ({ contents }) => <ul>
+            ({ contents }) => (<ul>
               {contents.map(item => (
                 <li key={item.id}>
                   <a href={`#${item.id}`}>{item.title}</a>
                 </li>
               ))}
-            </ul>
+            </ul>)
           }
         </TOC.Index>
       </GridCol>
@@ -34,14 +34,14 @@ storiesOf('TableOfContents', module).add('Component default', () => (
         <TOC.Section id="first" title="First">
           <h3>First</h3>
           <p>
-            Content of first section goes here<br/>
+            Content of first section goes here<br />
             Lorem ipsum and stuff like that
           </p>
         </TOC.Section>
         <TOC.Section id="second" title="Second">
           <h3>Second</h3>
           <p>
-            Content of second section goes here<br/>
+            Content of second section goes here<br />
             Lorem ipsum and stuff like that
           </p>
         </TOC.Section>

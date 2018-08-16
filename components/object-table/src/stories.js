@@ -25,7 +25,7 @@ stories.add('Component default (skips blank or null values)', () => {
     one: 'test', two: 'test', three: '', four: null,
   };
 
-  return <ObjectTable fields={fields} object={object} title={title}/>;
+  return <ObjectTable fields={fields} object={object} title={title} />;
 });
 
 examples.add('skipEmptyValues false (renders empty values but not null ones)', () => {
@@ -39,7 +39,7 @@ examples.add('skipEmptyValues false (renders empty values but not null ones)', (
     one: 'test', two: 'test', three: '', four: null,
   };
 
-  return <ObjectTable fields={fields} object={object} title={title} skipEmptyValues={false}/>;
+  return <ObjectTable fields={fields} object={object} title={title} skipEmptyValues={false} />;
 });
 
 examples.add('No values found for fields', () => {
@@ -159,11 +159,11 @@ examples.add('With default transform', () => {
   };
   const defaultTransform = (result = '-') => result;
 
-  return <ObjectTable
+  return (<ObjectTable
     fields={fields}
     object={object}
     title={title}
     defaultTransform={defaultTransform}
     skipEmptyRows
-  />;
+  />);
 });

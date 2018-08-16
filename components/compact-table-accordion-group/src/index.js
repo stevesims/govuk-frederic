@@ -113,7 +113,7 @@ const CompactTableAccordionGroup = ({
         onClick={
             changeOnTitleClick ? () => onChange({ open: !open }) : undefined
           }
-        >
+      >
         {title}
       </Title>
       <div>

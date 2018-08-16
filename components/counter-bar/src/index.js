@@ -277,7 +277,7 @@ const CounterWrapper = styled(TotalWrapper, {
  * </HashRouter>
  * ```
  */
-const CounterBar = withWhiteSpace({ marginBottom: 3 })(props => <OuterWrapper {...props}/>);
+const CounterBar = withWhiteSpace({ marginBottom: 3 })(props => <OuterWrapper {...props} />);
 
 CounterBar.propTypes = {
   children: PropTypes.node.isRequired,
@@ -301,7 +301,7 @@ CounterBar.Item = ({
         count={score}
         countColor={score > 0 ? scoreColor : scoreDisabledColor}
         countBackgroundColor={score > 0 ? scoreBackgroundColor : scoreDisabledBackgroundColor}
-        >
+      >
         {children}
       </ResultCountTitle>
     </Wrapper>

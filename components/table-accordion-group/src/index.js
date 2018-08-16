@@ -97,7 +97,8 @@ const TableAccordionGroup = ({
     <OpenButton open={open} onChange={onChange} />
     <Title
       clickable={changeOnTitleClick}
-      onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined }>
+      onClick={changeOnTitleClick ? () => onChange({ open: !open }) : undefined}
+    >
       {title}
     </Title>
     <div>

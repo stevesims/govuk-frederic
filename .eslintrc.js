@@ -8,17 +8,11 @@ module.exports = {
     es6: true,
   },
   rules: {
-    "react/forbid-prop-types": 0,
-    "react/jsx-closing-bracket-location": 0,
-    "react/jsx-closing-tag-location": 0,
-    "react/jsx-curly-spacing": 0,
-    "react/jsx-no-comment-textnodes": 0,
-    "react/jsx-tag-spacing": 0,
-    "react/jsx-wrap-multilines": 0,
-    "react/no-array-index-key": 0,
-    'react/require-default-props': 0,
-    "react/sort-comp": 0,
     "arrow-parens": [2, "as-needed"],
+
+    "react/jsx-closing-tag-location": 0, /* We could leave as-is */
+    "react/no-array-index-key": 0, /* Up for debate */
+    'react/require-default-props': 0, /* Suggest enabled but needs some work! */
 
     /* Copied from govuk/react */
     'react/jsx-filename-extension': 0,

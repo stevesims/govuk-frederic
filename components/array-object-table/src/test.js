@@ -37,12 +37,12 @@ describe('ArrayObjectTable', () => {
 
   describe('responds as expected to additional props', () => {
     it('renders a table heading if provided', () => {
-      const wrapper = shallow(<ArrayObjectTable fields={fields} array={array} title="Heading"/>);
+      const wrapper = shallow(<ArrayObjectTable fields={fields} array={array} title="Heading" />);
       expect(wrapper.contains('Heading')).toBe(true);
     });
 
     it('skips empty rows if skipEmptyRows is true', () => {
-      const wrapper = mount(<ArrayObjectTable fields={fields} array={array} skipEmptyRows/>);
+      const wrapper = mount(<ArrayObjectTable fields={fields} array={array} skipEmptyRows />);
       expect(getRows(wrapper)).toEqual([['test', 'two', '-']]);
     });
 

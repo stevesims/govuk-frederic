@@ -14,7 +14,7 @@ describe('CompactTableAccordionGroup', () => {
   });
 
   it('renders title when passed', () => {
-    const wrapper = mount(<CompactTableAccordionGroup expanded="Expanded" title="Title"/>);
+    const wrapper = mount(<CompactTableAccordionGroup expanded="Expanded" title="Title" />);
     expect(wrapper
       .find('Title')
       .childAt(0)

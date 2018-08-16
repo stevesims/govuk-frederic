@@ -167,7 +167,8 @@ const Table = ({
             // eslint-disable-next-line security/detect-object-injection
             <TableHeading
               key={title.key || index}
-              name={getName(names, 0, index, nameByRow)}>
+              name={getName(names, 0, index, nameByRow)}
+            >
               {title}
             </TableHeading>
           ))}
@@ -186,7 +187,8 @@ const Table = ({
                   name={getName(
                     names,
                     calculateIndex(titles, nameByRow, index), itemIndex, nameByRow,
-                  )}>
+                  )}
+                >
                   {item}
                 </TableHeading>
               ) : (
@@ -198,7 +200,8 @@ const Table = ({
                   name={getName(
                     names,
                     calculateIndex(titles, nameByRow, index), itemIndex, nameByRow,
-                  )}>
+                  )}
+                >
                   {item}
                 </TableData>
               )))}

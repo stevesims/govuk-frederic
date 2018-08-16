@@ -29,24 +29,6 @@ class TableAccordionGroupAsyncExample extends React.Component {
     };
   }
 
-  loadItem(index) {
-    // mock ajax call
-    setTimeout(() => {
-      this.setState(() => {
-        const newItems = this.state.items.map((item, i) => {
-          if (index === i) {
-            return {
-              ...item,
-              loaded: true,
-              text: `Loaded item ${index}`,
-            };
-          } return item;
-        });
-        return { items: newItems };
-      });
-    }, 1000);
-  }
-
   onChange(open, index) {
     this.setState(() => {
       const newItems = this.state.items.map((item, i) => {
@@ -72,6 +54,24 @@ class TableAccordionGroupAsyncExample extends React.Component {
     }
   }
 
+  loadItem(index) {
+    // mock ajax call
+    setTimeout(() => {
+      this.setState(() => {
+        const newItems = this.state.items.map((item, i) => {
+          if (index === i) {
+            return {
+              ...item,
+              loaded: true,
+              text: `Loaded item ${index}`,
+            };
+          } return item;
+        });
+        return { items: newItems };
+      });
+    }, 1000);
+  }
+
   render() {
     const { items } = this.state;
 
@@ -85,7 +85,8 @@ class TableAccordionGroupAsyncExample extends React.Component {
           }
           open={item.open}
           expanded={item.loaded ? item.text : <Spinner visible />}
-          onChange={({ open }) => this.onChange(open, index)}>
+          onChange={({ open }) => this.onChange(open, index)}
+        >
           {item.firstItem}
         </TableAccordionGroup>
       ))}

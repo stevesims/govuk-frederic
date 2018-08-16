@@ -94,7 +94,7 @@ const ArrayObjectTable = ({
   return rows.length ?
     <Fragment>
       {title}
-      <Table rows={rows} titles={titlesFromFields(fields)} {...props}/>
+      <Table rows={rows} titles={titlesFromFields(fields)} {...props} />
     </Fragment>
     :
     null;

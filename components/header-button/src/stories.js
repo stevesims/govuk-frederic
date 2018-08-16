@@ -19,18 +19,18 @@ stories.add('Component default', () =>
   <HeaderButton>One</HeaderButton>);
 
 examples.add('Multiple header buttons', () =>
-  <Fragment>
+  (<Fragment>
     <HeaderButton>One</HeaderButton>
     <HeaderButton>Two</HeaderButton>
-  </Fragment>);
+  </Fragment>));
 
 examples.add('Multiple header buttons with keyline', () =>
-  <Fragment>
+  (<Fragment>
     <Keyline>
       <HeaderButton>One</HeaderButton>
       <HeaderButton>Two</HeaderButton>
     </Keyline>
-  </Fragment>);
+  </Fragment>));
 
 examples.add('Active header button', () =>
   <HeaderButton active>On</HeaderButton>);
