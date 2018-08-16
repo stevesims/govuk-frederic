@@ -20,12 +20,12 @@ describe('Keyline', () => {
 
   it('renders as inlineBlock in response to prop', () => {
     const wrapper = mount(<Keyline inlineBlock />);
-    expect(wrapper).toHaveStyleRule('display', 'inline-block'); 
+    expect(wrapper).toHaveStyleRule('display', 'inline-block');
   });
-  
+
   it('renders with borderColor in response to prop', () => {
     const wrapper = mount(<Keyline borderColor="red" />);
-    expect(wrapper).toHaveStyleRule('border-bottom', '1px solid red'); 
+    expect(wrapper).toHaveStyleRule('border-bottom', '1px solid red');
   });
 
   it('matches snapshot', () => {

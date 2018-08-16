@@ -48,7 +48,12 @@ describe('ArrayObjectTable', () => {
 
     it('renders nothing if no rows are returned and hideWithNoValues is true', () => {
       const emptyArray = [{}, {}, {}];
-      const wrapper = shallow(<ArrayObjectTable fields={fields} array={emptyArray} skipEmptyRows hideWithNoValues />);
+      const wrapper = shallow(<ArrayObjectTable
+        fields={fields}
+        array={emptyArray}
+        skipEmptyRows
+        hideWithNoValues
+      />);
       expect(wrapper.html()).toBe(null);
     });
 
@@ -67,7 +72,7 @@ describe('ArrayObjectTable', () => {
       { key: 'four', heading: 'Four', transform: value => value ? value.toLowerCase() : '*' },
     ];
     const arrayOfOnlyTwo = [
-      {one: 'One', two: 'Two'},
+      { one: 'One', two: 'Two' },
     ];
 
     it('sends table row cells as expected', () => {

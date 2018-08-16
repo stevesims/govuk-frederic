@@ -29,9 +29,9 @@ const RotatingButton = styled('button')(
  * Simple
  * ```jsx
  * import manageState from 'manage-state';
- * 
+ *
  * const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
- * 
+ *
  * <ManagedOpenButton />
  * ```
  */

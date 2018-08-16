@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
@@ -23,7 +24,7 @@ stories.add('Component default (renders empty values and rows)', () => {
     {},
   ];
   const title = ['Heading'];
-  
+
   return <ArrayObjectTable fields={fields} array={array} title={title}/>;
 });
 
@@ -37,7 +38,7 @@ examples.add('skipEmptyRows (one mock empty row is shown if no rows)', () => {
     {},
   ];
   const title = ['Heading'];
-  
+
   return <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows/>;
 });
 
@@ -52,7 +53,13 @@ examples.add('skipEmtpyRows and hideWithNoValues (table is hidden if no rows)', 
   ];
   const title = ['Heading'];
 
-  return <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues/>;
+  return <ArrayObjectTable
+    fields={fields}
+    array={array}
+    title={title}
+    skipEmptyRows
+    hideWithNoValues
+  />;
 });
 
 examples.add('With object transform and default transform', () => {
@@ -63,7 +70,7 @@ examples.add('With object transform and default transform', () => {
     { key: 'three', heading: 'Four', transform: value => value ? value.toLowerCase() : '*' },
   ];
   const array = [
-    {one: 'One', two: 'Two'},
+    { one: 'One', two: 'Two' },
   ];
   const title = ['Heading'];
   const defaultTransform = value => (value || '-');

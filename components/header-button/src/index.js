@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
 
+import styled from 'react-emotion';
 import { FOCUS_COLOUR, LINK_ACTIVE_COLOUR, LINK_COLOUR } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
@@ -53,7 +53,7 @@ const Button = styled('button')(
  * ```jsx
  * <HeaderButton>One</HeaderButton>
  * ```
- * 
+ *
  * Multiple header buttons
  * ```jsx
  * <Fragment>
@@ -61,11 +61,11 @@ const Button = styled('button')(
  *  <HeaderButton>Two</HeaderButton>
  * </Fragment>
  * ```
- * 
+ *
  * Multiple header buttons with keyline
  * ```jsx
  * import Keyline from '@govuk-frederic/keyline';
- * 
+ *
  * <Fragment>
  *  <Keyline>
  *    <HeaderButton>One</HeaderButton>
@@ -73,12 +73,12 @@ const Button = styled('button')(
  *  </Keyline>
  * </Fragment>
  * ```
- * 
+ *
  * Active header button
  * ```jsx
  * <HeaderButton active>On</HeaderButton>
  * ```
- * 
+ *
  * Disabled header button
  * ```jsx
  * <HeaderButton disabled>Off</HeaderButton>

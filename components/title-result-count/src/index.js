@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import styled from 'react-emotion';
 
 import ResultCount from '@govuk-frederic/result-count';
@@ -37,7 +38,9 @@ const Title = styled('div')({
  * </TitleResultCount>
  * ```
  */
-const TitleResultCount = ({ countBackgroundColor, children, countColor, count, ...props }) => {
+const TitleResultCount = ({
+  countBackgroundColor, children, countColor, count, ...props
+}) => {
   return <Wrapper {...props}>
     <Title>{children}</Title>
     <ResultCount backgroundColor={countBackgroundColor} color={countColor}>

@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
+
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import HeaderButton from '.';
 import Keyline from '@govuk-frederic/keyline';
+
+import HeaderButton from '.';
 import ReadMe from '../README.md';
 
 const stories = storiesOf('Buttons/HeaderButton', module);
@@ -14,15 +16,13 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
 stories.add('Component default', () =>
-  <HeaderButton>One</HeaderButton>,
-);
+  <HeaderButton>One</HeaderButton>);
 
 examples.add('Multiple header buttons', () =>
   <Fragment>
     <HeaderButton>One</HeaderButton>
     <HeaderButton>Two</HeaderButton>
-  </Fragment>,
-);
+  </Fragment>);
 
 examples.add('Multiple header buttons with keyline', () =>
   <Fragment>
@@ -30,13 +30,10 @@ examples.add('Multiple header buttons with keyline', () =>
       <HeaderButton>One</HeaderButton>
       <HeaderButton>Two</HeaderButton>
     </Keyline>
-  </Fragment>,
-);
+  </Fragment>);
 
 examples.add('Active header button', () =>
-  <HeaderButton active>On</HeaderButton>,
-);
+  <HeaderButton active>On</HeaderButton>);
 
 examples.add('Disabled header button', () =>
-  <HeaderButton disabled>Off</HeaderButton>,
-);
+  <HeaderButton disabled>Off</HeaderButton>);

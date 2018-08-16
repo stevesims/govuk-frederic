@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import styled from 'react-emotion';
 import { NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -37,7 +38,7 @@ const TableData = styled('td', {
 
 const TableHeading = styled('th')(
   cellStyles,
-  ({rowHeading, columnCount}) => (
+  ({ rowHeading, columnCount }) => (
     {
       fontWeight: 'bold',
       textAlign: 'left',
@@ -49,7 +50,7 @@ const TableHeading = styled('th')(
 const getName = (names, row, column, nameByRow) => {
   if (nameByRow) {
     return Array.isArray(names[row]) ? names[row][column] : names[row];
-  } 
+  }
   return Array.isArray(names[column]) ? names[column][row] : names[column];
 };
 
@@ -74,10 +75,10 @@ const calculateIndex = (titles, nameByRow, index) => {
  *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
  * ];
  * const columnTableNames = ['one', 'two', 'three', ['i', 'am', 'named', 'individually']];
- * 
+ *
  * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} />
  * ```
- * 
+ *
  * rowIncludesHeading
  * ```jsx
  * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
@@ -86,11 +87,22 @@ const calculateIndex = (titles, nameByRow, index) => {
  *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
  *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
  * ];
- * const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individually'], 'three'];
- * 
- * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} rowIncludesHeading nameByRow names={rowTableNamesWithTitles} />
+ * const rowTableNamesWithTitles = [
+ *  'heading',
+ *  'one',
+ *  ['i', 'am', 'named', 'individually'],
+ *  'three'
+ * ];
+ *
+ * <Table
+ *  titles={arrayExampleHeadings}
+ *  rows={arrayExampleContent}
+ *  rowIncludesHeading
+ *  nameByRow
+ *  names={rowTableNamesWithTitles}
+ * />
  * ```
- * 
+ *
  * rowIncludesHeading, no titles
  * ```jsx
  * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
@@ -100,10 +112,10 @@ const calculateIndex = (titles, nameByRow, index) => {
  *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
  * ];
  * const rowTableNames = ['one', ['i', 'am', 'named', 'individually'], 'three'];
- * 
+ *
  * <Table rows={arrayExampleContent} rowIncludesHeading nameByRow names={rowTableNames} />
  * ```
- * 
+ *
  * rowIncludesHeading, no titles, small single row
  * ```jsx
  * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
@@ -113,10 +125,10 @@ const calculateIndex = (titles, nameByRow, index) => {
  *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
  * ];
  * const rowTableNames = ['one', ['i', 'am', 'named', 'individually'], 'three'];
- * 
+ *
  * <Table rows={[['title', 'value']]} rowIncludesHeading nameByRow names={rowTableNames} />
  * ```
- * 
+ *
  * rowIncludesHeading, with titles, with flexible columns
  * ```jsx
  * const arrayExampleHeadings = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
@@ -125,22 +137,36 @@ const calculateIndex = (titles, nameByRow, index) => {
  *  ['Content 2-1', 'Content 2-2', 'Content 2-3', 'Content 2-4'],
  *  ['Content 3-1', 'Content 3-2', 'Content 3-3', 'Content 3-4'],
  * ];
- * const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individually'], 'three'];
- * 
- * <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading nameByRow names={rowTableNamesWithTitles} />
+ * const rowTableNamesWithTitles = [
+ *  'heading',
+ *  'one',
+ *  ['i', 'am', 'named', 'individually'],
+ *  'three'
+ * ];
+ *
+ * <Table
+ *  titles={arrayExampleHeadings}
+ *  rows={arrayExampleContent}
+ *  flexibleColumns
+ *  rowIncludesHeading
+ *  nameByRow names={rowTableNamesWithTitles}
+ * />
  * ```
  */
-const Table = ({ name, names, nameByRow, rowIncludesHeading, titles, rows, ...props }) => (
+const Table = ({
+ name, names, nameByRow, rowIncludesHeading, titles, rows, ...props 
+}) => (
   <TableContainer name={name} {...props}>
     {titles &&
       titles.length && (
       <thead>
         <tr>
           {titles.map((title, index) => (
-            // disable false-positive rule - this is an access into an array of strings, not object access
+            // disable false-positive rule -
+            // this is an access into an array of strings, not object access
             // eslint-disable-next-line security/detect-object-injection
-            <TableHeading 
-              key={title.key || index} 
+            <TableHeading
+              key={title.key || index}
               name={getName(names, 0, index, nameByRow)}>
               {title}
             </TableHeading>
@@ -151,26 +177,31 @@ const Table = ({ name, names, nameByRow, rowIncludesHeading, titles, rows, ...pr
     <tbody>
       {rows.map((row, index) => (
         <tr key={index}>
-          {row.map(
-            (item, itemIndex) =>
+          {row.map((item, itemIndex) =>
               rowIncludesHeading && itemIndex === 0 ? (
-                <TableHeading 
-                  rowHeading 
-                  columnCount={row.length} 
-                  key={item.key || itemIndex} 
-                  name={getName(names, calculateIndex(titles, nameByRow, index), itemIndex, nameByRow)}>
+                <TableHeading
+                  rowHeading
+                  columnCount={row.length}
+                  key={item.key || itemIndex}
+                  name={getName(
+                    names,
+                    calculateIndex(titles, nameByRow, index), itemIndex, nameByRow,
+                  )}>
                   {item}
                 </TableHeading>
               ) : (
-                // disable false-positive rule - this is an access into an array of strings, not object access
+                // disable false-positive rule -
+                // this is an access into an array of strings, not object access
                 // eslint-disable-next-line security/detect-object-injection
-                <TableData 
-                  key={item.key || itemIndex} 
-                  name={getName(names, calculateIndex(titles, nameByRow, index), itemIndex, nameByRow)}>
+                <TableData
+                  key={item.key || itemIndex}
+                  name={getName(
+                    names,
+                    calculateIndex(titles, nameByRow, index), itemIndex, nameByRow,
+                  )}>
                   {item}
                 </TableData>
-              ),
-          )}
+              ))}
         </tr>
       ))}
     </tbody>
@@ -180,15 +211,15 @@ const Table = ({ name, names, nameByRow, rowIncludesHeading, titles, rows, ...pr
 Table.propTypes = {
   flexibleColumns: PropTypes.bool,
   name: PropTypes.string,
-  names: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
-    ]),
-  ),
+  names: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ])),
   nameByRow: PropTypes.bool,
   rowIncludesHeading: PropTypes.bool,
-  rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.node]))).isRequired,
+  rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string,
+    PropTypes.node,
+  ]))).isRequired,
   titles: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.node])),
 };
 

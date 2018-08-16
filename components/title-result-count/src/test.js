@@ -15,24 +15,20 @@ describe('TitleResultCount', () => {
 
   it('renders a title', () => {
     const wrapper = shallow(<TitleResultCount>Title</TitleResultCount>);
-    expect(
-      wrapper
-        .find('Title')
-        .childAt(0)
-        .text(),
-    ).toBe('Title');
+    expect(wrapper
+      .find('Title')
+      .childAt(0)
+      .text()).toBe('Title');
   });
 
   it('renders with a count', () => {
     const wrapper = shallow(<TitleResultCount count="3" />);
-    expect(
-      wrapper
-        .find('ResultCount')
-        .childAt(0)
-        .text(),
-    ).toBe('3');
+    expect(wrapper
+      .find('ResultCount')
+      .childAt(0)
+      .text()).toBe('3');
   });
-  
+
   it('matches snapshot', () => {
     const wrapper = mount(<TitleResultCount count="3">Title</TitleResultCount>);
     expect(wrapper).toMatchSnapshot();

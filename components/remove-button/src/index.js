@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'react-emotion';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
@@ -28,7 +29,7 @@ const RemoveButtonInner = styled('button')({
  * ```jsx
  * <RemoveButton title="Remove" />
  * ```
- * 
+ *
  * Next to some text
  * ```jsx
  * <div><span>Text here</span><RemoveButton title="Remove" /></div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import styled from 'react-emotion';
 
 import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
@@ -35,7 +36,7 @@ const Title = styled('span')({
  * ```jsx
  * <ArrowLeft />
  * ```
- * 
+ *
  * Dark background
  * ```jsx
  * import { GREY_1 } from 'govuk-colours';
@@ -51,7 +52,7 @@ const Title = styled('span')({
  *  <ArrowLeft width={28} fill="white" />
  * </div>
  * ```
- * 
+ *
  * Light background
  * ```jsx
  * import { WHITE } from 'govuk-colours';
@@ -67,7 +68,7 @@ const Title = styled('span')({
  *  <ArrowLeft width={28} fill="black" />
  * </div>
  * ```
- * 
+ *
  * Dark background & title
  * ```jsx
  * import { GREY_1 } from 'govuk-colours';
@@ -85,7 +86,7 @@ const Title = styled('span')({
  *  </ArrowLeft>
  * </div>
  * ```
- * 
+ *
  * Light background & title
  * ```jsx
  * import { WHITE } from 'govuk-colours';
@@ -103,7 +104,7 @@ const Title = styled('span')({
  *  </ArrowLeft>
  * </div>
  * ```
- * 
+ *
  * Wrapped with anchor with title text
  * ```jsx
  * import { WHITE } from 'govuk-colours';
@@ -123,7 +124,7 @@ const Title = styled('span')({
  *  </a>
  * </div>
  * ```
- * 
+ *
  * Wrapped with anchor with title text on dark background
  * ```jsx
  * import { GREY_1 } from 'govuk-colours';
@@ -143,7 +144,7 @@ const Title = styled('span')({
  *  </a>
  * </div>
  * ```
- * 
+ *
  * Passing down onClick with title text
  * ```jsx
  * import { GREY_1 } from 'govuk-colours';

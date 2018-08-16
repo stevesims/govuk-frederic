@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
@@ -26,12 +27,12 @@ const StyledResultCount = styled('span')(({ backgroundColor, color }) => ({
  * ```jsx
  * <ResultCount>0</ResultCount>
  * ```
- * 
+ *
  * Overriding background and text colours
  * ```jsx
  * <ResultCount backgroundColor="#6f777b" color="white">000</ResultCount>
  * ```
- * 
+ *
  */
 const ResultCount = props => <StyledResultCount {...props} />;
 

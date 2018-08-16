@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'govuk-frederic';
 
+import Table from '@govuk-frederic/table';
 import { rowsFromArray, titlesFromFields } from '@govuk-frederic/utils';
 
 /**
@@ -68,7 +68,14 @@ import { rowsFromArray, titlesFromFields } from '@govuk-frederic/utils';
  * const title = ['Heading'];
  * const defaultTransform = value => (value || '-');
  *
- * <ArrayObjectTable fields={fields} array={array} title={title} skipEmptyRows hideWithNoValues defaultTransform={defaultTransform}/>
+ * <ArrayObjectTable
+ *  fields={fields}
+ *  array={array}
+ *  title={title}
+ *  skipEmptyRows
+ *  hideWithNoValues
+ *  defaultTransform={defaultTransform}
+ * />
  * ```
  * */
 const ArrayObjectTable = ({
@@ -109,7 +116,7 @@ ArrayObjectTable.propTypes = {
 ArrayObjectTable.defaultProps = {
   hideWithNoValues: false,
   skipEmptyRows: false,
-  defaultTransform: value => (value ? value : '-'), /* "||" breaks api-docs formatting! */
+  defaultTransform: value => (value || '-'), /* "||" breaks api-docs formatting! */
   title: null,
 };
 

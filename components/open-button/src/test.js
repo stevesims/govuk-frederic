@@ -23,7 +23,7 @@ describe('OpenButton', () => {
   it('calls onChange event when clicked', () => {
     const handleClick = jest.fn();
     shallow(<OpenButton onChange={handleClick} />).simulate('click');
-    expect(handleClick).toHaveBeenCalledWith({open: true});
+    expect(handleClick).toHaveBeenCalledWith({ open: true });
   });
 
   it('matches snapshot', () => {

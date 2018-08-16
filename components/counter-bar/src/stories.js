@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter, Link } from 'react-router-dom';
+
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
@@ -23,8 +24,7 @@ stories.add('Component default', () =>
       <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Active counter', () =>
   (<CounterBar>
@@ -36,8 +36,7 @@ examples.add('Active counter', () =>
       <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Active total', () =>
   (<CounterBar>
@@ -49,8 +48,7 @@ examples.add('Active total', () =>
       <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Without Counters wrapper', () =>
   (<CounterBar>
@@ -60,8 +58,7 @@ examples.add('Without Counters wrapper', () =>
     <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
     <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
     <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Empty counters', () =>
   (<CounterBar>
@@ -73,11 +70,10 @@ examples.add('Empty counters', () =>
       <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
       <CounterBar.Counter />
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('CounterBar with padded counters container', () =>
-  (<div style={{padding: '4px'}}>
+  (<div style={{ padding: '4px' }}>
     <CounterBar>
       <CounterBar.Total score={15}>All counters</CounterBar.Total>
       <CounterBar.Counters>
@@ -88,8 +84,7 @@ examples.add('CounterBar with padded counters container', () =>
         <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
       </CounterBar.Counters>
     </CounterBar>
-  </div>),
-);
+  </div>));
 
 examples.add('Zero/no scores', () =>
   (<CounterBar>
@@ -101,8 +96,7 @@ examples.add('Zero/no scores', () =>
       <CounterBar.Counter>Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Custom colours on total', () =>
   (<CounterBar>
@@ -114,8 +108,7 @@ examples.add('Custom colours on total', () =>
       <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Custom colours on counters', () =>
   (<CounterBar>
@@ -127,21 +120,19 @@ examples.add('Custom colours on counters', () =>
       <CounterBar.Counter score={4} scoreColor="yellow" scoreBackgroundColor="purple">Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Use any HTML element string for the total', () =>
-(<CounterBar>
-  <CounterBar.Total score={15} component="aside">All counters</CounterBar.Total>
-  <CounterBar.Counters>
-    <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
-    <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
-    <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
-    <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
-    <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
-  </CounterBar.Counters>
-</CounterBar>),
-);
+  (<CounterBar>
+    <CounterBar.Total score={15} component="aside">All counters</CounterBar.Total>
+    <CounterBar.Counters>
+      <CounterBar.Counter score={1}>Counter 1</CounterBar.Counter>
+      <CounterBar.Counter score={2}>Counter 2</CounterBar.Counter>
+      <CounterBar.Counter score={3}>Counter 3</CounterBar.Counter>
+      <CounterBar.Counter score={4}>Counter 4</CounterBar.Counter>
+      <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
+    </CounterBar.Counters>
+  </CounterBar>));
 
 examples.add('Use a Link component for the total', () =>
   (<HashRouter>
@@ -155,8 +146,7 @@ examples.add('Use a Link component for the total', () =>
         <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
       </CounterBar.Counters>
     </CounterBar>
-  </HashRouter>),
-);
+  </HashRouter>));
 
 examples.add('Use any HTML element string for a counter', () =>
   (<CounterBar>
@@ -168,8 +158,7 @@ examples.add('Use any HTML element string for a counter', () =>
       <CounterBar.Counter score={4} component="section">Counter 4</CounterBar.Counter>
       <CounterBar.Counter score={5} component="span">Counter 5</CounterBar.Counter>
     </CounterBar.Counters>
-  </CounterBar>),
-);
+  </CounterBar>));
 
 examples.add('Use a Link component for a counter', () =>
   (<HashRouter>
@@ -183,8 +172,7 @@ examples.add('Use a Link component for a counter', () =>
         <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
       </CounterBar.Counters>
     </CounterBar>
-  </HashRouter>),
-);
+  </HashRouter>));
 
 examples.add('Use an active Link component for a counter', () =>
   (<HashRouter>
@@ -198,5 +186,4 @@ examples.add('Use an active Link component for a counter', () =>
         <CounterBar.Counter score={5}>Counter 5</CounterBar.Counter>
       </CounterBar.Counters>
     </CounterBar>
-  </HashRouter>),
-);
+  </HashRouter>));

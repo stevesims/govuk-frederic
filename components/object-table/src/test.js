@@ -15,10 +15,10 @@ describe('ObjectTable', () => {
     const wrapper = shallow(<ObjectTable />);
     expect(wrapper.exists()).toBe(true);
   });
-  
+
   describe('renders table data', () => {
     it('renders expected table data cells', () => {
-      const wrapper = mount(<ObjectTable fields={fields} object={object} />); 
+      const wrapper = mount(<ObjectTable fields={fields} object={object} />);
       expect(wrapper.find('Table').prop('rows')).toEqual([['One', 'test'], ['Two', 'two']]);
     });
 
@@ -26,16 +26,24 @@ describe('ObjectTable', () => {
       const fieldsWithTransform = [
         { key: 'one', heading: 'one' },
         { key: 'two', heading: 'two', transform: () => null },
-        { key: 'three', heading: 'three'},
+        { key: 'three', heading: 'three' },
       ];
       const objectWithNull = { one: 'test', two: 'test', three: null };
-      const wrapper = mount(<ObjectTable fields={fieldsWithTransform} object={objectWithNull} skipEmptyValues />);
+      const wrapper = mount(<ObjectTable
+        fields={fieldsWithTransform}
+        object={objectWithNull}
+        skipEmptyValues
+      />);
       expect(wrapper.find('tr').length).toBe(1);
     });
-  
+
     it('renders nothing when rows have no values and hideWithNoValues is true', () => {
       const objectWithNoValues = {};
-      const wrapper = mount(<ObjectTable fields={fields} object={objectWithNoValues} hideWithNoValues />);   
+      const wrapper = mount(<ObjectTable
+        fields={fields}
+        object={objectWithNoValues}
+        hideWithNoValues
+      />);
       expect(wrapper.html()).toBe(null);
     });
   });

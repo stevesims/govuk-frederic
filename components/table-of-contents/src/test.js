@@ -40,7 +40,7 @@ describe('TableOfContents', () => {
 
     expect(wrapper.find('#index-optional').length).toBe(0);
   });
-  
+
   it('matches snapshot', () => {
     const wrapper = mount(<TableOfContents.Container>
       <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>

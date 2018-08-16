@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'govuk-frederic';
+import Table from '@govuk-frederic/table';
 
 import { objectHasValueForKeys, keysFromFields, rowsFromObject } from '@govuk-frederic/utils';
 
 /**
  *
  * ### Usage
- * 
+ *
  * Simple
  * ```jsx
  * const fields = [
@@ -18,10 +18,10 @@ import { objectHasValueForKeys, keysFromFields, rowsFromObject } from '@govuk-fr
  * ];
  * const object = { one: 'test', two: 'test', three: '', four: null };
  * const title = ['Heading'];
- * 
+ *
  * <ObjectTable fields={fields} object={object} title={title}/>;
  * ```
- * 
+ *
  * With skipEmptyValues
  * ```jsx
  * const fields = [
@@ -32,10 +32,10 @@ import { objectHasValueForKeys, keysFromFields, rowsFromObject } from '@govuk-fr
  * ];
  * const object = { one: 'test', two: 'test', three: '', four: null };
  * const title = ['Heading'];
- * 
+ *
  * <ObjectTable fields={fields} object={object} title={title} skipEmptyValues={false}/>
  * ```
- * 
+ *
  * With hideWithNoValues
  * ```jsx
  * const fields = [
@@ -54,7 +54,7 @@ const ObjectTable = ({
   object,
   hideWithNoValues,
   skipEmptyValues,
-  defaultTransform, 
+  defaultTransform,
   ...props
 }) => {
   if (!hideWithNoValues || objectHasValueForKeys(object, keysFromFields(fields))) {

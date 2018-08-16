@@ -1,13 +1,15 @@
 import React from 'react';
+
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
+
+import ResultCountTitle from '@govuk-frederic/result-count-title';
+import Spinner from '@govuk-frederic/spinner';
 import manageState from 'manage-state';
 
 import TableAccordionGroup from '.';
 import ReadMe from '../README.md';
-import ResultCountTitle from '@govuk-frederic/result-count-title';
-import Spinner from '@govuk-frederic/spinner';
 
 class TableAccordionGroupAsyncExample extends React.Component {
   constructor(props) {
@@ -64,7 +66,8 @@ class TableAccordionGroupAsyncExample extends React.Component {
     // - `index` is not a user input as it comes from items.map in render.
     // - This code is also not expected to be executed on a server, other than during unit tests,
     //   in which case this vulnerability is not relevant.
-    if (open && !this.state.items[index].loaded) { // eslint-disable-line security/detect-object-injection
+    if (open && !this.state.items[index].loaded) {
+      // eslint-disable-line security/detect-object-injection
       this.loadItem(index);
     }
   }
@@ -82,7 +85,7 @@ class TableAccordionGroupAsyncExample extends React.Component {
           }
           open={item.open}
           expanded={item.loaded ? item.text : <Spinner visible />}
-          onChange={({open}) => this.onChange(open, index)}>
+          onChange={({ open }) => this.onChange(open, index)}>
           {item.firstItem}
         </TableAccordionGroup>
       ))}

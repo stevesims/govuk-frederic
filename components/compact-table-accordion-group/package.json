@@ -4,7 +4,9 @@
   "dependencies": {
     "@govuk-frederic/open-button": "^0.1.1",
     "@govuk-react/constants": "^0.2.7",
-    "@govuk-react/hoc": "^0.2.7"
+    "@govuk-react/hoc": "^0.2.7",
+    "react-collapse": ">=4",
+    "react-motion": "^0.5.2"
   },
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",

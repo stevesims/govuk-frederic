@@ -13,7 +13,7 @@ describe('Count', () => {
     const wrapper = shallow(<Count value={4} />);
     expect(wrapper.find('span').text()).toBe('4');
   });
-  
+
   it('matches snapshot', () => {
     const wrapper = mount(<Count value={6} />);
     expect(wrapper).toMatchSnapshot();

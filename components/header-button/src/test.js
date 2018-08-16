@@ -20,7 +20,7 @@ describe('HeaderButton', () => {
     expect(wrapper).toHaveStyleRule('border-top-color', LINK_COLOUR);
     expect(wrapper).toHaveStyleRule('color', LINK_COLOUR);
   });
-  
+
   it('applies styles on disabled prop', () => {
     const wrapper = shallow(<HeaderButton disabled />).find('Button');
     expect(wrapper).toHaveStyleRule('opacity', '0.35');
