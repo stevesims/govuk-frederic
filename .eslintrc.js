@@ -8,22 +8,6 @@ module.exports = {
     es6: true,
   },
   rules: {
-
-    /* THE FOLLOWING OVERRIDES TO AIRBNB ARE CURRENTLY REQUIRED TO MAKE CODE PASS: */
-    
-    /* I like these rules! */
-    "function-paren-newline": 0,
-    "keyword-spacing": 0, /* Recommend: 'function-paren-newline': ['error', 'consistent'], */
-    "import/first": 0,
-    "import/no-extraneous-dependencies": 0,
-    "indent": 0,
-    "linebreak-style": 0,
-    "max-len": 0,
-    "no-undef": 0,
-    "no-trailing-spaces": 0,
-    "no-unneeded-ternary": 0,
-    "object-curly-newline": 0,
-    "object-curly-spacing": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-closing-tag-location": 0,
@@ -34,7 +18,7 @@ module.exports = {
     "react/no-array-index-key": 0,
     'react/require-default-props': 0,
     "react/sort-comp": 0,
-    
+
     /* Up for discussion */
     "arrow-body-style": 0,
     "arrow-parens": 0, /* Could relax "requireForBlockBody": true */
