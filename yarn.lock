@@ -947,16 +947,6 @@
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.1.tgz#f3a81587ad8d0ef33cdad6f3b4310774fcc1053e"
 
-"@govuk-frederic/arrow@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@govuk-frederic/arrow/-/arrow-0.0.2.tgz#90fe79962f8b7bfbffe3dded8eb3c6499309d05d"
-
-"@govuk-frederic/open-button@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@govuk-frederic/open-button/-/open-button-0.0.3.tgz#15a8d4e31468c71fb8475bc27a42d24a79a05c4d"
-  dependencies:
-    "@govuk-frederic/arrow" "^0.0.2"
-
 "@govuk-react/back-link@^0.2.9":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@govuk-react/back-link/-/back-link-0.2.9.tgz#ec4b1126f7f78567a25915c40e8d76f3abb6ba33"

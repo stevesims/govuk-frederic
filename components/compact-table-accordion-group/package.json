@@ -2,7 +2,7 @@
   "name": "@govuk-frederic/compact-table-accordion-group",
   "version": "0.0.5",
   "dependencies": {
-    "@govuk-frederic/open-button": "^0.0.3",
+    "@govuk-frederic/open-button": "^0.0.4",
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7"
   },
