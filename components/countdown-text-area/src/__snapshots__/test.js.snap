@@ -65,6 +65,7 @@ exports[`CountdownTextArea matches snapshot 1`] = `
 <CountdownTextArea
   maxLength={2}
   noMaxLengthAttr={false}
+  onChange={[MockFunction]}
   positiveOnly={false}
   value="Test"
 >
@@ -72,6 +73,7 @@ exports[`CountdownTextArea matches snapshot 1`] = `
     maxLength={2}
     name="CountdownTextArea--container"
     noMaxLengthAttr={false}
+    onChange={[MockFunction]}
     over={true}
     positiveOnly={false}
     value="Test"
@@ -80,15 +82,18 @@ exports[`CountdownTextArea matches snapshot 1`] = `
       className="emotion-6 emotion-7"
       maxLength={2}
       name="CountdownTextArea--container"
+      onChange={[MockFunction]}
       value="Test"
     >
       <StyledTextAreaField
         maxLength={2}
+        onChange={[MockFunction]}
         value="Test"
       >
         <textarea
           className="emotion-0 emotion-1"
           maxLength={2}
+          onChange={[MockFunction]}
           value="Test"
         />
       </StyledTextAreaField>
