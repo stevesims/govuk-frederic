@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/header-button",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "govuk-colours": "^1.0.3"
