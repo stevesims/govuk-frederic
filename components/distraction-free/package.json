@@ -24,10 +24,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "Mark Chambers",
+  "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/distraction-free",
+  "description": "Provides border, arrow-left button and body area for document display.",
   "private": false,
   "publishConfig": {
     "access": "public"

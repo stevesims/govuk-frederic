@@ -23,10 +23,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "Steve Sims",
+  "contributors": ["Taran Chauhan", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/table",
+  "description": "Renders a table with optional heading row. Cell data is derived from an array and can include names per cell or per row.",
   "private": false,
   "publishConfig": {
     "access": "public"

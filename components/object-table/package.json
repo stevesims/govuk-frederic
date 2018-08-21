@@ -23,10 +23,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Gavin Orland",
+  "author": "Steve Sims",
+  "contributors": ["Toby Brancher", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/object-table",
+  "description": "Renders a table from an object whose properties match provided fields. Also supports transforms for values.",
   "private": false,
   "publishConfig": {
     "access": "public"

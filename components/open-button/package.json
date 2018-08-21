@@ -22,10 +22,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "Alasdair Mcleay",
+  "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/open-button",
+  "description": "Uses Arrow icon and manage-state to create a button which toggles rotation when clicked and can accept an event handler.",
   "private": false,
   "publishConfig": {
     "access": "public"

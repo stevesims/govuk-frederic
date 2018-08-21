@@ -2,7 +2,6 @@
   "name": "@govuk-frederic/table-of-contents",
   "version": "0.1.0",
   "private": false,
-  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
@@ -23,5 +22,9 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Steve Sims"
+  "author": "Steve Sims",
+  "contributors": ["Gavin Orland", "Taran Chauhan"],
+  "license": "MIT",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/table-of-contents",
+  "description": "Construction kit to build a table of contents - uses Context API."
 }

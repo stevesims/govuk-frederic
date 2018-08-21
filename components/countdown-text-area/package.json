@@ -24,10 +24,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "Steve Sims",
+  "contributors": ["Taran Chauhan", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/countdown-text-area",
+  "description": "TextArea which accepts a maxlength prop and renders a TextAreaField, limits characters and styles accordingly.",
   "private": false,
   "publishConfig": {
     "access": "public"

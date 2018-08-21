@@ -23,10 +23,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "The govuk-frederic authors",
+  "contributors": ["Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/result-count",
+  "description": "Renders children, expected to be a number, styled and with customisable color and background-color.",
   "private": false,
   "publishConfig": {
     "access": "public"

@@ -19,10 +19,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "The govuk-frederic authors",
+  "contributors": ["Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/spinner",
+  "description": "Renders an animated GIF as Base-64 - prop sets visibility.",
   "private": false,
   "publishConfig": {
     "access": "public"

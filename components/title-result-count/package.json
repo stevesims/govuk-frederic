@@ -23,10 +23,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "Steve Sims",
+  "contributors": ["Taran Chauhan", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/title-result-count",
+  "description": "Renders a ResultCount using count prop provided and a title from children.",
   "private": false,
   "publishConfig": {
     "access": "public"

@@ -24,10 +24,11 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Tarandeep Singh Chauhan",
+  "author": "Jonathan Sheldrake",
+  "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://github.com/stevesims/govuk-frederic#readme",
-  "description": "govuk-frederic: Frederic project specific components.",
+  "homepage": "https://www.npmjs.com/package/@govuk-frederic/compact-table-accordion-group",
+  "description": "An accordion menu with various customisable features.",
   "private": false,
   "publishConfig": {
     "access": "public"
