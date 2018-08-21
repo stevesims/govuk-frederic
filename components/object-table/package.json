@@ -1,9 +1,9 @@
 {
   "name": "@govuk-frederic/object-table",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "dependencies": {
-    "@govuk-frederic/table": "^0.0.6",
-    "@govuk-frederic/utils": "^0.0.6"
+    "@govuk-frederic/table": "^0.1.0",
+    "@govuk-frederic/utils": "^0.1.0"
   },
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
