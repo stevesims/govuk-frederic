@@ -22,7 +22,7 @@
   "author": "The govuk-frederic authors",
   "contributors": ["Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/spinner",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/spinner",
   "description": "Renders an animated GIF as Base-64 - prop sets visibility.",
   "private": false,
   "publishConfig": {

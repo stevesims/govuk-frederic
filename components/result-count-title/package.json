@@ -26,7 +26,7 @@
   "author": "The govuk-frederic authors",
   "contributors": ["Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/result-count-title",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/result-count-title",
   "description": "Renders a ResultCount with value sent as a prop, along with a title sent as children.",
   "private": false,
   "publishConfig": {

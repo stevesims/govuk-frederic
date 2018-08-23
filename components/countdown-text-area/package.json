@@ -27,7 +27,7 @@
   "author": "Steve Sims",
   "contributors": ["Taran Chauhan", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/countdown-text-area",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/countdown-text-area",
   "description": "TextArea which accepts a maxlength prop and renders a TextAreaField, limits characters and styles accordingly.",
   "private": false,
   "publishConfig": {

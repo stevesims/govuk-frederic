@@ -27,7 +27,7 @@
   "author": "Mark Chambers",
   "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/distraction-free",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/distraction-free",
   "description": "Provides border, arrow-left button and body area for document display.",
   "private": false,
   "publishConfig": {

@@ -25,6 +25,6 @@
   "author": "Steve Sims",
   "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/table-of-contents",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/table-of-contents",
   "description": "Construction kit to build a table of contents - uses Context API."
 }

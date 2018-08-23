@@ -29,7 +29,7 @@
   "author": "Alasdair Mcleay",
   "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/table-accordion-group",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/table-accordion-group",
   "description": "Accordion menu which uses manage-state and react-collapse.",
   "private": false,
   "publishConfig": {

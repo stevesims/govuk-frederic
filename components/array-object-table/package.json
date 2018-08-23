@@ -26,7 +26,7 @@
   "author": "Steve Sims",
   "contributors": ["Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/array-object-table",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/array-object-table",
   "description": "Renders a table from an an array of objects, providing they have properties which match provided the keys. Also supports transforms of undefined values.",
   "private": false,
   "publishConfig": {

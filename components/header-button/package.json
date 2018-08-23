@@ -26,7 +26,7 @@
   "author": "The govuk-frederic authors",
   "contributors": ["Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/header-button",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/header-button",
   "description": "Styled button with further optional active and disabled styles.",
   "private": false,
   "publishConfig": {

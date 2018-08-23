@@ -26,7 +26,7 @@
   "author": "Steve Sims",
   "contributors": ["Taran Chauhan", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/table",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/table",
   "description": "Renders a table with optional heading row. Cell data is derived from an array and can include names per cell or per row.",
   "private": false,
   "publishConfig": {

@@ -28,7 +28,7 @@
   "author": "Simon Moore",
   "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/keyline",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/keyline",
   "description": "Renders a bottom border with optional inline-block and colour.",
   "private": false,
   "publishConfig": {

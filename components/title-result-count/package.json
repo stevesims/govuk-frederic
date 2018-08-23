@@ -26,7 +26,7 @@
   "author": "Steve Sims",
   "contributors": ["Taran Chauhan", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/title-result-count",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/title-result-count",
   "description": "Renders a ResultCount using count prop provided and a title from children.",
   "private": false,
   "publishConfig": {

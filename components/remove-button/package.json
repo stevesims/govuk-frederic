@@ -25,7 +25,7 @@
   "author": "Mark Chambers",
   "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/remove-button",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/remove-button",
   "description": "Renders a styled button containing an x character.",
   "private": false,
   "publishConfig": {

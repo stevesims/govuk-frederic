@@ -26,7 +26,7 @@
   "author": "Steve Sims",
   "contributors": ["Toby Brancher", "Gavin Orland"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/object-table",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/object-table",
   "description": "Renders a table from an object whose properties match provided fields. Also supports transforms for values.",
   "private": false,
   "publishConfig": {

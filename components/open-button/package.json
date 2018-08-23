@@ -25,7 +25,7 @@
   "author": "Alasdair Mcleay",
   "contributors": ["Gavin Orland", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/open-button",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/open-button",
   "description": "Uses Arrow icon and manage-state to create a button which toggles rotation when clicked and can accept an event handler.",
   "private": false,
   "publishConfig": {

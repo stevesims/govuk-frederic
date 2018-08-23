@@ -28,7 +28,7 @@
   "author": "Gavin Orland",
   "contributors": ["Steve Sims", "Toby Brancher", "Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/counter-bar",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/counter-bar",
   "description": "A 'construction kit' for creating a counter bar with counters and a total, with various configurable parameters.",
   "private": false,
   "publishConfig": {

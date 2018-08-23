@@ -25,7 +25,7 @@
   "author": "The govuk-frederic authors",
   "contributors": ["Taran Chauhan"],
   "license": "MIT",
-  "homepage": "https://www.npmjs.com/package/@govuk-frederic/count",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/count",
   "description": "Renders a number sent in as a prop.",
   "private": false,
   "publishConfig": {
