@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/result-count-title",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "@govuk-frederic/result-count": "^0.1.0",
+    "@govuk-frederic/result-count": "^0.1.1",
     "@govuk-react/constants": "^0.2.7"
   },
   "devDependencies": {
@@ -24,7 +24,9 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "The govuk-frederic authors",
-  "contributors": ["Taran Chauhan"],
+  "contributors": [
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/result-count-title",
   "description": "Renders a ResultCount with value sent as a prop, along with a title sent as children.",

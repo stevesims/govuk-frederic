@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/countdown-text-area",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/text-area": "^0.2.9",
@@ -25,7 +25,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Steve Sims",
-  "contributors": ["Taran Chauhan", "Gavin Orland"],
+  "contributors": [
+    "Taran Chauhan",
+    "Gavin Orland"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/countdown-text-area",
   "description": "TextArea which accepts a maxlength prop and renders a TextAreaField, limits characters and styles accordingly.",

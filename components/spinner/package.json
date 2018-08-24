@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/spinner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.2.4",
     "@storybook/addon-knobs": "^3.4.2"
@@ -20,7 +20,9 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "The govuk-frederic authors",
-  "contributors": ["Taran Chauhan"],
+  "contributors": [
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/spinner",
   "description": "Renders an animated GIF as Base-64 - prop sets visibility.",

@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/compact-table-accordion-group",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "@govuk-frederic/open-button": "^0.1.0",
+    "@govuk-frederic/open-button": "^0.1.1",
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7"
   },
@@ -25,7 +25,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Jonathan Sheldrake",
-  "contributors": ["Gavin Orland", "Taran Chauhan"],
+  "contributors": [
+    "Gavin Orland",
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/compact-table-accordion-group",
   "description": "An accordion menu with various customisable features.",

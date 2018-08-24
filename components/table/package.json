@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7"
@@ -24,7 +24,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Steve Sims",
-  "contributors": ["Taran Chauhan", "Gavin Orland"],
+  "contributors": [
+    "Taran Chauhan",
+    "Gavin Orland"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/table",
   "description": "Renders a table with optional heading row. Cell data is derived from an array and can include names per cell or per row.",
