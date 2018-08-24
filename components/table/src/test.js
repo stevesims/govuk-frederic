@@ -87,6 +87,17 @@ describe('Table', () => {
     expect(td.prop('name')).toBe('three');
   });
 
+  it('renders name on table element', () => {
+    const wrapper = mount(<Table 
+      name="tableNameAtt"
+      rows={rows}
+      rowIncludesHeading 
+      nameByRow
+    />);
+
+    expect(wrapper.find('table').prop('name')).toBe('tableNameAtt');
+  });
+
   it('names each cell according to its row, with titles', () => {
     const wrapper = mount(<Table 
       rows={rows}
