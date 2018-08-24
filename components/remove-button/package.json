@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/remove-button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7"
   },
@@ -23,7 +23,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Mark Chambers",
-  "contributors": ["Gavin Orland", "Taran Chauhan"],
+  "contributors": [
+    "Gavin Orland",
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/remove-button",
   "description": "Renders a styled button containing an x character.",

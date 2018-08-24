@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/table-of-contents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -23,7 +23,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Steve Sims",
-  "contributors": ["Gavin Orland", "Taran Chauhan"],
+  "contributors": [
+    "Gavin Orland",
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/table-of-contents",
   "description": "Construction kit to build a table of contents - uses Context API."

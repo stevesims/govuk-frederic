@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/title-result-count",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "@govuk-frederic/result-count": "^0.1.0",
+    "@govuk-frederic/result-count": "^0.1.1",
     "@govuk-react/constants": "^0.2.7"
   },
   "devDependencies": {
@@ -24,7 +24,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Steve Sims",
-  "contributors": ["Taran Chauhan", "Gavin Orland"],
+  "contributors": [
+    "Taran Chauhan",
+    "Gavin Orland"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/title-result-count",
   "description": "Renders a ResultCount using count prop provided and a title from children.",

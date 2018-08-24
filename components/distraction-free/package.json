@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/distraction-free",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "@govuk-frederic/arrow-left": "^0.1.0",
+    "@govuk-frederic/arrow-left": "^0.1.1",
     "@govuk-react/constants": "^0.2.7",
     "govuk-colours": "^1.0.3"
   },
@@ -25,7 +25,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Mark Chambers",
-  "contributors": ["Gavin Orland", "Taran Chauhan"],
+  "contributors": [
+    "Gavin Orland",
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/distraction-free",
   "description": "Provides border, arrow-left button and body area for document display.",

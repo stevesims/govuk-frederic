@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/keyline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "@govuk-frederic/result-count-title": "^0.1.0",
+    "@govuk-frederic/result-count-title": "^0.1.1",
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7",
     "govuk-colours": "^1.0.3"
@@ -26,7 +26,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Simon Moore",
-  "contributors": ["Gavin Orland", "Taran Chauhan"],
+  "contributors": [
+    "Gavin Orland",
+    "Taran Chauhan"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/keyline",
   "description": "Renders a bottom border with optional inline-block and colour.",
