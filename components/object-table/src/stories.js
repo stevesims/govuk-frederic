@@ -159,11 +159,11 @@ examples.add('With default transform', () => {
   };
   const defaultTransform = (result = '-') => result;
 
-  return (<ObjectTable
+  return <ObjectTable
     fields={fields}
     object={object}
     title={title}
     defaultTransform={defaultTransform}
     skipEmptyRows
-  />);
+  />;
 });

@@ -8,11 +8,21 @@ module.exports = {
     es6: true,
   },
   rules: {
-    "arrow-parens": [2, "as-needed"],
+    'arrow-parens': [2, 'as-needed'],
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'only-multiline',
+    }],
+    'function-paren-newline': 0,
+    'no-confusing-arrow': 0,
 
-    "react/jsx-closing-tag-location": 0, /* We could leave as-is */
-    "react/no-array-index-key": 0, /* Up for debate */
-    'react/require-default-props': 0, /* Suggest enabled but needs some work! */
+    'react/jsx-closing-tag-location': 0,
+    'react/jsx-wrap-multilines': 0,
+    'react/no-array-index-key': 0,
+    'react/require-default-props': 0,
 
     /* Copied from govuk/react */
     'react/jsx-filename-extension': 0,

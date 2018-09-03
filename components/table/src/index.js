@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from 'react-emotion';
+
 import { NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
@@ -155,7 +155,7 @@ const calculateIndex = (titles, nameByRow, index) => {
  */
 const Table = ({
   name, names, nameByRow, rowIncludesHeading, titles, rows, ...props
-}) => (
+}) =>
   <TableContainer name={name} {...props}>
     {titles &&
       titles.length && (
@@ -208,8 +208,7 @@ const Table = ({
         </tr>
       ))}
     </tbody>
-  </TableContainer>
-);
+  </TableContainer>;
 
 Table.propTypes = {
   flexibleColumns: PropTypes.bool,

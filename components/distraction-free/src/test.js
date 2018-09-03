@@ -20,13 +20,21 @@ describe('DistractionFree', () => {
   });
 
   it('renders optional arrow title', () => {
-    const wrapper = shallow(<DistractionFree arrowLeftTitle="Title">Text</DistractionFree>);
+    const wrapper = shallow(
+      <DistractionFree arrowLeftTitle="Title">
+        Text
+      </DistractionFree>
+    );
     expect(wrapper.find('ArrowLeft').childAt(0).text()).toBe('Title');
   });
 
   it('renders function passed when clicked', () => {
     const clickHandler = jest.fn();
-    const wrapper = shallow(<DistractionFree onClick={clickHandler}>Text</DistractionFree>);
+    const wrapper = shallow(
+      <DistractionFree onClick={clickHandler}>
+        Text
+      </DistractionFree>
+    );
     wrapper.find('Button').simulate('click');
     expect(clickHandler).toHaveBeenCalledTimes(1);
   });
@@ -38,7 +46,11 @@ describe('DistractionFree', () => {
 
   it('matches snapshot', () => {
     const clickHandler = jest.fn();
-    const wrapper = mount(<DistractionFree arrowLeftTitle="Title" onClick={clickHandler}>Text</DistractionFree>);
+    const wrapper = mount(
+      <DistractionFree arrowLeftTitle="Title" onClick={clickHandler}>
+        Text
+      </DistractionFree>
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

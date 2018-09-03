@@ -35,11 +35,10 @@ const RotatingButton = styled('button')(
  * <ManagedOpenButton />
  * ```
  */
-const OpenButton = ({ open, onChange, ...props }) => (
+const OpenButton = ({ open, onChange, ...props }) =>
   <RotatingButton open={open} onClick={() => onChange && onChange({ open: !open })} {...props}>
     <Arrow width={20} />
-  </RotatingButton>
-);
+  </RotatingButton>;
 
 OpenButton.propTypes = {
   onChange: PropTypes.func,

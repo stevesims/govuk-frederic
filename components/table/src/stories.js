@@ -25,29 +25,34 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
 stories.add('Component default', () =>
-  <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} />);
+  <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} />
+);
 
 examples.add('rowIncludesHeading, with titles', () =>
-  (<Table
+  <Table
     titles={arrayExampleHeadings}
     rows={arrayExampleContent}
     rowIncludesHeading
     nameByRow
     names={rowTableNamesWithTitles}
-  />));
+  />
+);
 
 examples.add('rowIncludesHeading, no titles', () =>
-  <Table rows={arrayExampleContent} rowIncludesHeading nameByRow names={rowTableNames} />);
+  <Table rows={arrayExampleContent} rowIncludesHeading nameByRow names={rowTableNames} />
+);
 
 examples.add('rowIncludesHeading, no titles, small single row', () =>
-  <Table rows={[['title', 'value']]} rowIncludesHeading nameByRow names={rowTableNames} />);
+  <Table rows={[['title', 'value']]} rowIncludesHeading nameByRow names={rowTableNames} />
+);
 
 examples.add('rowIncludesHeading, with flexible columns', () =>
-  (<Table
+  <Table
     titles={arrayExampleHeadings}
     rows={arrayExampleContent}
     flexibleColumns
     rowIncludesHeading
     nameByRow
     names={rowTableNames}
-  />));
+  />
+);

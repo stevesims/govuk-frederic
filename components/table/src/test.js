@@ -34,7 +34,8 @@ describe('Table', () => {
   });
 
   it('names each cell according to its column', () => {
-    const wrapper = mount(<Table rows={rows} titles={titles} name="name" names={columnTableNames} />);
+    const wrapper = mount(
+      <Table rows={rows} titles={titles} name="name" names={columnTableNames} />);
     const th = wrapper.find('TableHeading').at(2);
     expect(th.prop('name')).toBe('three');
     const td = wrapper.find('TableData').at(2);

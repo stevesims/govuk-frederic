@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from 'react-emotion';
 import { Collapse } from 'react-collapse';
+
 import { FONT_SIZE, NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
@@ -92,7 +92,7 @@ const Title = styled('header')(({ clickable }) => (clickable ? { cursor: 'pointe
  */
 const TableAccordionGroup = ({
   title, children, expanded, onChange, open, changeOnTitleClick, ...props
-}) => (
+}) =>
   <Container {...props}>
     <OpenButton open={open} onChange={onChange} />
     <Title
@@ -105,8 +105,7 @@ const TableAccordionGroup = ({
       <div>{children}</div>
       <Collapse isOpened={open}>{expanded}</Collapse>
     </div>
-  </Container>
-);
+  </Container>;
 
 TableAccordionGroup.propTypes = {
   changeOnTitleClick: PropTypes.bool,

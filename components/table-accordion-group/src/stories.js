@@ -75,8 +75,8 @@ class TableAccordionGroupAsyncExample extends React.Component {
   render() {
     const { items } = this.state;
 
-    return (<div>
-      {items.map((item, index) => (
+    return <div>
+      {items.map((item, index) =>
         <TableAccordionGroup
           changeOnTitleClick
           key={item.id}
@@ -89,8 +89,8 @@ class TableAccordionGroupAsyncExample extends React.Component {
         >
           {item.firstItem}
         </TableAccordionGroup>
-      ))}
-    </div>);
+      )}
+    </div>;
   }
 }
 
@@ -106,32 +106,42 @@ const examples = storiesOf('Tables/TableAccordionGroup/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => (<TableAccordionGroup title="Title" expanded="expanded">
-      Children
-</TableAccordionGroup>));
+stories.add('Component default', () =>
+  <TableAccordionGroup title="Title" expanded="expanded">
+    Children
+  </TableAccordionGroup>
+);
 
-examples.add('Open', () => (<TableAccordionGroup open title="Title" expanded="expanded">
-      Children
-</TableAccordionGroup>));
+examples.add('Open', () =>
+  <TableAccordionGroup open title="Title" expanded="expanded">
+    Children
+  </TableAccordionGroup>
+);
 
-examples.add('State managed', () => (<ManagedTableAccordionGroup title="Title" expanded="expanded">
-          Children
-</ManagedTableAccordionGroup>));
+examples.add('State managed', () =>
+  <ManagedTableAccordionGroup title="Title" expanded="expanded">
+    Children
+  </ManagedTableAccordionGroup>
+);
 
-examples.add('changeOnTitleClick', () => (<ManagedTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
-          Children
-</ManagedTableAccordionGroup>));
+examples.add('changeOnTitleClick', () =>
+  <ManagedTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
+    Children
+  </ManagedTableAccordionGroup>
+);
 
-examples.add('array', () => (<ManagedTableAccordionGroup
-  expanded={
+examples.add('array', () =>
+  <ManagedTableAccordionGroup
+    expanded={
     arrayExampleItems.map((item, index) => {
       if (index) {
         return <div>{item}</div>;
       }
       return null;
     })}
->
-  {arrayExampleItems[0]}
-</ManagedTableAccordionGroup>));
+  >
+    {arrayExampleItems[0]}
+  </ManagedTableAccordionGroup>
+);
 
 examples.add('async', () => <TableAccordionGroupAsyncExample />);

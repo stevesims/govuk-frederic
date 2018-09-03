@@ -9,9 +9,11 @@ describe('TableOfContents Section Entry', () => {
   const removeContent = jest.fn();
 
   it('renders without crashing', () => {
-    wrapper = shallow(<Entry id="id" title="Title" toc={{ addContent, removeContent }}>
+    wrapper = shallow(
+      <Entry id="id" title="Title" toc={{ addContent, removeContent }}>
         Section text here
-    </Entry>);
+      </Entry>
+    );
   });
 
   it('has called addContent in context', () => {

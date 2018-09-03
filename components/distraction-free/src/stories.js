@@ -14,14 +14,14 @@ const examples = storiesOf('Page/DistractionFree/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => (
+stories.add('Component default', () =>
   <DistractionFree onClick={action('clicked back button')}>
     content goes here
   </DistractionFree>
-));
+);
 
-examples.add('With title', () => (
+examples.add('With title', () =>
   <DistractionFree arrowLeftTitle="Back to example" onClick={action('clicked back button')}>
     content goes here
   </DistractionFree>
-));
+);

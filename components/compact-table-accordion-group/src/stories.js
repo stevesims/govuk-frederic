@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ResultCountTitle from '@govuk-frederic/result-count-title';
 import Spinner from '@govuk-frederic/spinner';
 import manageState from 'manage-state';
@@ -75,7 +74,7 @@ class CompactTableAccordionGroupAsyncExample extends React.Component {
   render() {
     const { items } = this.state;
 
-    return (<div>
+    return <div>
       {items.map((item, index) => (
         <CompactTableAccordionGroup
           changeOnTitleClick
@@ -90,7 +89,7 @@ class CompactTableAccordionGroupAsyncExample extends React.Component {
           {item.firstItem}
         </CompactTableAccordionGroup>
       ))}
-    </div>);
+    </div>;
   }
 }
 
@@ -106,36 +105,50 @@ const examples = storiesOf('Tables/CompactTableAccordionGroup/Examples', module)
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => (<CompactTableAccordionGroup title="Title" expanded="expanded">
-      Children
-</CompactTableAccordionGroup>));
+stories.add('Component default', () =>
+  <CompactTableAccordionGroup title="Title" expanded="expanded">
+    Children
+  </CompactTableAccordionGroup>
+);
 
-examples.add('No children', () => <CompactTableAccordionGroup open title="Title" expanded="expanded" />);
+examples.add('No children', () =>
+  <CompactTableAccordionGroup open title="Title" expanded="expanded" />
+);
 
-examples.add('Open', () => (<CompactTableAccordionGroup open title="Title" expanded="expanded">
-      Children
-</CompactTableAccordionGroup>));
+examples.add('Open', () =>
+  <CompactTableAccordionGroup open title="Title" expanded="expanded">
+    Children
+  </CompactTableAccordionGroup>
+);
 
-examples.add('State managed', () => (<ManagedCompactTableAccordionGroup title="Title" expanded="expanded">
-          Children
-</ManagedCompactTableAccordionGroup>));
+examples.add('State managed', () =>
+  <ManagedCompactTableAccordionGroup title="Title" expanded="expanded">
+    Children
+  </ManagedCompactTableAccordionGroup>
+);
 
-examples.add('State managed without children', () => <ManagedCompactTableAccordionGroup title="Title" expanded="expanded" />);
+examples.add('State managed without children', () =>
+  <ManagedCompactTableAccordionGroup title="Title" expanded="expanded" />
+);
 
-examples.add('changeOnTitleClick', () => (<ManagedCompactTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
-          Children
-</ManagedCompactTableAccordionGroup>));
+examples.add('changeOnTitleClick', () =>
+  <ManagedCompactTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
+    Children
+  </ManagedCompactTableAccordionGroup>
+);
 
-examples.add('array', () => (<ManagedCompactTableAccordionGroup
-  expanded={
+examples.add('array', () =>
+  <ManagedCompactTableAccordionGroup
+    expanded={
     arrayExampleItems.map((item, index) => {
       if (index) {
         return <div>{item}</div>;
       }
       return null;
     })}
->
-  {arrayExampleItems[0]}
-</ManagedCompactTableAccordionGroup>));
+  >
+    {arrayExampleItems[0]}
+  </ManagedCompactTableAccordionGroup>
+);
 
 examples.add('async', () => <CompactTableAccordionGroupAsyncExample />);

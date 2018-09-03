@@ -14,4 +14,6 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
 stories.add('Component default', () => <RemoveButton title="Remove" />);
-examples.add('Next to some text', () => <div><span>Text here</span><RemoveButton title="Remove" /></div>);
+examples.add('Next to some text', () =>
+  <div><span>Text here</span><RemoveButton title="Remove" /></div>
+);

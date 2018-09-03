@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from 'react-emotion';
+
 import { GREY_1, WHITE } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
@@ -60,7 +60,7 @@ const Button = styled('button')({
  */
 const DistractionFree = ({
   children, onClick, arrowLeftTitle, ...props
-}) => (
+}) =>
   <Background {...props}>
     <Header>
       <Button onClick={onClick}>
@@ -70,8 +70,7 @@ const DistractionFree = ({
       </Button>
     </Header>
     <Body>{children}</Body>
-  </Background>
-);
+  </Background>;
 
 DistractionFree.propTypes = {
   arrowLeftTitle: PropTypes.string,

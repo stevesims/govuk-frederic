@@ -53,21 +53,21 @@ examples.add('skipEmtpyRows and hideWithNoValues (table is hidden if no rows)', 
   ];
   const title = ['Heading'];
 
-  return (<ArrayObjectTable
+  return <ArrayObjectTable
     fields={fields}
     array={array}
     title={title}
     skipEmptyRows
     hideWithNoValues
-  />);
+  />;
 });
 
 examples.add('With object transform and default transform', () => {
   const fields = [
     { key: 'one', heading: 'One' },
-    { key: 'two', heading: 'Two', transform: value => (value ? value.toLowerCase() : '') },
+    { key: 'two', heading: 'Two', transform: value => value ? value.toLowerCase() : '' },
     { key: 'three', heading: 'Three' },
-    { key: 'three', heading: 'Four', transform: value => (value ? value.toLowerCase() : '*') },
+    { key: 'three', heading: 'Four', transform: value => value ? value.toLowerCase() : '*' },
   ];
   const array = [
     { one: 'One', two: 'Two' },
@@ -75,12 +75,12 @@ examples.add('With object transform and default transform', () => {
   const title = ['Heading'];
   const defaultTransform = value => (value || '-');
 
-  return (<ArrayObjectTable
+  return <ArrayObjectTable
     fields={fields}
     array={array}
     title={title}
     skipEmptyRows
     hideWithNoValues
     defaultTransform={defaultTransform}
-  />);
+  />;
 });

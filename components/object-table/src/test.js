@@ -29,21 +29,17 @@ describe('ObjectTable', () => {
         { key: 'three', heading: 'three' },
       ];
       const objectWithNull = { one: 'test', two: 'test', three: null };
-      const wrapper = mount(<ObjectTable
-        fields={fieldsWithTransform}
-        object={objectWithNull}
-        skipEmptyValues
-      />);
+      const wrapper = mount(
+        <ObjectTable fields={fieldsWithTransform} object={objectWithNull} skipEmptyValues />
+      );
       expect(wrapper.find('tr').length).toBe(1);
     });
 
     it('renders nothing when rows have no values and hideWithNoValues is true', () => {
       const objectWithNoValues = {};
-      const wrapper = mount(<ObjectTable
-        fields={fields}
-        object={objectWithNoValues}
-        hideWithNoValues
-      />);
+      const wrapper = mount(
+        <ObjectTable fields={fields} object={objectWithNoValues} hideWithNoValues />
+      );
       expect(wrapper.html()).toBe(null);
     });
   });

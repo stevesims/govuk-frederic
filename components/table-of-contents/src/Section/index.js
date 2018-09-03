@@ -27,11 +27,10 @@ export class Entry extends Component {
   }
 }
 
-const Section = props => (
+const Section = props =>
   <Context.Consumer>
     {toc => <Entry {...props} toc={toc} />}
-  </Context.Consumer>
-);
+  </Context.Consumer>;
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,

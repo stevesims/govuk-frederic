@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from 'react-emotion';
 import { Collapse } from 'react-collapse';
+
 import { NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
@@ -111,8 +111,8 @@ const CompactTableAccordionGroup = ({
       <Title
         clickable={changeOnTitleClick}
         onClick={
-            changeOnTitleClick ? () => onChange({ open: !open }) : undefined
-          }
+          changeOnTitleClick ? () => onChange({ open: !open }) : undefined
+        }
       >
         {title}
       </Title>

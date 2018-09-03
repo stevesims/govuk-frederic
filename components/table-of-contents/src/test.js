@@ -9,24 +9,28 @@ const renderIndex = ({ contents }) =>
 
 describe('TableOfContents', () => {
   it('renders without crashing', () => {
-    const wrapper = mount(<TableOfContents.Container>
-      <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
-      <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
-    </TableOfContents.Container>);
+    const wrapper = mount(
+      <TableOfContents.Container>
+        <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
+        <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
+      </TableOfContents.Container>
+    );
     expect(wrapper.exists()).toBe(true);
   });
 
   it('can remove a section', () => {
-    const TestContainer = ({ showSection }) => (<TableOfContents.Container>
-      <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
-      { showSection &&
+    const TestContainer = ({ showSection }) => (
+      <TableOfContents.Container>
+        <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
+        { showSection &&
         <TableOfContents.Section id="optional" title="Optional">Optional section here</TableOfContents.Section>
       }
-      { showSection &&
+        { showSection &&
         <TableOfContents.Section id="optional" title="Optional">Duplicate section here</TableOfContents.Section>
       }
-      <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
-    </TableOfContents.Container>);
+        <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
+      </TableOfContents.Container>
+    );
     TestContainer.propTypes = {
       showSection: PropTypes.bool,
     };
@@ -42,10 +46,12 @@ describe('TableOfContents', () => {
   });
 
   it('matches snapshot', () => {
-    const wrapper = mount(<TableOfContents.Container>
-      <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
-      <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
-    </TableOfContents.Container>);
+    const wrapper = mount(
+      <TableOfContents.Container>
+        <TableOfContents.Section id="id" title="Title">Section text here</TableOfContents.Section>
+        <TableOfContents.Index>{ renderIndex }</TableOfContents.Index>
+      </TableOfContents.Container>
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

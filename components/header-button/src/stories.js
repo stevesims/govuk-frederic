@@ -15,25 +15,24 @@ const examples = storiesOf('Buttons/HeaderButton/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () =>
-  <HeaderButton>One</HeaderButton>);
+stories.add('Component default', () => <HeaderButton>One</HeaderButton>);
 
 examples.add('Multiple header buttons', () =>
-  (<Fragment>
+  <Fragment>
     <HeaderButton>One</HeaderButton>
     <HeaderButton>Two</HeaderButton>
-  </Fragment>));
+  </Fragment>
+);
 
 examples.add('Multiple header buttons with keyline', () =>
-  (<Fragment>
+  <Fragment>
     <Keyline>
       <HeaderButton>One</HeaderButton>
       <HeaderButton>Two</HeaderButton>
     </Keyline>
-  </Fragment>));
+  </Fragment>
+);
 
-examples.add('Active header button', () =>
-  <HeaderButton active>On</HeaderButton>);
+examples.add('Active header button', () => <HeaderButton active>On</HeaderButton>);
 
-examples.add('Disabled header button', () =>
-  <HeaderButton disabled>Off</HeaderButton>);
+examples.add('Disabled header button', () => <HeaderButton disabled>Off</HeaderButton>);
