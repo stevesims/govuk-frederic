@@ -154,7 +154,7 @@ const calculateIndex = (titles, nameByRow, index) => {
  * ```
  */
 const Table = ({
- name, names, nameByRow, rowIncludesHeading, titles, rows, ...props 
+  name, names, nameByRow, rowIncludesHeading, titles, rows, ...props
 }) => (
   <TableContainer name={name} {...props}>
     {titles &&

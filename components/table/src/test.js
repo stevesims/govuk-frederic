@@ -88,10 +88,10 @@ describe('Table', () => {
   });
 
   it('renders name on table element', () => {
-    const wrapper = mount(<Table 
+    const wrapper = mount(<Table
       name="tableNameAtt"
       rows={rows}
-      rowIncludesHeading 
+      rowIncludesHeading
       nameByRow
     />);
 
