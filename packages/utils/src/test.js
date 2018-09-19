@@ -12,12 +12,12 @@ describe('rowsFromArray', () => {
       {},
       { one: 'test', two: 'test' },
     ];
-    
+
     let rows = rowsFromArray(array, fields, false);
-    expect(rows).toEqual([['-', 'two', '-'], ['test', 'test', '-']]);
+    expect(rows).toEqual([[undefined, 'two', undefined], ['test', 'test', undefined]]);
 
     rows = rowsFromArray(array, fields, true);
-    expect(rows).toEqual([['test', 'test', '-']]);
+    expect(rows).toEqual([['test', 'test', undefined]]);
   });
 });
 
@@ -29,7 +29,7 @@ describe('rowsFromObject', () => {
       { key: 'two', heading: 'Two', transform: () => 'hardcodedstring' },
       { key: 'three', heading: 'Three' },
     ];
-    const object = { one: 'test', two: 'test', three: null };    
+    const object = { one: 'test', two: 'test', three: null };
     const skipEmptyValues = true;
     const rows = rowsFromObject(object, fields, skipEmptyValues);
 
@@ -86,6 +86,26 @@ describe('rowsFromObject', () => {
       names: [
         'one',
         'two',
+      ],
+    });
+  });
+
+  it('dont render rows with null regardless of whether skipEmptyValues is set to false', () => {
+    const { rowsFromObject } = exports;
+    const fields = [
+      { key: 'one', heading: 'One' },
+      { key: 'two', heading: 'Two' },
+    ];
+    const object = { one: 'test', two: null };
+    const skipEmptyValues = false;
+    const rows = rowsFromObject(object, fields, skipEmptyValues);
+
+    expect(rows).toEqual({
+      rows: [
+        ['One', 'test'],
+      ],
+      names: [
+        'one',
       ],
     });
   });

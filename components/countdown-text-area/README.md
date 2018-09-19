@@ -29,7 +29,7 @@ const ManagedCountdownTextarea = manageState(CountdownTextArea, {
  changeEvent: true,
  propsToState: ['value'],
 });
- 
+
 <ManagedCountdownTextarea noMaxLengthAttr maxLength={150} />
 ```
 

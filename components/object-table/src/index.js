@@ -88,6 +88,7 @@ ObjectTable.defaultProps = {
   object: {},
   hideWithNoValues: false,
   skipEmptyValues: false,
+  defaultTransform: (value = '-') => value,
   title: null,
 };
 

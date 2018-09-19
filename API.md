@@ -76,7 +76,7 @@ const defaultTransform = value => (value || '-');
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `array` | true | `````` | arrayOf[object Object] | 
- `defaultTransform` |  | ```value => (value ? value : '-')``` | func | 
+ `defaultTransform` |  | ```(value = '-') => value``` | func | 
  `fields` | true | `````` | arrayOf[object Object] | 
  `hideWithNoValues` |  | ```false``` | bool | 
  `skipEmptyRows` |  | ```false``` | bool | 
@@ -344,56 +344,6 @@ Prop | Required | Default | Type | Description
  `title` |  | `````` | node | 
 
 
-Arrow
-=====
-
-### Import
-```js
-  import Arrow from '@govuk-frederic/arrow';
-```
-<!-- STORY -->
-
-### Usage
-
-Simple
-```jsx
-<Arrow />
-```
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `fill` |  | ```'#0C60A2'``` | string | 
- `width` |  | ```20``` | number | 
-
-
-OpenButton
-==========
-
-### Import
-```js
-  import OpenButton from '@govuk-frederic/open-button';
-```
-<!-- STORY -->
-
-### Usage
-
-Simple
-```jsx
-import manageState from 'manage-state';
-
-const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
-
-<ManagedOpenButton />
-```
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `onChange` |  | `````` | func | 
- `open` |  | `````` | bool | 
-
-
 Count
 =====
 
@@ -448,7 +398,7 @@ const ManagedCountdownTextarea = manageState(CountdownTextArea, {
  changeEvent: true,
  propsToState: ['value'],
 });
- 
+
 <ManagedCountdownTextarea noMaxLengthAttr maxLength={150} />
 ```
 
@@ -1059,56 +1009,6 @@ Prop | Required | Default | Type | Description
  `onChange` |  | `````` | func | 
  `open` |  | ```false``` | bool | 
  `title` |  | `````` | node | 
-
-
-Arrow
-=====
-
-### Import
-```js
-  import Arrow from '@govuk-frederic/arrow';
-```
-<!-- STORY -->
-
-### Usage
-
-Simple
-```jsx
-<Arrow />
-```
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `fill` |  | ```'#0C60A2'``` | string | 
- `width` |  | ```20``` | number | 
-
-
-OpenButton
-==========
-
-### Import
-```js
-  import OpenButton from '@govuk-frederic/open-button';
-```
-<!-- STORY -->
-
-### Usage
-
-Simple
-```jsx
-import manageState from 'manage-state';
-
-const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
-
-<ManagedOpenButton />
-```
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `onChange` |  | `````` | func | 
- `open` |  | `````` | bool | 
 
 
 Table
