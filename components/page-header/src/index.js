@@ -52,6 +52,7 @@ const NavigationContainer = styled('div')({
  * ### TODO:
  * - Add responsive considerations
  * - Check rendering of multiple items in Navigation container and provide example Story
+ * - Replace magic numbers from HOC items with constants
  */
 const PageHeader = ({ logo, children }) => (
   <StyledPageHeader>
