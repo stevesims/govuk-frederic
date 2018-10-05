@@ -28,11 +28,13 @@ const PriorityNavigation = (<NavLink to="/">My Account</NavLink>);
 
 ### TODO:
 - Add responsive considerations
+- Check rendering of multiple items in Navigation container and provide example Story
+- Replace magic numbers from HOC items with constants
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```null``` | node | 
- `logo` |  | ```null``` | node | 
+ `children` |  | ```null``` | node | Navigation items, rendered on the right
+ `logo` |  | ```null``` | node | Title, rendered large on the left
 
 

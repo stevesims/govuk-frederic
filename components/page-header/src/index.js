@@ -66,7 +66,9 @@ const PageHeader = ({ logo, children }) => (
 );
 
 PageHeader.propTypes = {
+  /** Title, rendered large on the left */
   logo: PropTypes.node,
+  /** Navigation items, rendered on the right */
   children: PropTypes.node,
 };
 

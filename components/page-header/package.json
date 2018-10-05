@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/page-header",
-  "description": "Page header component following UK Home Office styling referenced Q4 2018.",
+  "description": "Page header component providing space for a title and navigation",
   "private": false,
   "publishConfig": {
     "access": "public"
