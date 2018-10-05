@@ -12,7 +12,7 @@ export function keysFromFields(fields) {
 
 export const titlesFromFields = fields => fields.map(field => field.heading || field.title);
 
-export const rowsFromArray = (array, fields, skipEmptyRows, defaultTransform = value => (value || '-')) => {
+export const rowsFromArray = (array, fields, skipEmptyRows, defaultTransform = value => value) => {
   const keys = keysFromFields(fields);
 
   return array.reduce((rows, item) => {
@@ -27,15 +27,19 @@ export const rowsFromArray = (array, fields, skipEmptyRows, defaultTransform = v
 };
 
 // TODO: ALL THE DOCS
-// TODO: SOME TESTS
 // Empty values and keys are treated the same
 export const rowsFromObject = (object, fields, skipEmptyValues, defaultTransform = value => value) => {
   return fields.reduce(
     (table, { key, heading, names, transform = defaultTransform}) => {
       // If there is a name attribute in the fields object use it, otherwise fallback to the key
       const nameAttribute = names ? names : key;
-      // Run any passed transforms and normalise undefined values to an empty string
-      const result = transform(object[key], object) || '';
+      // Run any passed transforms
+      let result = transform(object[key], object);
+
+      // Normalise undefined values to empty strings
+      if (result === undefined) {
+        result = '';
+      }
 
       // Empty values are empty strings (normalised above)
       // We never render null

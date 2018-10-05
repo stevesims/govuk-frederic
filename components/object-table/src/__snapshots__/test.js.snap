@@ -61,6 +61,7 @@ exports[`ObjectTable matches snapshot 1`] = `
 }
 
 <ObjectTable
+  defaultTransform={[Function]}
   fields={
     Array [
       Object {

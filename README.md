@@ -18,7 +18,7 @@ const Page = () => (
 );
 ```
 
-See the [Storybook](https://{placeholder}.github.io/govuk-frederic) for examples of all available components.
+See the [Storybook](https://stevesims.github.io/govuk-frederic/) for examples of all available components.
 
 ## Contributors
 

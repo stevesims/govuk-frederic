@@ -109,7 +109,7 @@ ArrayObjectTable.propTypes = {
 ArrayObjectTable.defaultProps = {
   hideWithNoValues: false,
   skipEmptyRows: false,
-  defaultTransform: value => (value ? value : '-'), /* "||" breaks api-docs formatting! */
+  defaultTransform: (value = '-') => value,
   title: null,
 };
 

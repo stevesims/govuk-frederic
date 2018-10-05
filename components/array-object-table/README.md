@@ -76,7 +76,7 @@ const defaultTransform = value => (value || '-');
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `array` | true | `````` | arrayOf[object Object] | 
- `defaultTransform` |  | ```value => (value ? value : '-')``` | func | 
+ `defaultTransform` |  | ```(value = '-') => value``` | func | 
  `fields` | true | `````` | arrayOf[object Object] | 
  `hideWithNoValues` |  | ```false``` | bool | 
  `skipEmptyRows` |  | ```false``` | bool | 
