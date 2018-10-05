@@ -24,9 +24,6 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Toby Brancher",
-  "contributors": [
-    "Toby Brancher"
-  ],
   "license": "MIT",
   "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/page-header",
   "description": "Page header component providing space for a title and navigation",
