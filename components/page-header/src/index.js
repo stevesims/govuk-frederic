@@ -35,6 +35,7 @@ const NavigationContainer = styled('div')({
  * Default example
  * 
  * ```jsx
+ * import { Link } from 'react-router-dom';
  * import PageHeader, { asLogoAnchor, asNavAnchor } from '@govuk-frederic/page-header';
  * 
  * const LogoLink = asLogoAnchor(Link);
