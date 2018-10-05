@@ -91,6 +91,7 @@
     "@govuk-frederic/keyline": "*",
     "@govuk-frederic/object-table": "*",
     "@govuk-frederic/open-button": "*",
+    "@govuk-frederic/page-header": "*",
     "@govuk-frederic/remove-button": "*",
     "@govuk-frederic/result-count": "*",
     "@govuk-frederic/result-count-title": "*",
