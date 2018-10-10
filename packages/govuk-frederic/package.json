@@ -14,6 +14,7 @@
     "@govuk-frederic/keyline": "^0.1.1",
     "@govuk-frederic/object-table": "^0.1.1",
     "@govuk-frederic/open-button": "^0.1.1",
+    "@govuk-frederic/page-header": "^0.1.1",
     "@govuk-frederic/remove-button": "^0.1.1",
     "@govuk-frederic/result-count": "^0.1.1",
     "@govuk-frederic/result-count-title": "^0.1.1",

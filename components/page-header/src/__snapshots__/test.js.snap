@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeaderExample renders the storybook example 1`] = `
+.emotion-18 {
+  width: 100%;
+  color: #ffffff;
+  background: #0b0c0c;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.emotion-6 {
+  padding: 10px;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:focus {
+  outline: none;
+  color: #0b0c0c;
+  background: #ffbf47;
+}
+
+.emotion-14 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.emotion-8:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8:focus {
+  outline: none;
+  color: #0b0c0c;
+  background: #ffbf47;
+}
+
+<PageHeaderExample>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <PageHeader
+        logo={
+          <StyledLogoAnchor
+            to="/"
+          >
+            Logo text
+          </StyledLogoAnchor>
+        }
+      >
+        <StyledPageHeader>
+          <div
+            className="emotion-18 emotion-19"
+          >
+            <InnerContainer>
+              <div
+                className="emotion-16 emotion-17"
+              >
+                <LogoContainer>
+                  <div
+                    className="emotion-6 emotion-7"
+                  >
+                    <StyledLogoAnchor
+                      to="/"
+                    >
+                      <Anchor
+                        className="emotion-0 emotion-1"
+                        to="/"
+                      >
+                        <Link
+                          className="emotion-0 emotion-1"
+                          replace={false}
+                          to="/"
+                        >
+                          <a
+                            className="emotion-0 emotion-1"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            Logo text
+                          </a>
+                        </Link>
+                      </Anchor>
+                    </StyledLogoAnchor>
+                  </div>
+                </LogoContainer>
+                <NavigationContainer>
+                  <div
+                    className="emotion-14 emotion-15"
+                  >
+                    <StyledNavAnchor
+                      to="/"
+                    >
+                      <Anchor
+                        className="emotion-8 emotion-9"
+                        to="/"
+                      >
+                        <Link
+                          className="emotion-8 emotion-9"
+                          replace={false}
+                          to="/"
+                        >
+                          <a
+                            className="emotion-8 emotion-9"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            My Account
+                          </a>
+                        </Link>
+                      </Anchor>
+                    </StyledNavAnchor>
+                  </div>
+                </NavigationContainer>
+              </div>
+            </InnerContainer>
+          </div>
+        </StyledPageHeader>
+      </PageHeader>
+    </Router>
+  </BrowserRouter>
+</PageHeaderExample>
+`;
