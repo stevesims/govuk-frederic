@@ -11,15 +11,19 @@ export class Entry extends Component {
     toc: PropTypes.shape({
       addContent: PropTypes.func.isRequired,
       removeContent: PropTypes.func.isRequired,
-    }).isRequired,
+    }),
   }
 
   componentDidMount() {
-    this.props.toc.addContent(this.props.id, this.props.title);
+    if (this.props.toc) {
+      this.props.toc.addContent(this.props.id, this.props.title);
+    }
   }
 
   componentWillUnmount() {
-    this.props.toc.removeContent(this.props.id);
+    if (this.props.toc) {
+      this.props.toc.removeContent(this.props.id);
+    }
   }
 
   render() {

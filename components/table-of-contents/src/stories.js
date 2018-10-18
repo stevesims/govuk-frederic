@@ -9,11 +9,11 @@ import TOC from '.';
 import ReadMe from '../README.md';
 
 const stories = storiesOf('TableOfContents', module);
-// const examples = storiesOf('TableOfContents/Examples', module);
+const examples = storiesOf('TableOfContents/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-storiesOf('TableOfContents', module).add('Component default', () => (
+stories.add('Component default', () => (
   <TOC.Container>
     <GridRow>
       <GridCol>
@@ -47,4 +47,14 @@ storiesOf('TableOfContents', module).add('Component default', () => (
       </GridCol>
     </GridRow>
   </TOC.Container>
+));
+
+examples.add('Standalone Section', () => (
+  <TOC.Section id="first" title="First">
+    <h3>First</h3>
+    <p>
+      Content of first section goes here<br/>
+      Lorem ipsum and stuff like that
+    </p>
+  </TOC.Section>
 ));
