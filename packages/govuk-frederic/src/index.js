@@ -15,6 +15,7 @@ export { default as Keyline } from '@govuk-frederic/keyline';
 export { default as ObjectTable } from '@govuk-frederic/object-table';
 export { default as OpenButton } from '@govuk-frederic/open-button';
 export { default as PageHeader } from '@govuk-frederic/page-header';
+export { default as PageNavigation } from '@govuk-frederic/page-navigation';
 export { default as RemoveButton } from '@govuk-frederic/remove-button';
 export { default as ResultCount } from '@govuk-frederic/result-count';
 export { default as ResultCountTitle } from '@govuk-frederic/result-count-title';
