@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageHeaderExample renders the storybook example 1`] = `
-.emotion-18 {
+.emotion-30 {
   width: 100%;
   color: #ffffff;
   background: #0b0c0c;
 }
 
-.emotion-16 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,6 +29,9 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
 }
 
 .emotion-0 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,9 +40,6 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 700;
 }
 
 .emotion-0:hover {
@@ -53,12 +53,15 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
   background: #ffbf47;
 }
 
-.emotion-14 {
+.emotion-26 {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .emotion-8 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,9 +70,6 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25;
 }
 
 .emotion-8:hover {
@@ -109,75 +109,190 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
     >
       <PageHeader
         logo={
-          <StyledLogoAnchor
+          <Unknown
             to="/"
           >
             Logo text
-          </StyledLogoAnchor>
+          </Unknown>
         }
       >
         <StyledPageHeader>
           <div
-            className="emotion-18 emotion-19"
+            className="emotion-30 emotion-31"
           >
             <InnerContainer>
               <div
-                className="emotion-16 emotion-17"
+                className="emotion-28 emotion-29"
               >
                 <LogoContainer>
                   <div
                     className="emotion-6 emotion-7"
                   >
-                    <StyledLogoAnchor
+                    <Component
                       to="/"
                     >
-                      <Anchor
-                        className="emotion-0 emotion-1"
+                      <NavLinkWithProp
+                        activeProp="active"
                         to="/"
                       >
-                        <Link
-                          className="emotion-0 emotion-1"
-                          replace={false}
-                          to="/"
+                        <Route
+                          path="\\\\/"
                         >
-                          <a
-                            className="emotion-0 emotion-1"
-                            href="/"
-                            onClick={[Function]}
+                          <LogoAnchor
+                            active={true}
+                            as={[Function]}
+                            to="/"
                           >
-                            Logo text
-                          </a>
-                        </Link>
-                      </Anchor>
-                    </StyledLogoAnchor>
+                            <Component
+                              active={true}
+                              as={[Function]}
+                              className="emotion-0 emotion-1"
+                              to="/"
+                            >
+                              <Link
+                                className="emotion-0 emotion-1"
+                                replace={false}
+                                to="/"
+                              >
+                                <a
+                                  className="emotion-0 emotion-1"
+                                  href="/"
+                                  onClick={[Function]}
+                                >
+                                  Logo text
+                                </a>
+                              </Link>
+                            </Component>
+                          </LogoAnchor>
+                        </Route>
+                      </NavLinkWithProp>
+                    </Component>
                   </div>
                 </LogoContainer>
                 <NavigationContainer>
                   <div
-                    className="emotion-14 emotion-15"
+                    className="emotion-26 emotion-27"
                   >
-                    <StyledNavAnchor
+                    <Component
+                      exact={true}
                       to="/"
                     >
-                      <Anchor
-                        className="emotion-8 emotion-9"
+                      <NavLinkWithProp
+                        activeProp="active"
+                        exact={true}
                         to="/"
                       >
-                        <Link
-                          className="emotion-8 emotion-9"
-                          replace={false}
-                          to="/"
+                        <Route
+                          exact={true}
+                          path="\\\\/"
                         >
-                          <a
-                            className="emotion-8 emotion-9"
-                            href="/"
-                            onClick={[Function]}
+                          <NavAnchor
+                            active={true}
+                            as={[Function]}
+                            to="/"
                           >
-                            My Account
-                          </a>
-                        </Link>
-                      </Anchor>
-                    </StyledNavAnchor>
+                            <Component
+                              active={true}
+                              as={[Function]}
+                              className="emotion-8 emotion-9"
+                              to="/"
+                            >
+                              <Link
+                                className="emotion-8 emotion-9"
+                                replace={false}
+                                to="/"
+                              >
+                                <a
+                                  className="emotion-8 emotion-9"
+                                  href="/"
+                                  onClick={[Function]}
+                                >
+                                  Home
+                                </a>
+                              </Link>
+                            </Component>
+                          </NavAnchor>
+                        </Route>
+                      </NavLinkWithProp>
+                    </Component>
+                    <Component
+                      to="/account"
+                    >
+                      <NavLinkWithProp
+                        activeProp="active"
+                        to="/account"
+                      >
+                        <Route
+                          path="\\\\/account"
+                        >
+                          <NavAnchor
+                            active={false}
+                            as={[Function]}
+                            to="/account"
+                          >
+                            <Component
+                              active={false}
+                              as={[Function]}
+                              className="emotion-8 emotion-9"
+                              to="/account"
+                            >
+                              <Link
+                                className="emotion-8 emotion-9"
+                                replace={false}
+                                to="/account"
+                              >
+                                <a
+                                  className="emotion-8 emotion-9"
+                                  href="/account"
+                                  onClick={[Function]}
+                                >
+                                  My Account
+                                </a>
+                              </Link>
+                            </Component>
+                          </NavAnchor>
+                        </Route>
+                      </NavLinkWithProp>
+                    </Component>
+                    <Component
+                      to="/account/subsection"
+                    >
+                      <NavLinkWithProp
+                        activeProp="active"
+                        to="/account/subsection"
+                      >
+                        <Route
+                          path="\\\\/account\\\\/subsection"
+                        >
+                          <NavAnchor
+                            active={false}
+                            as={[Function]}
+                            to="/account/subsection"
+                          >
+                            <Component
+                              active={false}
+                              as={[Function]}
+                              className="emotion-8 emotion-9"
+                              to="/account/subsection"
+                            >
+                              <Link
+                                className="emotion-8 emotion-9"
+                                replace={false}
+                                to="/account/subsection"
+                              >
+                                <a
+                                  className="emotion-8 emotion-9"
+                                  href="/account/subsection"
+                                  onClick={[Function]}
+                                >
+                                   - Account subsection
+                                </a>
+                              </Link>
+                            </Component>
+                          </NavAnchor>
+                        </Route>
+                      </NavLinkWithProp>
+                    </Component>
                   </div>
                 </NavigationContainer>
               </div>

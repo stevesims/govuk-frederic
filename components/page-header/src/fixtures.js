@@ -1,19 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import asNavLink from 'as-nav-link';
 
-import PageHeader, { asLogoAnchor, asNavAnchor } from '.';
+import PageHeader from '.';
 
-const LogoLink = asLogoAnchor(Link);
-const NavLink = asNavAnchor(Link);
+const LogoLink = asNavLink()(PageHeader.LogoAnchor);
+const NavLink = asNavLink()(PageHeader.NavAnchor);
 
 const PageLogo = (<LogoLink to="/">Logo text</LogoLink>);
-const PriorityNavigation = (<NavLink to="/">My Account</NavLink>);
 
 const PageHeaderExample = () => (
   <BrowserRouter>
     <PageHeader logo={PageLogo}>
-      {PriorityNavigation}
-    </PageHeader >
+      <NavLink exact to="/">Home</NavLink>
+      <NavLink to="/account">My Account</NavLink>
+      <NavLink to="/account/subsection"> - Account subsection</NavLink>
+    </PageHeader>
   </BrowserRouter>
 );
 

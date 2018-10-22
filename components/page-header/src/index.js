@@ -5,6 +5,9 @@ import styled from 'react-emotion';
 import { SPACING } from '@govuk-react/constants';
 import { BLACK, WHITE } from 'govuk-colours';
 
+import LogoAnchor from './atoms/logo-anchor';
+import NavAnchor from './atoms/nav-anchor';
+
 const StyledPageHeader = styled('div')({
   width: '100%',
   color: WHITE,
@@ -33,13 +36,14 @@ const NavigationContainer = styled('div')({
  * ### Usage
  *
  * Default example
- * 
+ *
  * ```jsx
  * import { Link } from 'react-router-dom';
- * import PageHeader, { asLogoAnchor, asNavAnchor } from '@govuk-frederic/page-header';
- * 
- * const LogoLink = asLogoAnchor(Link);
- * const NavLink = asNavAnchor(Link);
+ * import PageHeader from '@govuk-frederic/page-header';
+ * import asNavLink from 'as-nav-link';
+ *
+ * const LogoLink = asNavLink()(PageHeader.LogoAnchor);
+ * const NavLink = asNavLink()(PageHeader.NavAnchor);
  * const PageLogo = (<LogoLink to="/">Logo text</LogoLink>);
  * const PriorityNavigation = (<NavLink to="/">My Account</NavLink>);
  *
@@ -78,7 +82,7 @@ PageHeader.defaultProps = {
   children: null,
 };
 
-export default PageHeader;
+PageHeader.LogoAnchor = LogoAnchor;
+PageHeader.NavAnchor = NavAnchor;
 
-export asLogoAnchor from './hoc/asLogoAnchor';
-export asNavAnchor from './hoc/asNavAnchor';
+export default PageHeader;
