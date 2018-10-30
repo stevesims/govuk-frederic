@@ -52,7 +52,7 @@ const title = ['Heading'];
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `defaultTransform` |  | `````` | func | 
+ `defaultTransform` |  | ```(value = '-') => value``` | func | 
  `fields` |  | ```[]``` | arrayOf[object Object] | 
  `hideWithNoValues` |  | ```false``` | bool | 
  `object` |  | ```{}``` | object | 

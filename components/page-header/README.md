@@ -12,10 +12,12 @@ PageHeader
 Default example
 
 ```jsx
-import PageHeader, { asLogoAnchor, asNavAnchor } from '@govuk-frederic/page-header';
+import { Link } from 'react-router-dom';
+import PageHeader from '@govuk-frederic/page-header';
+import asNavLink from 'as-nav-link';
 
-const LogoLink = asLogoAnchor(Link);
-const NavLink = asNavAnchor(Link);
+const LogoLink = asNavLink()(PageHeader.LogoAnchor);
+const NavLink = asNavLink()(PageHeader.NavAnchor);
 const PageLogo = (<LogoLink to="/">Logo text</LogoLink>);
 const PriorityNavigation = (<NavLink to="/">My Account</NavLink>);
 
