@@ -55,8 +55,8 @@ const NavigationItems = styled('div')({
  * ### TODO:
  * - Add responsive considerations
  */
-const PageNavigation = ({ children }) => (
-  <StyledNavigation>
+const PageNavigation = ({ children, ...props }) => (
+  <StyledNavigation {...props}>
     <InnerContainer>
       <NavigationItems>
         {children}

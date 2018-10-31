@@ -59,8 +59,8 @@ const NavigationContainer = styled('div')({
  * - Check rendering of multiple items in Navigation container and provide example Story
  * - Replace magic numbers from HOC items with constants
  */
-const PageHeader = ({ logo, children }) => (
-  <StyledPageHeader>
+const PageHeader = ({ logo, children, ...props }) => (
+  <StyledPageHeader {...props}>
     <InnerContainer>
       <LogoContainer>{ logo }</LogoContainer>
       <NavigationContainer>
