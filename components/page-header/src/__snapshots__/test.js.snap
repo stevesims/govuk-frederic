@@ -117,7 +117,7 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
         }
       >
         <StyledPageHeader>
-          <div
+          <header
             className="emotion-30 emotion-31"
           >
             <InnerContainer>
@@ -297,7 +297,7 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
                 </NavigationContainer>
               </div>
             </InnerContainer>
-          </div>
+          </header>
         </StyledPageHeader>
       </PageHeader>
     </Router>

@@ -8,7 +8,7 @@ import { BLACK, WHITE } from 'govuk-colours';
 import LogoAnchor from './atoms/logo-anchor';
 import NavAnchor from './atoms/nav-anchor';
 
-const StyledPageHeader = styled('div')({
+const StyledPageHeader = styled('header')({
   width: '100%',
   color: WHITE,
   background: BLACK,

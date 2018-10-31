@@ -63,7 +63,7 @@ exports[`PageNavigationExample renders the storybook example 1`] = `
 <PageNavigationExample>
   <PageNavigation>
     <StyledNavigation>
-      <div
+      <nav
         className="emotion-16 emotion-17"
       >
         <InnerContainer>
@@ -123,7 +123,7 @@ exports[`PageNavigationExample renders the storybook example 1`] = `
             </NavigationItems>
           </div>
         </InnerContainer>
-      </div>
+      </nav>
     </StyledNavigation>
   </PageNavigation>
 </PageNavigationExample>
@@ -244,7 +244,7 @@ exports[`PageNavigationExample renders the with React Router 1`] = `
     >
       <PageNavigation>
         <StyledNavigation>
-          <div
+          <nav
             className="emotion-22 emotion-23"
           >
             <InnerContainer>
@@ -379,7 +379,7 @@ exports[`PageNavigationExample renders the with React Router 1`] = `
                 </NavigationItems>
               </div>
             </InnerContainer>
-          </div>
+          </nav>
         </StyledNavigation>
       </PageNavigation>
     </Router>

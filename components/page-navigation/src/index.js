@@ -7,7 +7,7 @@ import { BLUE, WHITE } from 'govuk-colours';
 
 import Anchor from './atoms/anchor';
 
-const StyledNavigation = styled('div')({
+const StyledNavigation = styled('nav')({
   width: '100%',
   background: WHITE,
   color: BLUE,
