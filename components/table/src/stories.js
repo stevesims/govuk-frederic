@@ -42,3 +42,15 @@ examples.add('rowIncludesHeading, no titles, small single row', () =>
 examples.add('rowIncludesHeading, with flexible columns', () =>
   <Table titles={arrayExampleHeadings} rows={arrayExampleContent} flexibleColumns rowIncludesHeading nameByRow names={rowTableNames} />,
 );
+
+examples.add('borderless', () =>
+  <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} borderless />,
+);
+
+examples.add('custom spacing', () =>
+  <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} spacing="5px" />,
+);
+
+examples.add('borderless with custom spacing', () =>
+  <Table titles={arrayExampleHeadings} rows={arrayExampleContent} names={columnTableNames} borderless spacing="5px" />,
+);

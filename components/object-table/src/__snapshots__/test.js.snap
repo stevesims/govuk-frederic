@@ -15,6 +15,7 @@ exports[`ObjectTable matches snapshot 1`] = `
   display: table;
   font-family: "nta",Arial,sans-serif;
   width: 100%;
+  border-collapse: collapse;
   table-layout: fixed;
   margin-bottom: 15px;
 }
@@ -29,7 +30,7 @@ exports[`ObjectTable matches snapshot 1`] = `
   border-bottom: 1px solid #bfc1c3;
   display: table-cell;
   font-size: 14px;
-  padding: 15px 4px;
+  padding: 15px 5px;
   vertical-align: top;
   font-weight: bold;
   text-align: left;
@@ -37,27 +38,27 @@ exports[`ObjectTable matches snapshot 1`] = `
 }
 
 .emotion-0:first-child {
-  padding: 15px 4px 15px 0;
+  padding: 15px 5px 15px 0;
 }
 
 .emotion-0:last-child {
-  padding: 15px 0 15px 4px;
+  padding: 15px 0 15px 5px;
 }
 
 .emotion-2 {
   border-bottom: 1px solid #bfc1c3;
   display: table-cell;
   font-size: 14px;
-  padding: 15px 4px;
+  padding: 15px 5px;
   vertical-align: top;
 }
 
 .emotion-2:first-child {
-  padding: 15px 4px 15px 0;
+  padding: 15px 5px 15px 0;
 }
 
 .emotion-2:last-child {
-  padding: 15px 0 15px 4px;
+  padding: 15px 0 15px 5px;
 }
 
 <ObjectTable
@@ -86,6 +87,7 @@ exports[`ObjectTable matches snapshot 1`] = `
   title={null}
 >
   <Styled(Table)
+    borderless={false}
     flexibleColumns={false}
     nameByRow={true}
     names={
@@ -107,9 +109,11 @@ exports[`ObjectTable matches snapshot 1`] = `
         ],
       ]
     }
+    spacing="15px"
     titles={null}
   >
     <Table
+      borderless={false}
       className="emotion-10"
       flexibleColumns={false}
       nameByRow={true}
@@ -132,6 +136,7 @@ exports[`ObjectTable matches snapshot 1`] = `
           ],
         ]
       }
+      spacing="15px"
       titles={null}
     >
       <TableContainer
@@ -146,10 +151,12 @@ exports[`ObjectTable matches snapshot 1`] = `
               key="0"
             >
               <TableHeading
+                borderless={false}
                 columnCount={2}
                 key="0"
                 name="one"
                 rowHeading={true}
+                spacing="15px"
               >
                 <th
                   className="emotion-0 emotion-1"
@@ -159,8 +166,10 @@ exports[`ObjectTable matches snapshot 1`] = `
                 </th>
               </TableHeading>
               <TableData
+                borderless={false}
                 key="1"
                 name="one"
+                spacing="15px"
               >
                 <td
                   className="emotion-2 emotion-3"
@@ -174,10 +183,12 @@ exports[`ObjectTable matches snapshot 1`] = `
               key="1"
             >
               <TableHeading
+                borderless={false}
                 columnCount={2}
                 key="0"
                 name="two"
                 rowHeading={true}
+                spacing="15px"
               >
                 <th
                   className="emotion-0 emotion-1"
@@ -187,8 +198,10 @@ exports[`ObjectTable matches snapshot 1`] = `
                 </th>
               </TableHeading>
               <TableData
+                borderless={false}
                 key="1"
                 name="two"
+                spacing="15px"
               >
                 <td
                   className="emotion-2 emotion-3"

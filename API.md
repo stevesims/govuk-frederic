@@ -1174,12 +1174,14 @@ const rowTableNamesWithTitles = ['heading', 'one', ['i', 'am', 'named', 'individ
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
+ `borderless` |  | ```false``` | bool | 
  `flexibleColumns` |  | ```false``` | bool | 
  `name` |  | `````` | string | 
  `nameByRow` |  | ```false``` | bool | 
  `names` |  | ```[]``` | arrayOf[object Object] | 
  `rowIncludesHeading` |  | ```false``` | bool | 
  `rows` | true | `````` | arrayOf[object Object] | 
+ `spacing` |  | ```SPACING.SCALE_3``` | string | 
  `titles` |  | ```null``` | arrayOf[object Object] | 
 
 

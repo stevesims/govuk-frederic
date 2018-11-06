@@ -15,6 +15,7 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
   display: table;
   font-family: "nta",Arial,sans-serif;
   width: 100%;
+  border-collapse: collapse;
   table-layout: fixed;
   margin-bottom: 15px;
 }
@@ -29,34 +30,34 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
   border-bottom: 1px solid #bfc1c3;
   display: table-cell;
   font-size: 14px;
-  padding: 15px 4px;
+  padding: 15px 5px;
   vertical-align: top;
   font-weight: bold;
   text-align: left;
 }
 
 .emotion-0:first-child {
-  padding: 15px 4px 15px 0;
+  padding: 15px 5px 15px 0;
 }
 
 .emotion-0:last-child {
-  padding: 15px 0 15px 4px;
+  padding: 15px 0 15px 5px;
 }
 
 .emotion-6 {
   border-bottom: 1px solid #bfc1c3;
   display: table-cell;
   font-size: 14px;
-  padding: 15px 4px;
+  padding: 15px 5px;
   vertical-align: top;
 }
 
 .emotion-6:first-child {
-  padding: 15px 4px 15px 0;
+  padding: 15px 5px 15px 0;
 }
 
 .emotion-6:last-child {
-  padding: 15px 0 15px 4px;
+  padding: 15px 0 15px 5px;
 }
 
 <ArrayObjectTable
@@ -92,6 +93,7 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
   title={null}
 >
   <Styled(Table)
+    borderless={false}
     flexibleColumns={false}
     nameByRow={false}
     names={Array []}
@@ -105,6 +107,7 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
         ],
       ]
     }
+    spacing="15px"
     titles={
       Array [
         "One",
@@ -114,6 +117,7 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
     }
   >
     <Table
+      borderless={false}
       className="emotion-14"
       flexibleColumns={false}
       nameByRow={false}
@@ -128,6 +132,7 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
           ],
         ]
       }
+      spacing="15px"
       titles={
         Array [
           "One",
@@ -146,7 +151,9 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
           <thead>
             <tr>
               <TableHeading
+                borderless={false}
                 key="0"
+                spacing="15px"
               >
                 <th
                   className="emotion-0 emotion-1"
@@ -155,7 +162,9 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
                 </th>
               </TableHeading>
               <TableHeading
+                borderless={false}
                 key="1"
+                spacing="15px"
               >
                 <th
                   className="emotion-0 emotion-1"
@@ -164,7 +173,9 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
                 </th>
               </TableHeading>
               <TableHeading
+                borderless={false}
                 key="2"
+                spacing="15px"
               >
                 <th
                   className="emotion-0 emotion-1"
@@ -179,7 +190,9 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
               key="0"
             >
               <TableData
+                borderless={false}
                 key="0"
+                spacing="15px"
               >
                 <td
                   className="emotion-6 emotion-7"
@@ -188,7 +201,9 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
                 </td>
               </TableData>
               <TableData
+                borderless={false}
                 key="1"
+                spacing="15px"
               >
                 <td
                   className="emotion-6 emotion-7"
@@ -197,7 +212,9 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
                 </td>
               </TableData>
               <TableData
+                borderless={false}
                 key="2"
+                spacing="15px"
               >
                 <td
                   className="emotion-6 emotion-7"
