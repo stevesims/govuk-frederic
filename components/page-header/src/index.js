@@ -9,9 +9,11 @@ import LogoAnchor from './atoms/logo-anchor';
 import NavAnchor from './atoms/nav-anchor';
 
 const StyledPageHeader = styled('header')({
+  position: 'relative',
   width: '100%',
   color: WHITE,
   background: BLACK,
+  zIndex: 100,
 });
 
 const InnerContainer = styled('div')({

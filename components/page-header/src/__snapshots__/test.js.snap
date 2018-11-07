@@ -2,9 +2,11 @@
 
 exports[`PageHeaderExample renders the storybook example 1`] = `
 .emotion-30 {
+  position: relative;
   width: 100%;
   color: #ffffff;
   background: #0b0c0c;
+  z-index: 100;
 }
 
 .emotion-28 {
