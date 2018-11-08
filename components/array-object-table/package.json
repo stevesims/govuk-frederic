@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/array-object-table",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "dependencies": {
-    "@govuk-frederic/table": "^0.1.1",
+    "@govuk-frederic/table": "^0.1.3",
     "@govuk-frederic/utils": "^0.1.2"
   },
   "devDependencies": {

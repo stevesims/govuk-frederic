@@ -1,6 +1,6 @@
 {
   "name": "@govuk-frederic/table",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7"
