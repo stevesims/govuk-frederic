@@ -1,40 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CompactTableAccordionGroup matches snapshot 1`] = `
-.emotion-8 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 15px;
-  }
-}
-
-.emotion-6 {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 14px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  position: relative;
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 15px;
-  }
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 8px;
-}
-
-.emotion-0 {
+.c3 {
   background: none;
   border: none;
   cursor: pointer;
@@ -49,133 +16,306 @@ exports[`CompactTableAccordionGroup matches snapshot 1`] = `
   transform: rotate(-90deg);
 }
 
-.emotion-0:focus {
+.c3:focus {
   outline: none;
 }
 
-.emotion-2 {
+.c1 {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.c4 {
   cursor: pointer;
   padding-left: 16px;
+}
+
+.c0 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 15px;
+  }
 }
 
 <Styled(CompactTableAccordionGroup)
   changeOnTitleClick={true}
   expanded="Expanded"
   onChange={[MockFunction]}
-  open={false}
 >
-  <CompactTableAccordionGroup
+  <StyledComponent
     changeOnTitleClick={true}
-    className="emotion-8"
     expanded="Expanded"
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-gzVnrw",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(CompactTableAccordionGroup)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-gzVnrw",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     onChange={[MockFunction]}
-    open={false}
   >
-    <Container
-      className="emotion-8"
+    <CompactTableAccordionGroup
+      changeOnTitleClick={true}
+      className="c0"
+      expanded="Expanded"
+      onChange={[MockFunction]}
+      open={false}
     >
-      <div
-        className="emotion-6 emotion-7"
+      <styled.div
+        className="c0"
       >
-        <TitleRow>
-          <div
-            className="emotion-4 emotion-5"
-          >
-            <OpenButton
-              onChange={[MockFunction]}
-              open={false}
-            >
-              <RotatingButton
-                onClick={[Function]}
-                open={false}
-              >
-                <button
-                  className="emotion-0 emotion-1"
-                  onClick={[Function]}
-                  open={false}
-                >
-                  <Arrow
-                    fill="#0C60A2"
-                    width={20}
-                  >
-                    <svg
-                      height="20px"
-                      viewBox="0 0 6 4"
-                      width="20px"
-                    >
-                      <polygon
-                        fill="#0C60A2"
-                        points="3 4 6 1 0 1"
-                      />
-                    </svg>
-                  </Arrow>
-                </button>
-              </RotatingButton>
-            </OpenButton>
-            <Title
-              clickable={true}
-              onClick={[Function]}
-            >
-              <header
-                className="emotion-2 emotion-3"
-                onClick={[Function]}
-              />
-            </Title>
-            <div>
-              <div>
-                Test
-              </div>
-            </div>
-          </div>
-        </TitleRow>
-        <Collapse
-          fixedHeight={-1}
-          forceInitialAnimation={false}
-          hasNestedCollapse={false}
-          isOpened={false}
-          onMeasure={[Function]}
-          onRender={[Function]}
-          onRest={[Function]}
-          style={Object {}}
-          theme={
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
             Object {
-              "collapse": "ReactCollapse--collapse",
-              "content": "ReactCollapse--content",
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-ifAKCX",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; font-size: 14px; padding-bottom: 10px; padding-top: 10px; position: relative;",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-ifAKCX",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             }
           }
+          forwardedRef={null}
         >
-          <Motion
-            defaultStyle={
-              Object {
-                "height": 0,
-              }
-            }
-            onRest={[Function]}
-            style={
-              Object {
-                "height": 0,
-              }
-            }
+          <div
+            className="c0 c1"
           >
-            <div
-              className="ReactCollapse--collapse"
-              style={
+            <styled.div>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": true,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "display: flex; margin-bottom: 8px;",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <div
+                  className="c2"
+                >
+                  <OpenButton
+                    onChange={[MockFunction]}
+                    open={false}
+                  >
+                    <styled.button
+                      onClick={[Function]}
+                      open={false}
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bxivhb",
+                              "isStatic": false,
+                              "lastClassName": "c3",
+                              "rules": Array [
+                                ":focus {
+  outline: none;
+} background: none; border: none; cursor: pointer; height: 20px; padding: 0; transition: transform 0.3s ease-in-out; width: 20px;",
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.button",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bxivhb",
+                            "target": "button",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        onClick={[Function]}
+                        open={false}
+                      >
+                        <button
+                          className="c3"
+                          onClick={[Function]}
+                          open={false}
+                        >
+                          <Arrow
+                            fill="#0C60A2"
+                            width={20}
+                          >
+                            <svg
+                              height="20px"
+                              viewBox="0 0 6 4"
+                              width="20px"
+                            >
+                              <polygon
+                                fill="#0C60A2"
+                                points="3 4 6 1 0 1"
+                              />
+                            </svg>
+                          </Arrow>
+                        </button>
+                      </StyledComponent>
+                    </styled.button>
+                  </OpenButton>
+                  <styled.header
+                    clickable={true}
+                    onClick={[Function]}
+                  >
+                    <StyledComponent
+                      clickable={true}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bZQynM",
+                            "isStatic": false,
+                            "lastClassName": "c4",
+                            "rules": Array [
+                              [Function],
+                              "padding-left: 16px;",
+                            ],
+                          },
+                          "displayName": "styled.header",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bZQynM",
+                          "target": "header",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      onClick={[Function]}
+                    >
+                      <header
+                        className="c4"
+                        onClick={[Function]}
+                      />
+                    </StyledComponent>
+                  </styled.header>
+                  <div>
+                    <div>
+                      Test
+                    </div>
+                  </div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+            <Collapse
+              fixedHeight={-1}
+              forceInitialAnimation={false}
+              hasNestedCollapse={false}
+              isOpened={false}
+              onMeasure={[Function]}
+              onRender={[Function]}
+              onRest={[Function]}
+              style={Object {}}
+              theme={
                 Object {
-                  "height": 0,
-                  "overflow": "hidden",
+                  "collapse": "ReactCollapse--collapse",
+                  "content": "ReactCollapse--content",
                 }
               }
             >
-              <div
-                className="ReactCollapse--content"
+              <Motion
+                defaultStyle={
+                  Object {
+                    "height": 0,
+                  }
+                }
+                onRest={[Function]}
+                style={
+                  Object {
+                    "height": 0,
+                  }
+                }
               >
-                Expanded
-              </div>
-            </div>
-          </Motion>
-        </Collapse>
-      </div>
-    </Container>
-  </CompactTableAccordionGroup>
+                <div
+                  className="ReactCollapse--collapse"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <div
+                    className="ReactCollapse--content"
+                  >
+                    Expanded
+                  </div>
+                </div>
+              </Motion>
+            </Collapse>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </CompactTableAccordionGroup>
+  </StyledComponent>
 </Styled(CompactTableAccordionGroup)>
 `;

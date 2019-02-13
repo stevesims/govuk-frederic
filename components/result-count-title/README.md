@@ -23,7 +23,7 @@ In black with count value 0
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | `````` | node | 
- `count` |  | `````` | union(number|string) | 
+ `count` |  | `````` | union(number \| string) | 
  `countBackgroundColor` |  | `````` | string | 
  `countColor` |  | `````` | string | 
 

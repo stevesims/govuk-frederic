@@ -1,21 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TitleResultCount matches snapshot 1`] = `
-.emotion-4 {
-  display: inline-block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.emotion-0 {
-  display: inline-block;
-  font-family: "nta",Arial,sans-serif;
-  font-size: 15px;
-  line-height: 1.25;
-  margin-right: 10px;
-}
-
-.emotion-2 {
+.c2 {
   background: #6f777b;
   color: #ffffff;
   display: inline-block;
@@ -28,37 +14,131 @@ exports[`TitleResultCount matches snapshot 1`] = `
   text-align: center;
 }
 
+.c0 {
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c1 {
+  display: inline-block;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+  margin-right: 10px;
+}
+
 <TitleResultCount
   count="3"
 >
-  <Wrapper>
-    <div
-      className="emotion-4 emotion-5"
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "display: inline-block; white-space: nowrap; text-overflow: ellipsis;",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Title>
-        <div
-          className="emotion-0 emotion-1"
-        >
-          Title
-        </div>
-      </Title>
-      <ResultCount
-        backgroundColor="#6f777b"
-        color="#ffffff"
+      <div
+        className="c0"
       >
-        <StyledResultCount
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "display: inline-block; font-family: \\"nta\\", Arial, sans-serif; font-size: 15px; line-height: 1.25; margin-right: 10px;",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c1"
+            >
+              Title
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <ResultCount
           backgroundColor="#6f777b"
           color="#ffffff"
         >
-          <span
-            className="emotion-2 emotion-3"
+          <styled.span
+            backgroundColor="#6f777b"
             color="#ffffff"
           >
-            3
-          </span>
-        </StyledResultCount>
-      </ResultCount>
-    </div>
-  </Wrapper>
+            <StyledComponent
+              backgroundColor="#6f777b"
+              color="#ffffff"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "c2",
+                    "rules": Array [
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="c2"
+                color="#ffffff"
+              >
+                3
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </ResultCount>
+      </div>
+    </StyledComponent>
+  </styled.div>
 </TitleResultCount>
 `;

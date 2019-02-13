@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { GREY_1, WHITE } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
@@ -49,7 +49,7 @@ const Button = styled('button')({
  *    content goes here
  * </DistractionFree>
  * ```
- * 
+ *
  * With title
  * ```jsx
  * <DistractionFree arrowLeftTitle="Back to example" onClick={(e) => {}}>

@@ -2,23 +2,17 @@
   "name": "@govuk-frederic/table",
   "version": "0.1.3",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.7",
-    "@govuk-react/hoc": "^0.2.7"
-  },
-  "devDependencies": {
-    "@govuk-react/storybook-components": "^0.2.4",
-    "@storybook/addon-knobs": "^3.4.2"
+    "@govuk-react/constants": "^0.6.0-alpha.1",
+    "@govuk-react/hoc": "^0.6.0-alpha.1"
   },
   "peerDependencies": {
-    "emotion": ">=9",
-    "prop-types": ">=15",
     "react": ">=16.2.0",
-    "react-emotion": ">=9"
+    "styled-components": ">=4"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -d lib --source-maps",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps",
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js",
     "docs": "doc-component ./lib/index.js ./README.md"
   },
   "main": "lib/index.js",

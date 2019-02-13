@@ -1,21 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Count matches snapshot 1`] = `
-.emotion-0 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
 }
 
 <Count
   value={6}
 >
-  <StyledCount>
-    <div
-      className="emotion-0 emotion-1"
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif;",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <span>
-        6
-      </span>
-    </div>
-  </StyledCount>
+      <div
+        className="c0"
+      >
+        <span>
+          6
+        </span>
+      </div>
+    </StyledComponent>
+  </styled.div>
 </Count>
 `;

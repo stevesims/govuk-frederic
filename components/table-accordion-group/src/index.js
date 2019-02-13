@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { Collapse } from 'react-collapse';
 import { FONT_SIZE, NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -22,57 +22,57 @@ const Title = styled('header')(({ clickable }) => (clickable ? { cursor: 'pointe
 });
 
 /**
- * 
+ *
  * ### Usage
- * 
+ *
  * State managed with children
  * ```jsx
  * import manageState from 'manage-state';
- * 
+ *
  * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
  *   propsToState: ['open'],
  * });
- * 
+ *
  * <ManagedTableAccordionGroup title="Title" expanded="expanded">
  *   Children
  * </ManagedTableAccordionGroup>
  * ```
- * 
+ *
  * State managed without children
  * ```jsx
  * import manageState from 'manage-state';
- * 
+ *
  * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
  *   propsToState: ['open'],
  * });
- * 
+ *
  * <ManagedTableAccordionGroup title="Title" expanded="expanded"/>
  * ```
- * 
+ *
  * Toggle open on title click with 'changeOnTitleClick' prop
  * ```jsx
  * import manageState from 'manage-state';
- * 
+ *
  * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
  *   propsToState: ['open'],
  * });
- * 
+ *
  * <ManagedTableAccordionGroup changeOnTitleClick title="Title" expanded="expanded">
  *   Children
  * </ManagedTableAccordionGroup>
  * ```
- * 
+ *
  * Array
  * ```jsx
  * import manageState from 'manage-state';
- * 
+ *
  * const arrayExampleItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
- * 
+ *
  * const ManagedTableAccordionGroup = manageState(TableAccordionGroup, {
  *   propsToState: ['open'],
  * });
- * 
- * 
+ *
+ *
  * <ManagedTableAccordionGroup
  *   expanded={
  *   arrayExampleItems.map((item, index) => {

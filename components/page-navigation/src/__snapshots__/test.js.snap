@@ -1,38 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageNavigationExample renders the storybook example 1`] = `
-.emotion-16 {
-  width: 100%;
-  background: #ffffff;
-  color: #005ea5;
-  border-bottom: solid 1px #e2e2e2;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,117 +20,294 @@ exports[`PageNavigationExample renders the storybook example 1`] = `
   padding-right: 15px;
 }
 
-.emotion-0:hover {
+.c3:hover {
   color: #2b8cc4;
   border-color: #2b8cc4;
 }
 
-.emotion-0:focus {
+.c3:focus {
   outline: 3px solid #ffbf47;
+}
+
+.c0 {
+  width: 100%;
+  background: #ffffff;
+  color: #005ea5;
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <PageNavigationExample>
   <PageNavigation>
-    <StyledNavigation>
-      <nav
-        className="emotion-16 emotion-17"
+    <styled.nav>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
+              "lastClassName": "c0",
+              "rules": Array [
+                "width: 100%; background: #ffffff; color: #005ea5; border-bottom: solid 1px #e2e2e2;",
+              ],
+            },
+            "displayName": "styled.nav",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "nav",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
       >
-        <InnerContainer>
-          <div
-            className="emotion-14 emotion-15"
-          >
-            <NavigationItems>
+        <nav
+          className="c0"
+        >
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "display: flex; justify-content: space-between; align-items: center; padding-left: 30px; padding-right: 30px;",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
               <div
-                className="emotion-12 emotion-13"
+                className="c1"
               >
-                <Anchor
-                  href="/"
-                >
-                  <Component
-                    className="emotion-0 emotion-1"
-                    href="/"
+                <styled.div>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bxivhb",
+                          "isStatic": true,
+                          "lastClassName": "c2",
+                          "rules": Array [
+                            "display: flex;",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bxivhb",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
                   >
-                    <a
-                      className="emotion-0 emotion-1"
-                      href="/"
+                    <div
+                      className="c2"
                     >
-                      Home
-                    </a>
-                  </Component>
-                </Anchor>
-                <Anchor
-                  href="/section-01"
-                >
-                  <Component
-                    className="emotion-0 emotion-1"
-                    href="/section-01"
-                  >
-                    <a
-                      className="emotion-0 emotion-1"
-                      href="/section-01"
-                    >
-                      Section 01
-                    </a>
-                  </Component>
-                </Anchor>
-                <Anchor
-                  href="/section-02"
-                >
-                  <Component
-                    className="emotion-0 emotion-1"
-                    href="/section-02"
-                  >
-                    <a
-                      className="emotion-0 emotion-1"
-                      href="/section-02"
-                    >
-                      Section 02
-                    </a>
-                  </Component>
-                </Anchor>
+                      <Styled(Component)
+                        href="/"
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bdVaJa",
+                                "isStatic": false,
+                                "lastClassName": "c3",
+                                "rules": Array [
+                                  "display: flex; padding: 5px; color: #005ea5; text-decoration: none; font-size: 16px; line-height: 1.25; font-weight: 700; border-bottom: 4px solid transparent; padding-top: 15px; padding-left: 15px; padding-bottom: 11px; padding-right: 15px; :hover {
+  color: #2b8cc4; border-color: #2b8cc4;
+} :focus {
+  outline: 3px solid #ffbf47;
+}",
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "Styled(Component)",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bdVaJa",
+                              "target": [Function],
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          href="/"
+                        >
+                          <Component
+                            className="c3"
+                            href="/"
+                          >
+                            <a
+                              className="c3"
+                              href="/"
+                            >
+                              Home
+                            </a>
+                          </Component>
+                        </StyledComponent>
+                      </Styled(Component)>
+                      <Styled(Component)
+                        href="/section-01"
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bdVaJa",
+                                "isStatic": false,
+                                "lastClassName": "c3",
+                                "rules": Array [
+                                  "display: flex; padding: 5px; color: #005ea5; text-decoration: none; font-size: 16px; line-height: 1.25; font-weight: 700; border-bottom: 4px solid transparent; padding-top: 15px; padding-left: 15px; padding-bottom: 11px; padding-right: 15px; :hover {
+  color: #2b8cc4; border-color: #2b8cc4;
+} :focus {
+  outline: 3px solid #ffbf47;
+}",
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "Styled(Component)",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bdVaJa",
+                              "target": [Function],
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          href="/section-01"
+                        >
+                          <Component
+                            className="c3"
+                            href="/section-01"
+                          >
+                            <a
+                              className="c3"
+                              href="/section-01"
+                            >
+                              Section 01
+                            </a>
+                          </Component>
+                        </StyledComponent>
+                      </Styled(Component)>
+                      <Styled(Component)
+                        href="/section-02"
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bdVaJa",
+                                "isStatic": false,
+                                "lastClassName": "c3",
+                                "rules": Array [
+                                  "display: flex; padding: 5px; color: #005ea5; text-decoration: none; font-size: 16px; line-height: 1.25; font-weight: 700; border-bottom: 4px solid transparent; padding-top: 15px; padding-left: 15px; padding-bottom: 11px; padding-right: 15px; :hover {
+  color: #2b8cc4; border-color: #2b8cc4;
+} :focus {
+  outline: 3px solid #ffbf47;
+}",
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "Styled(Component)",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bdVaJa",
+                              "target": [Function],
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          href="/section-02"
+                        >
+                          <Component
+                            className="c3"
+                            href="/section-02"
+                          >
+                            <a
+                              className="c3"
+                              href="/section-02"
+                            >
+                              Section 02
+                            </a>
+                          </Component>
+                        </StyledComponent>
+                      </Styled(Component)>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
               </div>
-            </NavigationItems>
-          </div>
-        </InnerContainer>
-      </nav>
-    </StyledNavigation>
+            </StyledComponent>
+          </styled.div>
+        </nav>
+      </StyledComponent>
+    </styled.nav>
   </PageNavigation>
 </PageNavigationExample>
 `;
 
 exports[`PageNavigationExample renders the with React Router 1`] = `
-.emotion-22 {
-  width: 100%;
-  background: #ffffff;
-  color: #005ea5;
-  border-bottom: solid 1px #e2e2e2;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,16 +326,16 @@ exports[`PageNavigationExample renders the with React Router 1`] = `
   padding-right: 15px;
 }
 
-.emotion-6:hover {
+.c4:hover {
   color: #2b8cc4;
   border-color: #2b8cc4;
 }
 
-.emotion-6:focus {
+.c4:focus {
   outline: 3px solid #ffbf47;
 }
 
-.emotion-0 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,13 +355,44 @@ exports[`PageNavigationExample renders the with React Router 1`] = `
   border-color: #005ea5;
 }
 
-.emotion-0:hover {
+.c3:hover {
   color: #2b8cc4;
   border-color: #2b8cc4;
 }
 
-.emotion-0:focus {
+.c3:focus {
   outline: 3px solid #ffbf47;
+}
+
+.c0 {
+  width: 100%;
+  background: #ffffff;
+  color: #005ea5;
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <ReactRouterExample>
@@ -243,144 +420,312 @@ exports[`PageNavigationExample renders the with React Router 1`] = `
       }
     >
       <PageNavigation>
-        <StyledNavigation>
-          <nav
-            className="emotion-22 emotion-23"
+        <styled.nav>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": true,
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "width: 100%; background: #ffffff; color: #005ea5; border-bottom: solid 1px #e2e2e2;",
+                  ],
+                },
+                "displayName": "styled.nav",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "nav",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <InnerContainer>
-              <div
-                className="emotion-20 emotion-21"
-              >
-                <NavigationItems>
+            <nav
+              className="c0"
+            >
+              <styled.div>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": true,
+                        "lastClassName": "c1",
+                        "rules": Array [
+                          "display: flex; justify-content: space-between; align-items: center; padding-left: 30px; padding-right: 30px;",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
                   <div
-                    className="emotion-18 emotion-19"
+                    className="c1"
                   >
-                    <Component
-                      exact={true}
-                      to="/"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        exact={true}
-                        to="/"
+                    <styled.div>
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bxivhb",
+                              "isStatic": true,
+                              "lastClassName": "c2",
+                              "rules": Array [
+                                "display: flex;",
+                              ],
+                            },
+                            "displayName": "styled.div",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bxivhb",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                       >
-                        <Route
-                          exact={true}
-                          path="\\\\/"
+                        <div
+                          className="c2"
                         >
-                          <Anchor
-                            active={true}
-                            as={[Function]}
+                          <Component
+                            exact={true}
                             to="/"
                           >
-                            <Component
-                              active={true}
-                              as={[Function]}
-                              className="emotion-0 emotion-1"
+                            <NavLinkWithProp
+                              activeProp="active"
+                              exact={true}
                               to="/"
                             >
-                              <Link
-                                className="emotion-0 emotion-1"
-                                replace={false}
-                                to="/"
+                              <Route
+                                exact={true}
+                                path="\\\\/"
                               >
-                                <a
-                                  className="emotion-0 emotion-1"
-                                  href="/"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={true}
+                                  as={[Function]}
+                                  to="/"
                                 >
-                                  Home
-                                </a>
-                              </Link>
-                            </Component>
-                          </Anchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
-                    <Component
-                      to="/section-01"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        to="/section-01"
-                      >
-                        <Route
-                          path="\\\\/section-01"
-                        >
-                          <Anchor
-                            active={false}
-                            as={[Function]}
+                                  <StyledComponent
+                                    active={true}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bdVaJa",
+                                          "isStatic": false,
+                                          "lastClassName": "c4",
+                                          "rules": Array [
+                                            "display: flex; padding: 5px; color: #005ea5; text-decoration: none; font-size: 16px; line-height: 1.25; font-weight: 700; border-bottom: 4px solid transparent; padding-top: 15px; padding-left: 15px; padding-bottom: 11px; padding-right: 15px; :hover {
+  color: #2b8cc4; border-color: #2b8cc4;
+} :focus {
+  outline: 3px solid #ffbf47;
+}",
+                                            [Function],
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bdVaJa",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/"
+                                  >
+                                    <Link
+                                      active={true}
+                                      className="c3"
+                                      replace={false}
+                                      to="/"
+                                    >
+                                      <a
+                                        active={true}
+                                        className="c3"
+                                        href="/"
+                                        onClick={[Function]}
+                                      >
+                                        Home
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                          <Component
                             to="/section-01"
                           >
-                            <Component
-                              active={false}
-                              as={[Function]}
-                              className="emotion-6 emotion-1"
+                            <NavLinkWithProp
+                              activeProp="active"
                               to="/section-01"
                             >
-                              <Link
-                                className="emotion-6 emotion-1"
-                                replace={false}
-                                to="/section-01"
+                              <Route
+                                path="\\\\/section-01"
                               >
-                                <a
-                                  className="emotion-6 emotion-1"
-                                  href="/section-01"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={false}
+                                  as={[Function]}
+                                  to="/section-01"
                                 >
-                                  Section 01
-                                </a>
-                              </Link>
-                            </Component>
-                          </Anchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
-                    <Component
-                      to="/section-02"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        to="/section-02"
-                      >
-                        <Route
-                          path="\\\\/section-02"
-                        >
-                          <Anchor
-                            active={false}
-                            as={[Function]}
+                                  <StyledComponent
+                                    active={false}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bdVaJa",
+                                          "isStatic": false,
+                                          "lastClassName": "c4",
+                                          "rules": Array [
+                                            "display: flex; padding: 5px; color: #005ea5; text-decoration: none; font-size: 16px; line-height: 1.25; font-weight: 700; border-bottom: 4px solid transparent; padding-top: 15px; padding-left: 15px; padding-bottom: 11px; padding-right: 15px; :hover {
+  color: #2b8cc4; border-color: #2b8cc4;
+} :focus {
+  outline: 3px solid #ffbf47;
+}",
+                                            [Function],
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bdVaJa",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/section-01"
+                                  >
+                                    <Link
+                                      active={false}
+                                      className="c4"
+                                      replace={false}
+                                      to="/section-01"
+                                    >
+                                      <a
+                                        active={false}
+                                        className="c4"
+                                        href="/section-01"
+                                        onClick={[Function]}
+                                      >
+                                        Section 01
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                          <Component
                             to="/section-02"
                           >
-                            <Component
-                              active={false}
-                              as={[Function]}
-                              className="emotion-6 emotion-1"
+                            <NavLinkWithProp
+                              activeProp="active"
                               to="/section-02"
                             >
-                              <Link
-                                className="emotion-6 emotion-1"
-                                replace={false}
-                                to="/section-02"
+                              <Route
+                                path="\\\\/section-02"
                               >
-                                <a
-                                  className="emotion-6 emotion-1"
-                                  href="/section-02"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={false}
+                                  as={[Function]}
+                                  to="/section-02"
                                 >
-                                  Section 02
-                                </a>
-                              </Link>
-                            </Component>
-                          </Anchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
+                                  <StyledComponent
+                                    active={false}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bdVaJa",
+                                          "isStatic": false,
+                                          "lastClassName": "c4",
+                                          "rules": Array [
+                                            "display: flex; padding: 5px; color: #005ea5; text-decoration: none; font-size: 16px; line-height: 1.25; font-weight: 700; border-bottom: 4px solid transparent; padding-top: 15px; padding-left: 15px; padding-bottom: 11px; padding-right: 15px; :hover {
+  color: #2b8cc4; border-color: #2b8cc4;
+} :focus {
+  outline: 3px solid #ffbf47;
+}",
+                                            [Function],
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bdVaJa",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/section-02"
+                                  >
+                                    <Link
+                                      active={false}
+                                      className="c4"
+                                      replace={false}
+                                      to="/section-02"
+                                    >
+                                      <a
+                                        active={false}
+                                        className="c4"
+                                        href="/section-02"
+                                        onClick={[Function]}
+                                      >
+                                        Section 02
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                        </div>
+                      </StyledComponent>
+                    </styled.div>
                   </div>
-                </NavigationItems>
-              </div>
-            </InnerContainer>
-          </nav>
-        </StyledNavigation>
+                </StyledComponent>
+              </styled.div>
+            </nav>
+          </StyledComponent>
+        </styled.nav>
       </PageNavigation>
     </Router>
   </BrowserRouter>

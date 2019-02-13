@@ -18,6 +18,6 @@ Simple
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `textClass` |  | `````` | string | 
- `value` | true | `````` | union(string|number) | 
+ `value` | true | `````` | union(string \| number) | 
 
 

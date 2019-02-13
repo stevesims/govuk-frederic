@@ -1,4 +1,5 @@
 const { devDependencies } = require('./package.json');
+const { dependencies: gfd } = require('./packages/govuk-frederic/package.json');
 
 module.exports = {
   parser: 'babel-eslint',
@@ -10,7 +11,7 @@ module.exports = {
   rules: {
 
     /* THE FOLLOWING OVERRIDES TO AIRBNB ARE CURRENTLY REQUIRED TO MAKE CODE PASS: */
-    
+
     /* I like these rules! */
     "function-paren-newline": 0,
     "keyword-spacing": 0, /* Recommend: 'function-paren-newline': ['error', 'consistent'], */
@@ -34,7 +35,7 @@ module.exports = {
     "react/no-array-index-key": 0,
     'react/require-default-props': 0,
     "react/sort-comp": 0,
-    
+
     /* Up for discussion */
     "arrow-body-style": 0,
     "arrow-parens": 0, /* Could relax "requireForBlockBody": true */
@@ -71,7 +72,11 @@ module.exports = {
         ],
       },
       settings: {
-        'import/core-modules': Object.keys(devDependencies),
+        "import/core-modules": [
+          'govuk-frederic',
+          ...Object.keys(devDependencies),
+          ...Object.keys(gfd).filter(dep => dep.startsWith('@govuk-frederic/'))
+        ]
       },
     },
     {

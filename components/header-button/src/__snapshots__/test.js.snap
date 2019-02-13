@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HeaderButton matches snapshot 1`] = `
-.emotion-0 {
+.c0 {
   background: none;
   border-bottom: 4px solid transparent;
   border-left: none;
@@ -19,12 +19,12 @@ exports[`HeaderButton matches snapshot 1`] = `
   color: #005ea5;
 }
 
-.emotion-0:focus {
+.c0:focus {
   background: #ffbf47;
   outline: 1px solid #ffbf47;
 }
 
-.emotion-0:hover {
+.c0:hover {
   border-bottom-color: #2b8cc4;
   border-top-color: #2b8cc4;
 }
@@ -32,12 +32,41 @@ exports[`HeaderButton matches snapshot 1`] = `
 <HeaderButton
   active={true}
 >
-  <Button
+  <styled.button
     active={true}
   >
-    <button
-      className="emotion-0 emotion-1"
-    />
-  </Button>
+    <StyledComponent
+      active={true}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "background: none; border-bottom: 4px solid transparent; border-left: none; border-right: none; border-top: 4px solid transparent; display: inline-block; font-family: \\"nta\\", Arial, sans-serif; font-size: 18px; font-weight: bold; min-width: 190px; padding: 8px; text-align: center;",
+              [Function],
+              [Function],
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <button
+        className="c0"
+      />
+    </StyledComponent>
+  </styled.button>
 </HeaderButton>
 `;

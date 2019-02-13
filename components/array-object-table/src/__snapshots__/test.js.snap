@@ -1,32 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArrayObjectTable matches snapshot 1`] = `
-.emotion-14 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-14 {
-    margin-bottom: 15px;
-  }
-}
-
-.emotion-12 {
+.c1 {
   display: table;
   font-family: "nta",Arial,sans-serif;
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  margin-bottom: 15px;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-12 {
-    margin-bottom: 15px;
-  }
+.c3 {
+  border-bottom: 1px solid #bfc1c3;
+  display: table-cell;
+  font-size: 14px;
+  padding: 15px 5px;
+  vertical-align: top;
 }
 
-.emotion-0 {
+.c3:first-child {
+  padding: 15px 5px 15px 0;
+}
+
+.c3:last-child {
+  padding: 15px 0 15px 5px;
+}
+
+.c2 {
   border-bottom: 1px solid #bfc1c3;
   display: table-cell;
   font-size: 14px;
@@ -36,28 +35,22 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
   text-align: left;
 }
 
-.emotion-0:first-child {
+.c2:first-child {
   padding: 15px 5px 15px 0;
 }
 
-.emotion-0:last-child {
+.c2:last-child {
   padding: 15px 0 15px 5px;
 }
 
-.emotion-6 {
-  border-bottom: 1px solid #bfc1c3;
-  display: table-cell;
-  font-size: 14px;
-  padding: 15px 5px;
-  vertical-align: top;
+.c0 {
+  margin-bottom: 15px;
 }
 
-.emotion-6:first-child {
-  padding: 15px 5px 15px 0;
-}
-
-.emotion-6:last-child {
-  padding: 15px 0 15px 5px;
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 15px;
+  }
 }
 
 <ArrayObjectTable
@@ -93,11 +86,6 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
   title={null}
 >
   <Styled(Table)
-    borderless={false}
-    flexibleColumns={false}
-    nameByRow={false}
-    names={Array []}
-    rowIncludesHeading={false}
     rows={
       Array [
         Array [
@@ -107,7 +95,6 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
         ],
       ]
     }
-    spacing="15px"
     titles={
       Array [
         "One",
@@ -116,13 +103,36 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
       ]
     }
   >
-    <Table
-      borderless={false}
-      className="emotion-14"
-      flexibleColumns={false}
-      nameByRow={false}
-      names={Array []}
-      rowIncludesHeading={false}
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gisBJw",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "Styled(Table)",
+          "foldedComponentIds": Array [],
+          "propTypes": Object {
+            "margin": [Function],
+            "mb": [Function],
+            "padding": [Function],
+          },
+          "render": [Function],
+          "styledComponentId": "sc-gisBJw",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
       rows={
         Array [
           Array [
@@ -132,7 +142,6 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
           ],
         ]
       }
-      spacing="15px"
       titles={
         Array [
           "One",
@@ -141,92 +150,324 @@ exports[`ArrayObjectTable matches snapshot 1`] = `
         ]
       }
     >
-      <TableContainer
-        className="emotion-14"
+      <Table
+        borderless={false}
+        className="c0"
         flexibleColumns={false}
+        nameByRow={false}
+        names={Array []}
+        rowIncludesHeading={false}
+        rows={
+          Array [
+            Array [
+              "test",
+              "two",
+              "-",
+            ],
+          ]
+        }
+        spacing="15px"
+        titles={
+          Array [
+            "One",
+            "Two",
+            "Three",
+          ]
+        }
       >
-        <table
-          className="emotion-12 emotion-13"
+        <styled.table
+          className="c0"
+          flexibleColumns={false}
         >
-          <thead>
-            <tr>
-              <TableHeading
-                borderless={false}
-                key="0"
-                spacing="15px"
-              >
-                <th
-                  className="emotion-0 emotion-1"
-                >
-                  One
-                </th>
-              </TableHeading>
-              <TableHeading
-                borderless={false}
-                key="1"
-                spacing="15px"
-              >
-                <th
-                  className="emotion-0 emotion-1"
-                >
-                  Two
-                </th>
-              </TableHeading>
-              <TableHeading
-                borderless={false}
-                key="2"
-                spacing="15px"
-              >
-                <th
-                  className="emotion-0 emotion-1"
-                >
-                  Three
-                </th>
-              </TableHeading>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              key="0"
+          <StyledComponent
+            className="c0"
+            flexibleColumns={false}
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-eqIVtm",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "display: table; font-family: \\"nta\\", Arial, sans-serif; width: 100%; border-collapse: collapse;",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.table",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-eqIVtm",
+                "target": "table",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <table
+              className="c0 c1"
             >
-              <TableData
-                borderless={false}
-                key="0"
-                spacing="15px"
-              >
-                <td
-                  className="emotion-6 emotion-7"
+              <thead>
+                <tr>
+                  <styled.th
+                    borderless={false}
+                    key="0"
+                    spacing="15px"
+                  >
+                    <StyledComponent
+                      borderless={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-caSCKo",
+                            "isStatic": false,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "displayName": "styled.th",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-caSCKo",
+                          "target": "th",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      spacing="15px"
+                    >
+                      <th
+                        className="c2"
+                        spacing="15px"
+                      >
+                        One
+                      </th>
+                    </StyledComponent>
+                  </styled.th>
+                  <styled.th
+                    borderless={false}
+                    key="1"
+                    spacing="15px"
+                  >
+                    <StyledComponent
+                      borderless={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-caSCKo",
+                            "isStatic": false,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "displayName": "styled.th",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-caSCKo",
+                          "target": "th",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      spacing="15px"
+                    >
+                      <th
+                        className="c2"
+                        spacing="15px"
+                      >
+                        Two
+                      </th>
+                    </StyledComponent>
+                  </styled.th>
+                  <styled.th
+                    borderless={false}
+                    key="2"
+                    spacing="15px"
+                  >
+                    <StyledComponent
+                      borderless={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-caSCKo",
+                            "isStatic": false,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "displayName": "styled.th",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-caSCKo",
+                          "target": "th",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      spacing="15px"
+                    >
+                      <th
+                        className="c2"
+                        spacing="15px"
+                      >
+                        Three
+                      </th>
+                    </StyledComponent>
+                  </styled.th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  key="0"
                 >
-                  test
-                </td>
-              </TableData>
-              <TableData
-                borderless={false}
-                key="1"
-                spacing="15px"
-              >
-                <td
-                  className="emotion-6 emotion-7"
-                >
-                  two
-                </td>
-              </TableData>
-              <TableData
-                borderless={false}
-                key="2"
-                spacing="15px"
-              >
-                <td
-                  className="emotion-6 emotion-7"
-                >
-                  -
-                </td>
-              </TableData>
-            </tr>
-          </tbody>
-        </table>
-      </TableContainer>
-    </Table>
+                  <styled.td
+                    borderless={false}
+                    key="0"
+                    spacing="15px"
+                  >
+                    <StyledComponent
+                      borderless={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-fAjcbJ",
+                            "isStatic": false,
+                            "lastClassName": "c3",
+                            "rules": Array [
+                              [Function],
+                            ],
+                          },
+                          "displayName": "styled.td",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-fAjcbJ",
+                          "target": "td",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      spacing="15px"
+                    >
+                      <td
+                        className="c3"
+                        spacing="15px"
+                      >
+                        test
+                      </td>
+                    </StyledComponent>
+                  </styled.td>
+                  <styled.td
+                    borderless={false}
+                    key="1"
+                    spacing="15px"
+                  >
+                    <StyledComponent
+                      borderless={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-fAjcbJ",
+                            "isStatic": false,
+                            "lastClassName": "c3",
+                            "rules": Array [
+                              [Function],
+                            ],
+                          },
+                          "displayName": "styled.td",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-fAjcbJ",
+                          "target": "td",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      spacing="15px"
+                    >
+                      <td
+                        className="c3"
+                        spacing="15px"
+                      >
+                        two
+                      </td>
+                    </StyledComponent>
+                  </styled.td>
+                  <styled.td
+                    borderless={false}
+                    key="2"
+                    spacing="15px"
+                  >
+                    <StyledComponent
+                      borderless={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-fAjcbJ",
+                            "isStatic": false,
+                            "lastClassName": "c3",
+                            "rules": Array [
+                              [Function],
+                            ],
+                          },
+                          "displayName": "styled.td",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-fAjcbJ",
+                          "target": "td",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      spacing="15px"
+                    >
+                      <td
+                        className="c3"
+                        spacing="15px"
+                      >
+                        -
+                      </td>
+                    </StyledComponent>
+                  </styled.td>
+                </tr>
+              </tbody>
+            </table>
+          </StyledComponent>
+        </styled.table>
+      </Table>
+    </StyledComponent>
   </Styled(Table)>
 </ArrayObjectTable>
 `;

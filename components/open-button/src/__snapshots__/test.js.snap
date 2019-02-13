@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OpenButton matches snapshot 1`] = `
-.emotion-0 {
+.c0 {
   background: none;
   border: none;
   cursor: pointer;
@@ -16,7 +16,7 @@ exports[`OpenButton matches snapshot 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-0:focus {
+.c0:focus {
   outline: none;
 }
 
@@ -24,31 +24,62 @@ exports[`OpenButton matches snapshot 1`] = `
   onChange={[MockFunction]}
   open={true}
 >
-  <RotatingButton
+  <styled.button
     onClick={[Function]}
     open={true}
   >
-    <button
-      className="emotion-0 emotion-1"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              ":focus {
+  outline: none;
+} background: none; border: none; cursor: pointer; height: 20px; padding: 0; transition: transform 0.3s ease-in-out; width: 20px;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       onClick={[Function]}
       open={true}
     >
-      <Arrow
-        fill="#0C60A2"
-        width={20}
+      <button
+        className="c0"
+        onClick={[Function]}
+        open={true}
       >
-        <svg
-          height="20px"
-          viewBox="0 0 6 4"
-          width="20px"
+        <Arrow
+          fill="#0C60A2"
+          width={20}
         >
-          <polygon
-            fill="#0C60A2"
-            points="3 4 6 1 0 1"
-          />
-        </svg>
-      </Arrow>
-    </button>
-  </RotatingButton>
+          <svg
+            height="20px"
+            viewBox="0 0 6 4"
+            width="20px"
+          >
+            <polygon
+              fill="#0C60A2"
+              points="3 4 6 1 0 1"
+            />
+          </svg>
+        </Arrow>
+      </button>
+    </StyledComponent>
+  </styled.button>
 </OpenButton>
 `;

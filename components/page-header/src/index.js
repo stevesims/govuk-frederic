@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
 import { SPACING } from '@govuk-react/constants';
 import { BLACK, WHITE } from 'govuk-colours';

@@ -5,7 +5,7 @@
 ## Usage
 
 ```sh
-npm install govuk-frederic emotion react-emotion --save
+npm install govuk-frederic styled-components --save
 ```
 
 ```js

@@ -1,11 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { createMatchers } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import Table from '.';
-
-expect.extend(createMatchers(emotion));
 
 const titles = ['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'];
 const rows = [
@@ -30,14 +26,15 @@ describe('Table', () => {
 
   it('renders titles from prop', () => {
     const wrapper = mount(<Table rows={rows} titles={titles} />);
-    expect(wrapper.find('TableHeading')).toHaveLength(4);
+
+    expect(wrapper.find('thead th')).toHaveLength(4);
   });
 
   it('names each cell according to its column', () => {
     const wrapper = mount(<Table rows={rows} titles={titles} name="name" names={columnTableNames} />);
-    const th = wrapper.find('TableHeading').at(2);
+    const th = wrapper.find('th').at(2);
     expect(th.prop('name')).toBe('three');
-    const td = wrapper.find('TableData').at(2);
+    const td = wrapper.find('td').at(2);
     expect(td.prop('name')).toBe('three');
   });
 
@@ -50,7 +47,7 @@ describe('Table', () => {
       rowIncludesHeading
       nameByRow
     />);
-    expect(wrapper.find('TableHeading')).toHaveLength(7);
+    expect(wrapper.find('th')).toHaveLength(7);
   });
 
   it('names each cell according to its row, no titles', () => {
@@ -62,28 +59,28 @@ describe('Table', () => {
       nameByRow
     />);
 
-    let th = wrapper.find('TableHeading').at(0);
+    let th = wrapper.find('th').at(0);
     expect(th.prop('name')).toBe('one');
 
-    let td = wrapper.find('TableData').at(0);
+    let td = wrapper.find('td').at(0);
     expect(td.prop('name')).toBe('one');
 
-    th = wrapper.find('TableHeading').at(1);
+    th = wrapper.find('th').at(1);
     expect(th.prop('name')).toBe('i');
 
-    td = wrapper.find('TableData').at(3);
+    td = wrapper.find('td').at(3);
     expect(td.prop('name')).toBe('am');
 
-    td = wrapper.find('TableData').at(4);
+    td = wrapper.find('td').at(4);
     expect(td.prop('name')).toBe('named');
 
-    td = wrapper.find('TableData').at(5);
+    td = wrapper.find('td').at(5);
     expect(td.prop('name')).toBe('individually');
 
-    th = wrapper.find('TableHeading').at(2);
+    th = wrapper.find('th').at(2);
     expect(th.prop('name')).toBe('three');
 
-    td = wrapper.find('TableData').at(8);
+    td = wrapper.find('td').at(8);
     expect(td.prop('name')).toBe('three');
   });
 
@@ -108,31 +105,31 @@ describe('Table', () => {
       titles={titles}
     />);
 
-    let th = wrapper.find('TableHeading').at(3);
+    let th = wrapper.find('th').at(3);
     expect(th.prop('name')).toBe('heading');
 
-    th = wrapper.find('TableHeading').at(4);
+    th = wrapper.find('th').at(4);
     expect(th.prop('name')).toBe('one');
 
-    let td = wrapper.find('TableData').at(0);
+    let td = wrapper.find('td').at(0);
     expect(td.prop('name')).toBe('one');
 
-    th = wrapper.find('TableHeading').at(5);
+    th = wrapper.find('th').at(5);
     expect(th.prop('name')).toBe('i');
 
-    td = wrapper.find('TableData').at(3);
+    td = wrapper.find('td').at(3);
     expect(td.prop('name')).toBe('am');
 
-    td = wrapper.find('TableData').at(4);
+    td = wrapper.find('td').at(4);
     expect(td.prop('name')).toBe('named');
 
-    td = wrapper.find('TableData').at(5);
+    td = wrapper.find('td').at(5);
     expect(td.prop('name')).toBe('individually');
 
-    th = wrapper.find('TableHeading').at(6);
+    th = wrapper.find('th').at(6);
     expect(th.prop('name')).toBe('three');
 
-    td = wrapper.find('TableData').at(8);
+    td = wrapper.find('td').at(8);
     expect(td.prop('name')).toBe('three');
   });
 
@@ -145,11 +142,11 @@ describe('Table', () => {
       nameByRow
       titles={titles}
     />);
-    expect(wrapper.find('TableHeading').at(3)).not.toHaveStyleRule('width');
+    expect(wrapper.find('th').at(3)).not.toHaveStyleRule('width');
     const t = titles.slice(-1);
     const r = rows.map(row => row.slice(-1));
     wrapper.setProps({ titles: t, rows: r });
-    expect(wrapper.find('TableHeading').at(3)).toHaveStyleRule('width', '25%');
+    expect(wrapper.find('th').at(3)).toHaveStyleRule('width', '25%');
   });
 
   it('sets table-layout according to flexibleColumns prop', () => {
@@ -176,9 +173,9 @@ describe('Table', () => {
       titles={titles}
     />);
     // debugger;
-    expect(wrapper.find('TableData').at(0)).toHaveStyleRule('border-bottom', expect.any(String));
+    expect(wrapper.find('td').at(0)).toHaveStyleRule('border-bottom', expect.any(String));
     wrapper.setProps({ borderless: true });
-    expect(wrapper.find('TableData').at(0)).not.toHaveStyleRule('border-bottom');
+    expect(wrapper.find('td').at(0)).not.toHaveStyleRule('border-bottom');
   });
 
   it('matches snapshot', () => {

@@ -22,7 +22,7 @@ yarn start
 
 To create a new component:
 
-- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
+- `yarn create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
 
 This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
 
@@ -33,13 +33,13 @@ Unit testing follows similar patterns as [Glamorous with Jest](https://github.co
 To run unit & eslint tests:
 
 ```sh
-npm run test
+yarn test
 ```
 
 To run & watch unit tests:
 
 ```sh
-npm run test:unit
+yarn test:unit
 ```
 
 ## Opening a pull request

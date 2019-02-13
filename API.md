@@ -364,7 +364,7 @@ Simple
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `textClass` |  | `````` | string | 
- `value` | true | `````` | union(string|number) | 
+ `value` | true | `````` | union(string \| number) | 
 
 
 CountdownTextArea
@@ -953,7 +953,7 @@ In black with count value 0
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | `````` | node | 
- `count` |  | `````` | union(number|string) | 
+ `count` |  | `````` | union(number \| string) | 
  `countBackgroundColor` |  | `````` | string | 
  `countColor` |  | `````` | string | 
 
@@ -1214,7 +1214,7 @@ Counter title with value 0 and override text and background colour.
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | `````` | node | 
- `count` |  | `````` | union(number|string) | 
+ `count` |  | `````` | union(number \| string) | 
  `countBackgroundColor` |  | `````` | string | 
  `countColor` |  | `````` | string | 
 

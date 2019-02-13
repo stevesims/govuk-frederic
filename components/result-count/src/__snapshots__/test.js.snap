@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResultCount matches snapshot 1`] = `
-.emotion-0 {
+.c0 {
   background: #6f777b;
   color: #ffffff;
   display: inline-block;
@@ -18,16 +18,44 @@ exports[`ResultCount matches snapshot 1`] = `
   backgroundColor="#6f777b"
   color="#ffffff"
 >
-  <StyledResultCount
+  <styled.span
     backgroundColor="#6f777b"
     color="#ffffff"
   >
-    <span
-      className="emotion-0 emotion-1"
+    <StyledComponent
+      backgroundColor="#6f777b"
       color="#ffffff"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      0
-    </span>
-  </StyledResultCount>
+      <span
+        className="c0"
+        color="#ffffff"
+      >
+        0
+      </span>
+    </StyledComponent>
+  </styled.span>
 </ResultCount>
 `;

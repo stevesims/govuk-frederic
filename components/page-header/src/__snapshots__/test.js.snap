@@ -1,7 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageHeaderExample renders the storybook example 1`] = `
-.emotion-30 {
+.c3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:focus {
+  outline: none;
+  color: #0b0c0c;
+  background: #ffbf47;
+}
+
+.c5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:focus {
+  outline: none;
+  color: #0b0c0c;
+  background: #ffbf47;
+}
+
+.c0 {
   position: relative;
   width: 100%;
   color: #ffffff;
@@ -9,7 +59,7 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
   z-index: 100;
 }
 
-.emotion-28 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,63 +76,13 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
   padding-right: 30px;
 }
 
-.emotion-6 {
+.c2 {
   padding: 10px;
 }
 
-.emotion-0 {
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-  color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0:focus {
-  outline: none;
-  color: #0b0c0c;
-  background: #ffbf47;
-}
-
-.emotion-26 {
+.c4 {
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-.emotion-8 {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-  color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-8:focus {
-  outline: none;
-  color: #0b0c0c;
-  background: #ffbf47;
 }
 
 <PageHeaderExample>
@@ -118,189 +118,425 @@ exports[`PageHeaderExample renders the storybook example 1`] = `
           </Unknown>
         }
       >
-        <StyledPageHeader>
-          <header
-            className="emotion-30 emotion-31"
+        <styled.header>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "position: relative; width: 100%; color: #ffffff; background: #0b0c0c; z-index: 100;",
+                  ],
+                },
+                "displayName": "styled.header",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "header",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <InnerContainer>
-              <div
-                className="emotion-28 emotion-29"
-              >
-                <LogoContainer>
+            <header
+              className="c0"
+            >
+              <styled.div>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bxivhb",
+                        "isStatic": true,
+                        "lastClassName": "c1",
+                        "rules": Array [
+                          "display: flex; justify-content: space-between; align-items: center; padding-left: 30px; padding-right: 30px;",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bxivhb",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
                   <div
-                    className="emotion-6 emotion-7"
+                    className="c1"
                   >
-                    <Component
-                      to="/"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        to="/"
+                    <styled.div>
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-ifAKCX",
+                              "isStatic": true,
+                              "lastClassName": "c2",
+                              "rules": Array [
+                                "padding: 10px;",
+                              ],
+                            },
+                            "displayName": "styled.div",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-ifAKCX",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                       >
-                        <Route
-                          path="\\\\/"
+                        <div
+                          className="c2"
                         >
-                          <LogoAnchor
-                            active={true}
-                            as={[Function]}
+                          <Component
                             to="/"
                           >
-                            <Component
-                              active={true}
-                              as={[Function]}
-                              className="emotion-0 emotion-1"
+                            <NavLinkWithProp
+                              activeProp="active"
                               to="/"
                             >
-                              <Link
-                                className="emotion-0 emotion-1"
-                                replace={false}
-                                to="/"
+                              <Route
+                                path="\\\\/"
                               >
-                                <a
-                                  className="emotion-0 emotion-1"
-                                  href="/"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={true}
+                                  as={[Function]}
+                                  to="/"
                                 >
-                                  Logo text
-                                </a>
-                              </Link>
-                            </Component>
-                          </LogoAnchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
-                  </div>
-                </LogoContainer>
-                <NavigationContainer>
-                  <div
-                    className="emotion-26 emotion-27"
-                  >
-                    <Component
-                      exact={true}
-                      to="/"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        exact={true}
-                        to="/"
+                                  <StyledComponent
+                                    active={true}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bdVaJa",
+                                          "isStatic": true,
+                                          "lastClassName": "c3",
+                                          "rules": Array [
+                                            "font-size: 30px; line-height: 30px; font-weight: 700; display: flex; padding: 5px; color: #ffffff; text-decoration: none; :hover {
+  text-decoration: underline;
+} :focus {
+  outline: none; color: #0b0c0c; background: #ffbf47;
+}",
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "propTypes": Object {
+                                          "active": [Function],
+                                          "as": [Function],
+                                        },
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bdVaJa",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/"
+                                  >
+                                    <Link
+                                      active={true}
+                                      className="c3"
+                                      replace={false}
+                                      to="/"
+                                    >
+                                      <a
+                                        active={true}
+                                        className="c3"
+                                        href="/"
+                                        onClick={[Function]}
+                                      >
+                                        Logo text
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                        </div>
+                      </StyledComponent>
+                    </styled.div>
+                    <styled.div>
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-EHOje",
+                              "isStatic": true,
+                              "lastClassName": "c4",
+                              "rules": Array [
+                                "padding-top: 15px; padding-bottom: 15px;",
+                              ],
+                            },
+                            "displayName": "styled.div",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-EHOje",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                       >
-                        <Route
-                          exact={true}
-                          path="\\\\/"
+                        <div
+                          className="c4"
                         >
-                          <NavAnchor
-                            active={true}
-                            as={[Function]}
+                          <Component
+                            exact={true}
                             to="/"
                           >
-                            <Component
-                              active={true}
-                              as={[Function]}
-                              className="emotion-8 emotion-9"
+                            <NavLinkWithProp
+                              activeProp="active"
+                              exact={true}
                               to="/"
                             >
-                              <Link
-                                className="emotion-8 emotion-9"
-                                replace={false}
-                                to="/"
+                              <Route
+                                exact={true}
+                                path="\\\\/"
                               >
-                                <a
-                                  className="emotion-8 emotion-9"
-                                  href="/"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={true}
+                                  as={[Function]}
+                                  to="/"
                                 >
-                                  Home
-                                </a>
-                              </Link>
-                            </Component>
-                          </NavAnchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
-                    <Component
-                      to="/account"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        to="/account"
-                      >
-                        <Route
-                          path="\\\\/account"
-                        >
-                          <NavAnchor
-                            active={false}
-                            as={[Function]}
+                                  <StyledComponent
+                                    active={true}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bwzfXH",
+                                          "isStatic": true,
+                                          "lastClassName": "c5",
+                                          "rules": Array [
+                                            "font-size: 16px; font-weight: 700; line-height: 1.25; display: flex; padding: 5px; color: #ffffff; text-decoration: none; :hover {
+  text-decoration: underline;
+} :focus {
+  outline: none; color: #0b0c0c; background: #ffbf47;
+}",
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "propTypes": Object {
+                                          "active": [Function],
+                                          "as": [Function],
+                                        },
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bwzfXH",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/"
+                                  >
+                                    <Link
+                                      active={true}
+                                      className="c5"
+                                      replace={false}
+                                      to="/"
+                                    >
+                                      <a
+                                        active={true}
+                                        className="c5"
+                                        href="/"
+                                        onClick={[Function]}
+                                      >
+                                        Home
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                          <Component
                             to="/account"
                           >
-                            <Component
-                              active={false}
-                              as={[Function]}
-                              className="emotion-8 emotion-9"
+                            <NavLinkWithProp
+                              activeProp="active"
                               to="/account"
                             >
-                              <Link
-                                className="emotion-8 emotion-9"
-                                replace={false}
-                                to="/account"
+                              <Route
+                                path="\\\\/account"
                               >
-                                <a
-                                  className="emotion-8 emotion-9"
-                                  href="/account"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={false}
+                                  as={[Function]}
+                                  to="/account"
                                 >
-                                  My Account
-                                </a>
-                              </Link>
-                            </Component>
-                          </NavAnchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
-                    <Component
-                      to="/account/subsection"
-                    >
-                      <NavLinkWithProp
-                        activeProp="active"
-                        to="/account/subsection"
-                      >
-                        <Route
-                          path="\\\\/account\\\\/subsection"
-                        >
-                          <NavAnchor
-                            active={false}
-                            as={[Function]}
+                                  <StyledComponent
+                                    active={false}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bwzfXH",
+                                          "isStatic": true,
+                                          "lastClassName": "c5",
+                                          "rules": Array [
+                                            "font-size: 16px; font-weight: 700; line-height: 1.25; display: flex; padding: 5px; color: #ffffff; text-decoration: none; :hover {
+  text-decoration: underline;
+} :focus {
+  outline: none; color: #0b0c0c; background: #ffbf47;
+}",
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "propTypes": Object {
+                                          "active": [Function],
+                                          "as": [Function],
+                                        },
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bwzfXH",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/account"
+                                  >
+                                    <Link
+                                      active={false}
+                                      className="c5"
+                                      replace={false}
+                                      to="/account"
+                                    >
+                                      <a
+                                        active={false}
+                                        className="c5"
+                                        href="/account"
+                                        onClick={[Function]}
+                                      >
+                                        My Account
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                          <Component
                             to="/account/subsection"
                           >
-                            <Component
-                              active={false}
-                              as={[Function]}
-                              className="emotion-8 emotion-9"
+                            <NavLinkWithProp
+                              activeProp="active"
                               to="/account/subsection"
                             >
-                              <Link
-                                className="emotion-8 emotion-9"
-                                replace={false}
-                                to="/account/subsection"
+                              <Route
+                                path="\\\\/account\\\\/subsection"
                               >
-                                <a
-                                  className="emotion-8 emotion-9"
-                                  href="/account/subsection"
-                                  onClick={[Function]}
+                                <Styled(Component)
+                                  active={false}
+                                  as={[Function]}
+                                  to="/account/subsection"
                                 >
-                                   - Account subsection
-                                </a>
-                              </Link>
-                            </Component>
-                          </NavAnchor>
-                        </Route>
-                      </NavLinkWithProp>
-                    </Component>
+                                  <StyledComponent
+                                    active={false}
+                                    as={[Function]}
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-bwzfXH",
+                                          "isStatic": true,
+                                          "lastClassName": "c5",
+                                          "rules": Array [
+                                            "font-size: 16px; font-weight: 700; line-height: 1.25; display: flex; padding: 5px; color: #ffffff; text-decoration: none; :hover {
+  text-decoration: underline;
+} :focus {
+  outline: none; color: #0b0c0c; background: #ffbf47;
+}",
+                                          ],
+                                        },
+                                        "displayName": "Styled(Component)",
+                                        "foldedComponentIds": Array [],
+                                        "propTypes": Object {
+                                          "active": [Function],
+                                          "as": [Function],
+                                        },
+                                        "render": [Function],
+                                        "styledComponentId": "sc-bwzfXH",
+                                        "target": [Function],
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                        Symbol(Symbol.hasInstance): [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                    to="/account/subsection"
+                                  >
+                                    <Link
+                                      active={false}
+                                      className="c5"
+                                      replace={false}
+                                      to="/account/subsection"
+                                    >
+                                      <a
+                                        active={false}
+                                        className="c5"
+                                        href="/account/subsection"
+                                        onClick={[Function]}
+                                      >
+                                         - Account subsection
+                                      </a>
+                                    </Link>
+                                  </StyledComponent>
+                                </Styled(Component)>
+                              </Route>
+                            </NavLinkWithProp>
+                          </Component>
+                        </div>
+                      </StyledComponent>
+                    </styled.div>
                   </div>
-                </NavigationContainer>
-              </div>
-            </InnerContainer>
-          </header>
-        </StyledPageHeader>
+                </StyledComponent>
+              </styled.div>
+            </header>
+          </StyledComponent>
+        </styled.header>
       </PageHeader>
     </Router>
   </BrowserRouter>

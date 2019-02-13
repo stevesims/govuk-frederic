@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { TextAreaField } from '@govuk-react/text-area';
 import { NTA_LIGHT } from '@govuk-react/constants';

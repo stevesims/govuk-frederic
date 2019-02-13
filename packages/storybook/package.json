@@ -22,26 +22,24 @@
     "@govuk-frederic/table-accordion-group": "^0.1.1",
     "@govuk-frederic/table-of-contents": "^0.1.2",
     "@govuk-frederic/title-result-count": "^0.1.1",
-    "@govuk-react/storybook-components": "^0.3.0",
-    "@storybook/addon-actions": "^3.4.1",
-    "@storybook/addon-knobs": "^3.4.1",
-    "@storybook/addon-links": "^3.4.1",
-    "@storybook/addon-options": "^3.4.8",
-    "@storybook/addons": "^3.4.1",
-    "@storybook/react": "^3.4.1",
+    "@govuk-react/storybook-components": "^0.6.0-alpha.1",
+    "@storybook/addon-actions": "^4.0.7",
+    "@storybook/addon-knobs": "^4.0.7",
+    "@storybook/addon-links": "^4.0.7",
+    "@storybook/addon-options": "^4.0.7",
+    "@storybook/addons": "^4.0.7",
+    "@storybook/react": "^4.0.7",
     "@storybook/storybook-deployer": "^2.2.0",
     "normalize.css": "^8.0.0",
-    "react-collapse": "^4.0.3",
-    "react-motion": "^0.5.2",
-    "storybook-readme": "^3.3.0"
+    "react-final-form": "^3.1.0"
   },
   "peerDependencies": {
-    "prop-types": ">=15",
     "react": ">=16.2.0"
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^9.2.5",
-    "react-chromatic": "^0.8.3"
+    "babel-loader": "^8.0.4",
+    "babel-plugin-styled-components": "^1.10.0",
+    "react-chromatic": "^0.8.4"
   },
   "scripts": {
     "start": "start-storybook -p 9009",

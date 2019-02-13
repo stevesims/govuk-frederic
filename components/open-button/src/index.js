@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
 import Arrow from '@govuk-frederic/arrow';
 
@@ -29,9 +29,9 @@ const RotatingButton = styled('button')(
  * Simple
  * ```jsx
  * import manageState from 'manage-state';
- * 
+ *
  * const ManagedOpenButton = manageState(OpenButton, { propsToState: ['open']});
- * 
+ *
  * <ManagedOpenButton />
  * ```
  */
