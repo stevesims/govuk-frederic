@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches snapshot for all options render: complex card 1`] = `
+.c0 {
+  background-color: yellow;
+  border-bottom: 3px solid teal;
+  border-top: solid 1px #6f777b;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 20px;
+  }
+}
+
+<styled.div
+  accentColor="teal"
+  backgroundColor="yellow"
+  centered={true}
+  padBottom={true}
+  topBorder={true}
+>
+  <StyledComponent
+    accentColor="teal"
+    backgroundColor="yellow"
+    centered={true}
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            "padding-left: 15px; padding-right: 15px; @media only screen and (min-width: 641px) {
+  padding-left: 20px; padding-right: 20px;
+}",
+            "padding-top: 15px; @media only screen and (min-width: 641px) {
+  padding-top: 15px;
+}",
+            [Function],
+            [Function],
+          ],
+        },
+        "defaultProps": Object {
+          "accentColor": undefined,
+          "backgroundColor": "#ffffff",
+          "centered": false,
+          "topBorder": false,
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "propTypes": undefined,
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    padBottom={true}
+    topBorder={true}
+  >
+    <div
+      className="c0"
+    >
+      Example
+    </div>
+  </StyledComponent>
+</styled.div>
+`;
+
+exports[`Card matches snapshot for simple render: simple card 1`] = `
+.c0 {
+  background-color: #ffffff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 20px;
+  }
+}
+
+<CardDocumented
+  backgroundColor="#ffffff"
+  centered={false}
+  topBorder={false}
+>
+  <styled.div
+    backgroundColor="#ffffff"
+    centered={false}
+    topBorder={false}
+  >
+    <StyledComponent
+      backgroundColor="#ffffff"
+      centered={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+              [Function],
+              [Function],
+              [Function],
+              "padding-left: 15px; padding-right: 15px; @media only screen and (min-width: 641px) {
+  padding-left: 20px; padding-right: 20px;
+}",
+              "padding-top: 15px; @media only screen and (min-width: 641px) {
+  padding-top: 15px;
+}",
+              [Function],
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "accentColor": undefined,
+            "backgroundColor": "#ffffff",
+            "centered": false,
+            "topBorder": false,
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      topBorder={false}
+    >
+      <div
+        className="c0"
+      >
+        Example
+      </div>
+    </StyledComponent>
+  </styled.div>
+</CardDocumented>
+`;

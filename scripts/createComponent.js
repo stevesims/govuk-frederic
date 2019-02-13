@@ -41,6 +41,7 @@ const packageJson = () => {
   "name": "@govuk-frederic/${componentFolderName}",
   "version": "${version}",
   "dependencies": {
+    "@govuk-react/lib": "^0.6.0-alpha.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

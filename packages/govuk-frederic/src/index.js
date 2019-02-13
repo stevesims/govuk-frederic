@@ -5,6 +5,7 @@
 export { default as ArrayObjectTable } from '@govuk-frederic/array-object-table';
 export { default as Arrow } from '@govuk-frederic/arrow';
 export { default as ArrowLeft } from '@govuk-frederic/arrow-left';
+export { default as Card } from '@govuk-frederic/card';
 export { default as CompactTableAccordionGroup } from '@govuk-frederic/compact-table-accordion-group';
 export { default as Count } from '@govuk-frederic/count';
 export { default as CountdownTextArea } from '@govuk-frederic/countdown-text-area';
