@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/open-button",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "dependencies": {
-    "@govuk-frederic/arrow": "^0.1.1"
+    "@govuk-frederic/arrow": "^0.2.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

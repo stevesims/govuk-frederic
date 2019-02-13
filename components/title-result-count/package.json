@@ -1,8 +1,8 @@
 {
   "name": "@govuk-frederic/title-result-count",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "dependencies": {
-    "@govuk-frederic/result-count": "^0.1.1",
+    "@govuk-frederic/result-count": "^0.2.0",
     "@govuk-react/constants": "^0.6.0-alpha.1"
   },
   "peerDependencies": {
